@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
 interface Scope
 {
     /**
      * Apply the scope to a given Eloquent query builder.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $builder
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $builder
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return void
      */
     public function apply(Builder $builder, Model $model);

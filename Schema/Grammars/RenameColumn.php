@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\Database\Schema\Grammars;
+namespace Cclilshy\PRipple\Database\Schema\Grammars;
 
 use Doctrine\DBAL\Schema\AbstractSchemaManager as SchemaManager;
 use Doctrine\DBAL\Schema\Column;
 use Doctrine\DBAL\Schema\TableDiff;
-use Illuminate\Database\Connection;
-use Illuminate\Database\Schema\Blueprint;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\Schema\Blueprint;
 use Illuminate\Support\Fluent;
 
 class RenameColumn
@@ -14,10 +14,10 @@ class RenameColumn
     /**
      * Compile a rename column command.
      *
-     * @param  \Illuminate\Database\Schema\Grammars\Grammar  $grammar
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return array
      */
     public static function compile(Grammar $grammar, Blueprint $blueprint, Fluent $command, Connection $connection)
@@ -38,8 +38,8 @@ class RenameColumn
     /**
      * Get a new column instance with the new column name.
      *
-     * @param  \Illuminate\Database\Schema\Grammars\Grammar  $grammar
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @param  \Doctrine\DBAL\Schema\Column  $column
      * @param  \Doctrine\DBAL\Schema\AbstractSchemaManager  $schema

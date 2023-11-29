@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Concerns;
+namespace Cclilshy\PRipple\Database\Concerns;
 
 use Illuminate\Support\Collection;
 

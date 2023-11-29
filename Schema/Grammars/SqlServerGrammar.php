@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Database\Schema\Grammars;
+namespace Cclilshy\PRipple\Database\Schema\Grammars;
 
-use Illuminate\Database\Connection;
-use Illuminate\Database\Query\Expression;
-use Illuminate\Database\Schema\Blueprint;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\Query\Expression;
+use Cclilshy\PRipple\Database\Schema\Blueprint;
 use Illuminate\Support\Fluent;
 
 class SqlServerGrammar extends Grammar
@@ -41,7 +41,7 @@ class SqlServerGrammar extends Grammar
      * Compile a create database command.
      *
      * @param  string  $name
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return string
      */
     public function compileCreateDatabase($name, $connection)
@@ -117,7 +117,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a create table command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -131,7 +131,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a column addition table command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -146,9 +146,9 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a rename column command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return array|string
      */
     public function compileRenameColumn(Blueprint $blueprint, Fluent $command, Connection $connection)
@@ -164,9 +164,9 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a change column command into a series of SQL statements.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return array|string
      *
      * @throws \RuntimeException
@@ -201,7 +201,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a primary key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -217,7 +217,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a unique key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -233,7 +233,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a plain index key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -249,7 +249,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a spatial index key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -265,7 +265,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a default command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string|null
      */
@@ -283,7 +283,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a drop table command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -295,7 +295,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a drop table (if exists) command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -320,7 +320,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a drop column command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -336,7 +336,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a drop default constraint command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -360,7 +360,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a drop primary key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -374,7 +374,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a drop unique key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -388,7 +388,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a drop index command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -402,7 +402,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a drop spatial index command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -414,7 +414,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a drop foreign key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -428,7 +428,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a rename table command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -442,7 +442,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Compile a rename index command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -970,7 +970,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Get the SQL for a collation column modifier.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $column
      * @return string|null
      */
@@ -984,7 +984,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Get the SQL for a nullable column modifier.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $column
      * @return string|null
      */
@@ -998,7 +998,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Get the SQL for a default column modifier.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $column
      * @return string|null
      */
@@ -1012,7 +1012,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Get the SQL for an auto-increment column modifier.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $column
      * @return string|null
      */
@@ -1026,7 +1026,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Get the SQL for a generated stored column modifier.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $column
      * @return string|null
      */
@@ -1048,7 +1048,7 @@ class SqlServerGrammar extends Grammar
     /**
      * Wrap a table in keyword identifiers.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint|\Illuminate\Contracts\Database\Query\Expression|string  $table
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint|\Illuminate\Contracts\Database\Query\Expression|string  $table
      * @return string
      */
     public function wrapTable($table)

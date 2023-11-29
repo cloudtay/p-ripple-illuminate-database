@@ -1,20 +1,20 @@
 <?php
 
-namespace Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\Support\DeferrableProvider;
-use Illuminate\Database\Console\Migrations\FreshCommand;
-use Illuminate\Database\Console\Migrations\InstallCommand;
-use Illuminate\Database\Console\Migrations\MigrateCommand;
-use Illuminate\Database\Console\Migrations\MigrateMakeCommand;
-use Illuminate\Database\Console\Migrations\RefreshCommand;
-use Illuminate\Database\Console\Migrations\ResetCommand;
-use Illuminate\Database\Console\Migrations\RollbackCommand;
-use Illuminate\Database\Console\Migrations\StatusCommand;
-use Illuminate\Database\Migrations\DatabaseMigrationRepository;
-use Illuminate\Database\Migrations\MigrationCreator;
-use Illuminate\Database\Migrations\Migrator;
+use Cclilshy\PRipple\Database\Console\Migrations\FreshCommand;
+use Cclilshy\PRipple\Database\Console\Migrations\InstallCommand;
+use Cclilshy\PRipple\Database\Console\Migrations\MigrateCommand;
+use Cclilshy\PRipple\Database\Console\Migrations\MigrateMakeCommand;
+use Cclilshy\PRipple\Database\Console\Migrations\RefreshCommand;
+use Cclilshy\PRipple\Database\Console\Migrations\ResetCommand;
+use Cclilshy\PRipple\Database\Console\Migrations\RollbackCommand;
+use Cclilshy\PRipple\Database\Console\Migrations\StatusCommand;
+use Cclilshy\PRipple\Database\Migrations\DatabaseMigrationRepository;
+use Cclilshy\PRipple\Database\Migrations\MigrationCreator;
+use Cclilshy\PRipple\Database\Migrations\Migrator;
 use Illuminate\Support\ServiceProvider;
 
 class MigrationServiceProvider extends ServiceProvider implements DeferrableProvider

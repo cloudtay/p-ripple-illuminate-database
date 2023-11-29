@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Connectors;
+namespace Cclilshy\PRipple\Database\Connectors;
 
 interface ConnectorInterface
 {

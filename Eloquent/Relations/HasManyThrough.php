@@ -1,16 +1,16 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Relations;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations;
 
 use Closure;
 use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\UniqueConstraintViolationException;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\Eloquent\Collection;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\ModelNotFoundException;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
+use Cclilshy\PRipple\Database\Eloquent\SoftDeletes;
+use Cclilshy\PRipple\Database\UniqueConstraintViolationException;
 
 class HasManyThrough extends Relation
 {
@@ -19,14 +19,14 @@ class HasManyThrough extends Relation
     /**
      * The "through" parent model instance.
      *
-     * @var \Illuminate\Database\Eloquent\Model
+     * @var \PRipple\Illuminate\Database\Eloquent\Model
      */
     protected $throughParent;
 
     /**
      * The far parent model instance.
      *
-     * @var \Illuminate\Database\Eloquent\Model
+     * @var \PRipple\Illuminate\Database\Eloquent\Model
      */
     protected $farParent;
 
@@ -61,9 +61,9 @@ class HasManyThrough extends Relation
     /**
      * Create a new has many through relationship instance.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $farParent
-     * @param  \Illuminate\Database\Eloquent\Model  $throughParent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $farParent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $throughParent
      * @param  string  $firstKey
      * @param  string  $secondKey
      * @param  string  $localKey
@@ -85,7 +85,7 @@ class HasManyThrough extends Relation
     /**
      * Convert the relationship to a "has one through" relationship.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOneThrough
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\HasOneThrough
      */
     public function one()
     {
@@ -119,7 +119,7 @@ class HasManyThrough extends Relation
     /**
      * Set the join clause on the query.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder|null  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder|null  $query
      * @return void
      */
     protected function performJoin(Builder $query = null)
@@ -206,7 +206,7 @@ class HasManyThrough extends Relation
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \Illuminate\Database\Eloquent\Collection  $results
+     * @param  \PRipple\Illuminate\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */
@@ -231,7 +231,7 @@ class HasManyThrough extends Relation
     /**
      * Build model dictionary keyed by the relation's foreign key.
      *
-     * @param  \Illuminate\Database\Eloquent\Collection  $results
+     * @param  \PRipple\Illuminate\Database\Eloquent\Collection  $results
      * @return array
      */
     protected function buildDictionary(Collection $results)
@@ -253,7 +253,7 @@ class HasManyThrough extends Relation
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     public function firstOrNew(array $attributes = [], array $values = [])
     {
@@ -269,7 +269,7 @@ class HasManyThrough extends Relation
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     public function firstOrCreate(array $attributes = [], array $values = [])
     {
@@ -285,7 +285,7 @@ class HasManyThrough extends Relation
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     public function createOrFirst(array $attributes = [], array $values = [])
     {
@@ -301,7 +301,7 @@ class HasManyThrough extends Relation
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     public function updateOrCreate(array $attributes, array $values = [])
     {
@@ -319,7 +319,7 @@ class HasManyThrough extends Relation
      * @param  mixed  $operator
      * @param  mixed  $value
      * @param  string  $boolean
-     * @return \Illuminate\Database\Eloquent\Model|static
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static
      */
     public function firstWhere($column, $operator = null, $value = null, $boolean = 'and')
     {
@@ -343,9 +343,9 @@ class HasManyThrough extends Relation
      * Execute the query and get the first result or throw an exception.
      *
      * @param  array  $columns
-     * @return \Illuminate\Database\Eloquent\Model|static
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static
      *
-     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>
+     * @throws \PRipple\Illuminate\Database\Eloquent\ModelNotFoundException<\PRipple\Illuminate\Database\Eloquent\Model>
      */
     public function firstOrFail($columns = ['*'])
     {
@@ -361,7 +361,7 @@ class HasManyThrough extends Relation
      *
      * @param  \Closure|array  $columns
      * @param  \Closure|null  $callback
-     * @return \Illuminate\Database\Eloquent\Model|static|mixed
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static|mixed
      */
     public function firstOr($columns = ['*'], Closure $callback = null)
     {
@@ -383,7 +383,7 @@ class HasManyThrough extends Relation
      *
      * @param  mixed  $id
      * @param  array  $columns
-     * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|null
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|\PRipple\Illuminate\Database\Eloquent\Collection|null
      */
     public function find($id, $columns = ['*'])
     {
@@ -401,7 +401,7 @@ class HasManyThrough extends Relation
      *
      * @param  \Illuminate\Contracts\Support\Arrayable|array  $ids
      * @param  array  $columns
-     * @return \Illuminate\Database\Eloquent\Collection
+     * @return \PRipple\Illuminate\Database\Eloquent\Collection
      */
     public function findMany($ids, $columns = ['*'])
     {
@@ -421,9 +421,9 @@ class HasManyThrough extends Relation
      *
      * @param  mixed  $id
      * @param  array  $columns
-     * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|\PRipple\Illuminate\Database\Eloquent\Collection
      *
-     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>
+     * @throws \PRipple\Illuminate\Database\Eloquent\ModelNotFoundException<\PRipple\Illuminate\Database\Eloquent\Model>
      */
     public function findOrFail($id, $columns = ['*'])
     {
@@ -448,7 +448,7 @@ class HasManyThrough extends Relation
      * @param  mixed  $id
      * @param  \Closure|array  $columns
      * @param  \Closure|null  $callback
-     * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|mixed
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|\PRipple\Illuminate\Database\Eloquent\Collection|mixed
      */
     public function findOr($id, $columns = ['*'], Closure $callback = null)
     {
@@ -489,7 +489,7 @@ class HasManyThrough extends Relation
      * Execute the query as a "select" statement.
      *
      * @param  array  $columns
-     * @return \Illuminate\Database\Eloquent\Collection
+     * @return \PRipple\Illuminate\Database\Eloquent\Collection
      */
     public function get($columns = ['*'])
     {
@@ -678,7 +678,7 @@ class HasManyThrough extends Relation
      * Prepare the query builder for query execution.
      *
      * @param  array  $columns
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     protected function prepareQueryBuilder($columns = ['*'])
     {
@@ -692,10 +692,10 @@ class HasManyThrough extends Relation
     /**
      * Add the constraints for a relationship query.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Builder  $parentQuery
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -717,10 +717,10 @@ class HasManyThrough extends Relation
     /**
      * Add the constraints for a relationship query on the same table.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Builder  $parentQuery
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     public function getRelationExistenceQueryForSelfRelation(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -742,10 +742,10 @@ class HasManyThrough extends Relation
     /**
      * Add the constraints for a relationship query on the same table as the through parent.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Builder  $parentQuery
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     public function getRelationExistenceQueryForThroughSelfRelation(Builder $query, Builder $parentQuery, $columns = ['*'])
     {

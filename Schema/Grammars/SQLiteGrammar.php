@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Database\Schema\Grammars;
+namespace Cclilshy\PRipple\Database\Schema\Grammars;
 
 use Doctrine\DBAL\Schema\Index;
-use Illuminate\Database\Connection;
-use Illuminate\Database\Query\Expression;
-use Illuminate\Database\Schema\Blueprint;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\Query\Expression;
+use Cclilshy\PRipple\Database\Schema\Blueprint;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Fluent;
 use RuntimeException;
@@ -67,7 +67,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a create table command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -85,7 +85,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Get the foreign key syntax for a table creation statement.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @return string|null
      */
     protected function addForeignKeys(Blueprint $blueprint)
@@ -134,7 +134,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Get the primary key syntax for a table creation statement.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @return string|null
      */
     protected function addPrimaryKeys(Blueprint $blueprint)
@@ -147,7 +147,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile alter table commands for adding columns.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return array
      */
@@ -165,9 +165,9 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a rename column command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return array|string
      */
     public function compileRenameColumn(Blueprint $blueprint, Fluent $command, Connection $connection)
@@ -184,7 +184,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a unique key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -200,7 +200,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a plain index key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -216,7 +216,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a spatial index key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return void
      *
@@ -230,7 +230,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a foreign key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string|null
      */
@@ -242,7 +242,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a drop table command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -254,7 +254,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a drop table (if exists) command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -316,9 +316,9 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a drop column command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return array
      */
     public function compileDropColumn(Blueprint $blueprint, Fluent $command, Connection $connection)
@@ -348,7 +348,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a drop unique key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -362,7 +362,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a drop index command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -376,7 +376,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a drop spatial index command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return void
      *
@@ -390,7 +390,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a rename table command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -404,9 +404,9 @@ class SQLiteGrammar extends Grammar
     /**
      * Compile a rename index command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return array
      *
      * @throws \RuntimeException
@@ -922,7 +922,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Get the SQL for a generated virtual column modifier.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $column
      * @return string|null
      */
@@ -944,7 +944,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Get the SQL for a generated stored column modifier.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $column
      * @return string|null
      */
@@ -966,7 +966,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Get the SQL for a nullable column modifier.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $column
      * @return string|null
      */
@@ -987,7 +987,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Get the SQL for a default column modifier.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $column
      * @return string|null
      */
@@ -1001,7 +1001,7 @@ class SQLiteGrammar extends Grammar
     /**
      * Get the SQL for an auto-increment column modifier.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $column
      * @return string|null
      */

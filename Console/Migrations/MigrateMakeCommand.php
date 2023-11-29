@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Database\Console\Migrations;
+namespace Cclilshy\PRipple\Database\Console\Migrations;
 
 use Illuminate\Contracts\Console\PromptsForMissingInput;
-use Illuminate\Database\Migrations\MigrationCreator;
+use Cclilshy\PRipple\Database\Migrations\MigrationCreator;
 use Illuminate\Support\Composer;
 use Illuminate\Support\Str;
 
@@ -31,7 +31,7 @@ class MigrateMakeCommand extends BaseCommand implements PromptsForMissingInput
     /**
      * The migration creator instance.
      *
-     * @var \Illuminate\Database\Migrations\MigrationCreator
+     * @var \PRipple\Illuminate\Database\Migrations\MigrationCreator
      */
     protected $creator;
 
@@ -47,7 +47,7 @@ class MigrateMakeCommand extends BaseCommand implements PromptsForMissingInput
     /**
      * Create a new migration install command instance.
      *
-     * @param  \Illuminate\Database\Migrations\MigrationCreator  $creator
+     * @param  \PRipple\Illuminate\Database\Migrations\MigrationCreator  $creator
      * @param  \Illuminate\Support\Composer  $composer
      * @return void
      */

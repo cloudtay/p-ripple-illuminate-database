@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\Database\Console\Migrations;
+namespace Cclilshy\PRipple\Database\Console\Migrations;
 
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Contracts\Console\Isolatable;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Database\Events\SchemaLoaded;
-use Illuminate\Database\Migrations\Migrator;
-use Illuminate\Database\SQLiteDatabaseDoesNotExistException;
-use Illuminate\Database\SqlServerConnection;
+use Cclilshy\PRipple\Database\Events\SchemaLoaded;
+use Cclilshy\PRipple\Database\Migrations\Migrator;
+use Cclilshy\PRipple\Database\SQLiteDatabaseDoesNotExistException;
+use Cclilshy\PRipple\Database\SqlServerConnection;
 use PDOException;
 use Throwable;
 
@@ -43,7 +43,7 @@ class MigrateCommand extends BaseCommand implements Isolatable
     /**
      * The migrator instance.
      *
-     * @var \Illuminate\Database\Migrations\Migrator
+     * @var \PRipple\Illuminate\Database\Migrations\Migrator
      */
     protected $migrator;
 
@@ -57,7 +57,7 @@ class MigrateCommand extends BaseCommand implements Isolatable
     /**
      * Create a new migration command instance.
      *
-     * @param  \Illuminate\Database\Migrations\Migrator  $migrator
+     * @param  \PRipple\Illuminate\Database\Migrations\Migrator  $migrator
      * @param  \Illuminate\Contracts\Events\Dispatcher  $dispatcher
      * @return void
      */
@@ -265,7 +265,7 @@ class MigrateCommand extends BaseCommand implements Isolatable
     /**
      * Get the path to the stored schema for the given connection.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return string
      */
     protected function schemaPath($connection)

@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Relations;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations;
 
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Concerns\ComparesRelatedModels;
-use Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
-use Illuminate\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\Eloquent\Collection;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Concerns\ComparesRelatedModels;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
 
 class BelongsTo extends Relation
 {
@@ -18,7 +18,7 @@ class BelongsTo extends Relation
     /**
      * The child model instance of the relation.
      *
-     * @var \Illuminate\Database\Eloquent\Model
+     * @var \PRipple\Illuminate\Database\Eloquent\Model
      */
     protected $child;
 
@@ -46,8 +46,8 @@ class BelongsTo extends Relation
     /**
      * Create a new belongs to relationship instance.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $child
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $child
      * @param  string  $foreignKey
      * @param  string  $ownerKey
      * @param  string  $relationName
@@ -160,7 +160,7 @@ class BelongsTo extends Relation
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \Illuminate\Database\Eloquent\Collection  $results
+     * @param  \PRipple\Illuminate\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */
@@ -194,8 +194,8 @@ class BelongsTo extends Relation
     /**
      * Associate the model instance to the given parent.
      *
-     * @param  \Illuminate\Database\Eloquent\Model|int|string|null  $model
-     * @return \Illuminate\Database\Eloquent\Model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model|int|string|null  $model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     public function associate($model)
     {
@@ -215,7 +215,7 @@ class BelongsTo extends Relation
     /**
      * Dissociate previously associated model from the given parent.
      *
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     public function dissociate()
     {
@@ -227,7 +227,7 @@ class BelongsTo extends Relation
     /**
      * Alias of "dissociate" method.
      *
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     public function disassociate()
     {
@@ -237,10 +237,10 @@ class BelongsTo extends Relation
     /**
      * Add the constraints for a relationship query.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Builder  $parentQuery
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -256,10 +256,10 @@ class BelongsTo extends Relation
     /**
      * Add the constraints for a relationship query on the same table.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Builder  $parentQuery
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     public function getRelationExistenceQueryForSelfRelation(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -288,8 +288,8 @@ class BelongsTo extends Relation
     /**
      * Make a new related instance for the given model.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
-     * @return \Illuminate\Database\Eloquent\Model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     protected function newRelatedInstanceFor(Model $parent)
     {
@@ -299,7 +299,7 @@ class BelongsTo extends Relation
     /**
      * Get the child of the relationship.
      *
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     public function getChild()
     {
@@ -359,7 +359,7 @@ class BelongsTo extends Relation
     /**
      * Get the value of the model's associated key.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return mixed
      */
     protected function getRelatedKeyFrom(Model $model)
@@ -370,7 +370,7 @@ class BelongsTo extends Relation
     /**
      * Get the value of the model's foreign key.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return mixed
      */
     protected function getForeignKeyFrom(Model $model)

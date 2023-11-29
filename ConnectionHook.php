@@ -1,12 +1,18 @@
 <?php
 
-namespace Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
-
-use App\PDOProxy\PDOProxyPool;
+use Cclilshy\PRipple\Core\Map\CoroutineMap;
+use Cclilshy\PRipple\Facade\JsonRpc;
+use Cclilshy\PRipple\Database\Proxy\PDOPRoxyPoolMap;
+use Cclilshy\PRipple\Facade\RPC;
 
 class ConnectionHook extends Connection
 {
+    public const MODE_ORIGINAL = 1;
+    public const MODE_PROXY    = 2;
+    public int $mode = ConnectionHook::MODE_PROXY;
+
     /**
      * @param string $query
      * @param array  $bindings
@@ -18,8 +24,16 @@ class ConnectionHook extends Connection
         return $this->run($query, $bindings, function ($query, $bindings) use ($useReadPdo) {
             if ($this->pretending()) {
                 return [];
+            } elseif ($this->mode === ConnectionHook::MODE_ORIGINAL) {
+                return parent::select($query, $bindings, $useReadPdo);
+            } else {
+                $statement = PDOPRoxyPoolMap::$pools[$this->getName()]->prepare($query);
+                $result    = [];
+                foreach ($statement->execute($bindings) as $item) {
+                    $result[] = $item;
+                }
+                return $result;
             }
-            return PDOProxyPool::instance()->get()->query($query, $bindings, []);
         });
     }
 }

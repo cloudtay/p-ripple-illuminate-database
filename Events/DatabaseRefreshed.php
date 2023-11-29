@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Events;
+namespace Cclilshy\PRipple\Database\Events;
 
 use Illuminate\Contracts\Database\Events\MigrationEvent as MigrationEventContract;
 

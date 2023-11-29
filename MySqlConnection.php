@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Exception;
-use Illuminate\Database\PDO\MySqlDriver;
-use Illuminate\Database\Query\Grammars\MySqlGrammar as QueryGrammar;
-use Illuminate\Database\Query\Processors\MySqlProcessor;
-use Illuminate\Database\Schema\Grammars\MySqlGrammar as SchemaGrammar;
-use Illuminate\Database\Schema\MySqlBuilder;
-use Illuminate\Database\Schema\MySqlSchemaState;
+use Cclilshy\PRipple\Database\PDO\MySqlDriver;
+use Cclilshy\PRipple\Database\Query\Grammars\MySqlGrammar as QueryGrammar;
+use Cclilshy\PRipple\Database\Query\Processors\MySqlProcessor;
+use Cclilshy\PRipple\Database\Schema\Grammars\MySqlGrammar as SchemaGrammar;
+use Cclilshy\PRipple\Database\Schema\MySqlBuilder;
+use Cclilshy\PRipple\Database\Schema\MySqlSchemaState;
 use Illuminate\Filesystem\Filesystem;
 use PDO;
 
@@ -51,7 +51,7 @@ class MySqlConnection extends ConnectionHook
     /**
      * Get the default query grammar instance.
      *
-     * @return \Illuminate\Database\Query\Grammars\MySqlGrammar
+     * @return \PRipple\Illuminate\Database\Query\Grammars\MySqlGrammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -63,7 +63,7 @@ class MySqlConnection extends ConnectionHook
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \Illuminate\Database\Schema\MySqlBuilder
+     * @return \PRipple\Illuminate\Database\Schema\MySqlBuilder
      */
     public function getSchemaBuilder()
     {
@@ -77,7 +77,7 @@ class MySqlConnection extends ConnectionHook
     /**
      * Get the default schema grammar instance.
      *
-     * @return \Illuminate\Database\Schema\Grammars\MySqlGrammar
+     * @return \PRipple\Illuminate\Database\Schema\Grammars\MySqlGrammar
      */
     protected function getDefaultSchemaGrammar()
     {
@@ -91,7 +91,7 @@ class MySqlConnection extends ConnectionHook
      *
      * @param  \Illuminate\Filesystem\Filesystem|null  $files
      * @param  callable|null  $processFactory
-     * @return \Illuminate\Database\Schema\MySqlSchemaState
+     * @return \PRipple\Illuminate\Database\Schema\MySqlSchemaState
      */
     public function getSchemaState(Filesystem $files = null, callable $processFactory = null)
     {
@@ -101,7 +101,7 @@ class MySqlConnection extends ConnectionHook
     /**
      * Get the default post processor instance.
      *
-     * @return \Illuminate\Database\Query\Processors\MySqlProcessor
+     * @return \PRipple\Illuminate\Database\Query\Processors\MySqlProcessor
      */
     protected function getDefaultPostProcessor()
     {
@@ -111,7 +111,7 @@ class MySqlConnection extends ConnectionHook
     /**
      * Get the Doctrine DBAL driver.
      *
-     * @return \Illuminate\Database\PDO\MySqlDriver
+     * @return \PRipple\Illuminate\Database\PDO\MySqlDriver
      */
     protected function getDoctrineDriver()
     {

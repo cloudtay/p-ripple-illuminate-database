@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
-use Illuminate\Database\RecordsNotFoundException;
+use Cclilshy\PRipple\Database\RecordsNotFoundException;
 use Illuminate\Support\Arr;
 
 /**
- * @template TModel of \Illuminate\Database\Eloquent\Model
+ * @template TModel of \PRipple\Illuminate\Database\Eloquent\Model
  */
 class ModelNotFoundException extends RecordsNotFoundException
 {

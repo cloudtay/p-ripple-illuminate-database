@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Migrations;
+namespace Cclilshy\PRipple\Database\Migrations;
 
 use Doctrine\DBAL\Schema\SchemaException;
 use Illuminate\Console\View\Components\BulletList;
@@ -9,12 +9,12 @@ use Illuminate\Console\View\Components\Info;
 use Illuminate\Console\View\Components\Task;
 use Illuminate\Console\View\Components\TwoColumnDetail;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Database\ConnectionResolverInterface as Resolver;
-use Illuminate\Database\Events\MigrationEnded;
-use Illuminate\Database\Events\MigrationsEnded;
-use Illuminate\Database\Events\MigrationsStarted;
-use Illuminate\Database\Events\MigrationStarted;
-use Illuminate\Database\Events\NoPendingMigrations;
+use Cclilshy\PRipple\Database\ConnectionResolverInterface as Resolver;
+use Cclilshy\PRipple\Database\Events\MigrationEnded;
+use Cclilshy\PRipple\Database\Events\MigrationsEnded;
+use Cclilshy\PRipple\Database\Events\MigrationsStarted;
+use Cclilshy\PRipple\Database\Events\MigrationStarted;
+use Cclilshy\PRipple\Database\Events\NoPendingMigrations;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
@@ -34,7 +34,7 @@ class Migrator
     /**
      * The migration repository implementation.
      *
-     * @var \Illuminate\Database\Migrations\MigrationRepositoryInterface
+     * @var \PRipple\Illuminate\Database\Migrations\MigrationRepositoryInterface
      */
     protected $repository;
 
@@ -48,7 +48,7 @@ class Migrator
     /**
      * The connection resolver instance.
      *
-     * @var \Illuminate\Database\ConnectionResolverInterface
+     * @var \PRipple\Illuminate\Database\ConnectionResolverInterface
      */
     protected $resolver;
 
@@ -69,7 +69,7 @@ class Migrator
     /**
      * The paths that have already been required.
      *
-     * @var array<string, \Illuminate\Database\Migrations\Migration|null>
+     * @var array<string, \PRipple\Illuminate\Database\Migrations\Migration|null>
      */
     protected static $requiredPathCache = [];
 
@@ -83,8 +83,8 @@ class Migrator
     /**
      * Create a new migrator instance.
      *
-     * @param  \Illuminate\Database\Migrations\MigrationRepositoryInterface  $repository
-     * @param  \Illuminate\Database\ConnectionResolverInterface  $resolver
+     * @param  \PRipple\Illuminate\Database\Migrations\MigrationRepositoryInterface  $repository
+     * @param  \PRipple\Illuminate\Database\ConnectionResolverInterface  $resolver
      * @param  \Illuminate\Filesystem\Filesystem  $files
      * @param  \Illuminate\Contracts\Events\Dispatcher|null  $dispatcher
      * @return void
@@ -478,7 +478,7 @@ class Migrator
     /**
      * Run a migration method on the given connection.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @param  object  $migration
      * @param  string  $method
      * @return void
@@ -656,7 +656,7 @@ class Migrator
      * Resolve the database connection instance.
      *
      * @param  string  $connection
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      */
     public function resolveConnection($connection)
     {
@@ -666,8 +666,8 @@ class Migrator
     /**
      * Get the schema grammar out of a migration connection.
      *
-     * @param  \Illuminate\Database\Connection  $connection
-     * @return \Illuminate\Database\Schema\Grammars\Grammar
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
+     * @return \PRipple\Illuminate\Database\Schema\Grammars\Grammar
      */
     protected function getSchemaGrammar($connection)
     {
@@ -683,7 +683,7 @@ class Migrator
     /**
      * Get the migration repository instance.
      *
-     * @return \Illuminate\Database\Migrations\MigrationRepositoryInterface
+     * @return \PRipple\Illuminate\Database\Migrations\MigrationRepositoryInterface
      */
     public function getRepository()
     {

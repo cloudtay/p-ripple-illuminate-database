@@ -1,12 +1,13 @@
 <?php
 
-namespace Illuminate\Database\Capsule;
+namespace Cclilshy\PRipple\Database\Capsule;
 
+use Cclilshy\PRipple\Database\ConnectionHook;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Database\Connectors\ConnectionFactory;
-use Illuminate\Database\DatabaseManager;
-use Illuminate\Database\Eloquent\Model as Eloquent;
+use Cclilshy\PRipple\Database\Connectors\ConnectionFactory;
+use Cclilshy\PRipple\Database\DatabaseManager;
+use Cclilshy\PRipple\Database\Eloquent\Model as Eloquent;
 use Illuminate\Support\Traits\CapsuleManagerTrait;
 use PDO;
 
@@ -17,7 +18,7 @@ class Manager
     /**
      * The database manager instance.
      *
-     * @var \Illuminate\Database\DatabaseManager
+     * @var \PRipple\Illuminate\Database\DatabaseManager
      */
     protected $manager;
 
@@ -67,7 +68,7 @@ class Manager
      * Get a connection instance from the global manager.
      *
      * @param  string|null  $connection
-     * @return \Illuminate\Database\Connection
+     * @return ConnectionHook
      */
     public static function connection($connection = null)
     {
@@ -77,10 +78,10 @@ class Manager
     /**
      * Get a fluent query builder instance.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|string  $table
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|string  $table
      * @param  string|null  $as
      * @param  string|null  $connection
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public static function table($table, $as = null, $connection = null)
     {
@@ -91,7 +92,7 @@ class Manager
      * Get a schema builder instance.
      *
      * @param  string|null  $connection
-     * @return \Illuminate\Database\Schema\Builder
+     * @return \PRipple\Illuminate\Database\Schema\Builder
      */
     public static function schema($connection = null)
     {
@@ -102,7 +103,7 @@ class Manager
      * Get a registered connection instance.
      *
      * @param  string|null  $name
-     * @return \Illuminate\Database\Connection
+     * @return ConnectionHook
      */
     public function getConnection($name = null)
     {
@@ -158,7 +159,7 @@ class Manager
     /**
      * Get the database manager instance.
      *
-     * @return \Illuminate\Database\DatabaseManager
+     * @return \PRipple\Illuminate\Database\DatabaseManager
      */
     public function getDatabaseManager()
     {

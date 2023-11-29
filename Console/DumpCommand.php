@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\Database\Console;
+namespace Cclilshy\PRipple\Database\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Database\Connection;
-use Illuminate\Database\ConnectionResolverInterface;
-use Illuminate\Database\Events\SchemaDumped;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\ConnectionResolverInterface;
+use Cclilshy\PRipple\Database\Events\SchemaDumped;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Config;
 use Symfony\Component\Console\Attribute\AsCommand;
@@ -34,7 +34,7 @@ class DumpCommand extends Command
     /**
      * Execute the console command.
      *
-     * @param  \Illuminate\Database\ConnectionResolverInterface  $connections
+     * @param  \PRipple\Illuminate\Database\ConnectionResolverInterface  $connections
      * @param  \Illuminate\Contracts\Events\Dispatcher  $dispatcher
      * @return void
      */
@@ -64,7 +64,7 @@ class DumpCommand extends Command
     /**
      * Create a schema state instance for the given connection.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return mixed
      */
     protected function schemaState(Connection $connection)
@@ -79,7 +79,7 @@ class DumpCommand extends Command
     /**
      * Get the path that the dump should be written to.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      */
     protected function path(Connection $connection)
     {

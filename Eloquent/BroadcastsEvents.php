@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
 use Illuminate\Support\Arr;
 
@@ -147,7 +147,7 @@ trait BroadcastsEvents
      * Create a new broadcastable model event for the model.
      *
      * @param  string  $event
-     * @return \Illuminate\Database\Eloquent\BroadcastableModelEventOccurred
+     * @return \PRipple\Illuminate\Database\Eloquent\BroadcastableModelEventOccurred
      */
     protected function newBroadcastableEvent(string $event)
     {

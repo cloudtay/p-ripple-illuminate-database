@@ -1,17 +1,17 @@
 <?php
 
-namespace Illuminate\Database\Query\Processors;
+namespace Cclilshy\PRipple\Database\Query\Processors;
 
 use Exception;
-use Illuminate\Database\Connection;
-use Illuminate\Database\Query\Builder;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\Query\Builder;
 
 class SqlServerProcessor extends Processor
 {
     /**
      * Process an "insert get ID" query.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $query
      * @param  string  $sql
      * @param  array  $values
      * @param  string|null  $sequence
@@ -35,7 +35,7 @@ class SqlServerProcessor extends Processor
     /**
      * Process an "insert get ID" query for ODBC.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return int
      *
      * @throws \Exception

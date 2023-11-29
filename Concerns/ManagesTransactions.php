@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Database\Concerns;
+namespace Cclilshy\PRipple\Database\Concerns;
 
 use Closure;
-use Illuminate\Database\DeadlockException;
+use Cclilshy\PRipple\Database\DeadlockException;
 use RuntimeException;
 use Throwable;
 

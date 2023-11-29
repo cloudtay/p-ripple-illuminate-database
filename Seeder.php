@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\View\Components\TwoColumnDetail;
 use Illuminate\Contracts\Container\Container;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Cclilshy\PRipple\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 
@@ -121,7 +121,7 @@ abstract class Seeder
      * Resolve an instance of the given seeder class.
      *
      * @param  string  $class
-     * @return \Illuminate\Database\Seeder
+     * @return \PRipple\Illuminate\Database\Seeder
      */
     protected function resolve($class)
     {

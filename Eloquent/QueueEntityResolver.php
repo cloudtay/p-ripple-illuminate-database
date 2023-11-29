@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
 use Illuminate\Contracts\Queue\EntityNotFoundException;
 use Illuminate\Contracts\Queue\EntityResolver as EntityResolverContract;

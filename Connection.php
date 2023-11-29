@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Carbon\CarbonInterval;
 use Closure;
@@ -9,17 +9,17 @@ use Doctrine\DBAL\Connection as DoctrineConnection;
 use Doctrine\DBAL\Types\Type;
 use Exception;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Database\Events\QueryExecuted;
-use Illuminate\Database\Events\StatementPrepared;
-use Illuminate\Database\Events\TransactionBeginning;
-use Illuminate\Database\Events\TransactionCommitted;
-use Illuminate\Database\Events\TransactionCommitting;
-use Illuminate\Database\Events\TransactionRolledBack;
-use Illuminate\Database\Query\Builder as QueryBuilder;
-use Illuminate\Database\Query\Expression;
-use Illuminate\Database\Query\Grammars\Grammar as QueryGrammar;
-use Illuminate\Database\Query\Processors\Processor;
-use Illuminate\Database\Schema\Builder as SchemaBuilder;
+use Cclilshy\PRipple\Database\Events\QueryExecuted;
+use Cclilshy\PRipple\Database\Events\StatementPrepared;
+use Cclilshy\PRipple\Database\Events\TransactionBeginning;
+use Cclilshy\PRipple\Database\Events\TransactionCommitted;
+use Cclilshy\PRipple\Database\Events\TransactionCommitting;
+use Cclilshy\PRipple\Database\Events\TransactionRolledBack;
+use Cclilshy\PRipple\Database\Query\Builder as QueryBuilder;
+use Cclilshy\PRipple\Database\Query\Expression;
+use Cclilshy\PRipple\Database\Query\Grammars\Grammar as QueryGrammar;
+use Cclilshy\PRipple\Database\Query\Processors\Processor;
+use Cclilshy\PRipple\Database\Schema\Builder as SchemaBuilder;
 use Illuminate\Support\Arr;
 use Illuminate\Support\InteractsWithTime;
 use Illuminate\Support\Traits\Macroable;
@@ -87,21 +87,21 @@ class Connection implements ConnectionInterface
     /**
      * The query grammar implementation.
      *
-     * @var \Illuminate\Database\Query\Grammars\Grammar
+     * @var \PRipple\Illuminate\Database\Query\Grammars\Grammar
      */
     protected $queryGrammar;
 
     /**
      * The schema grammar implementation.
      *
-     * @var \Illuminate\Database\Schema\Grammars\Grammar
+     * @var \PRipple\Illuminate\Database\Schema\Grammars\Grammar
      */
     protected $schemaGrammar;
 
     /**
      * The query post processor implementation.
      *
-     * @var \Illuminate\Database\Query\Processors\Processor
+     * @var \PRipple\Illuminate\Database\Query\Processors\Processor
      */
     protected $postProcessor;
 
@@ -129,7 +129,7 @@ class Connection implements ConnectionInterface
     /**
      * The transaction manager instance.
      *
-     * @var \Illuminate\Database\DatabaseTransactionsManager
+     * @var \PRipple\Illuminate\Database\DatabaseTransactionsManager
      */
     protected $transactionsManager;
 
@@ -253,7 +253,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the default query grammar instance.
      *
-     * @return \Illuminate\Database\Query\Grammars\Grammar
+     * @return \PRipple\Illuminate\Database\Query\Grammars\Grammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -275,7 +275,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the default schema grammar instance.
      *
-     * @return \Illuminate\Database\Schema\Grammars\Grammar|null
+     * @return \PRipple\Illuminate\Database\Schema\Grammars\Grammar|null
      */
     protected function getDefaultSchemaGrammar()
     {
@@ -295,7 +295,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the default post processor instance.
      *
-     * @return \Illuminate\Database\Query\Processors\Processor
+     * @return \PRipple\Illuminate\Database\Query\Processors\Processor
      */
     protected function getDefaultPostProcessor()
     {
@@ -305,7 +305,7 @@ class Connection implements ConnectionInterface
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \Illuminate\Database\Schema\Builder
+     * @return \PRipple\Illuminate\Database\Schema\Builder
      */
     public function getSchemaBuilder()
     {
@@ -319,9 +319,9 @@ class Connection implements ConnectionInterface
     /**
      * Begin a fluent query against a database table.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Contracts\Database\Query\Expression|string  $table
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\Illuminate\Contracts\Database\Query\Expression|string  $table
      * @param  string|null  $as
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function table($table, $as = null)
     {
@@ -331,7 +331,7 @@ class Connection implements ConnectionInterface
     /**
      * Get a new query builder instance.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function query()
     {
@@ -363,7 +363,7 @@ class Connection implements ConnectionInterface
      * @param  bool  $useReadPdo
      * @return mixed
      *
-     * @throws \Illuminate\Database\MultipleColumnsSelectedException
+     * @throws \PRipple\Illuminate\Database\MultipleColumnsSelectedException
      */
     public function scalar($query, $bindings = [], $useReadPdo = true)
     {
@@ -757,7 +757,7 @@ class Connection implements ConnectionInterface
      * @param  \Closure  $callback
      * @return mixed
      *
-     * @throws \Illuminate\Database\QueryException
+     * @throws \PRipple\Illuminate\Database\QueryException
      */
     protected function run($query, $bindings, Closure $callback)
     {
@@ -798,7 +798,7 @@ class Connection implements ConnectionInterface
      * @param  \Closure  $callback
      * @return mixed
      *
-     * @throws \Illuminate\Database\QueryException
+     * @throws \PRipple\Illuminate\Database\QueryException
      */
     protected function runQueryCallback($query, $bindings, Closure $callback)
     {
@@ -938,13 +938,13 @@ class Connection implements ConnectionInterface
     /**
      * Handle a query exception.
      *
-     * @param  \Illuminate\Database\QueryException  $e
+     * @param  \PRipple\Illuminate\Database\QueryException  $e
      * @param  string  $query
      * @param  array  $bindings
      * @param  \Closure  $callback
      * @return mixed
      *
-     * @throws \Illuminate\Database\QueryException
+     * @throws \PRipple\Illuminate\Database\QueryException
      */
     protected function handleQueryException(QueryException $e, $query, $bindings, Closure $callback)
     {
@@ -960,13 +960,13 @@ class Connection implements ConnectionInterface
     /**
      * Handle a query exception that occurred during query execution.
      *
-     * @param  \Illuminate\Database\QueryException  $e
+     * @param  \PRipple\Illuminate\Database\QueryException  $e
      * @param  string  $query
      * @param  array  $bindings
      * @param  \Closure  $callback
      * @return mixed
      *
-     * @throws \Illuminate\Database\QueryException
+     * @throws \PRipple\Illuminate\Database\QueryException
      */
     protected function tryAgainIfCausedByLostConnection(QueryException $e, $query, $bindings, Closure $callback)
     {
@@ -984,7 +984,7 @@ class Connection implements ConnectionInterface
      *
      * @return mixed|false
      *
-     * @throws \Illuminate\Database\LostConnectionException
+     * @throws \PRipple\Illuminate\Database\LostConnectionException
      */
     public function reconnect()
     {
@@ -1450,7 +1450,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the query grammar used by the connection.
      *
-     * @return \Illuminate\Database\Query\Grammars\Grammar
+     * @return \PRipple\Illuminate\Database\Query\Grammars\Grammar
      */
     public function getQueryGrammar()
     {
@@ -1460,7 +1460,7 @@ class Connection implements ConnectionInterface
     /**
      * Set the query grammar used by the connection.
      *
-     * @param  \Illuminate\Database\Query\Grammars\Grammar  $grammar
+     * @param  \PRipple\Illuminate\Database\Query\Grammars\Grammar  $grammar
      * @return $this
      */
     public function setQueryGrammar(Query\Grammars\Grammar $grammar)
@@ -1473,7 +1473,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the schema grammar used by the connection.
      *
-     * @return \Illuminate\Database\Schema\Grammars\Grammar
+     * @return \PRipple\Illuminate\Database\Schema\Grammars\Grammar
      */
     public function getSchemaGrammar()
     {
@@ -1483,7 +1483,7 @@ class Connection implements ConnectionInterface
     /**
      * Set the schema grammar used by the connection.
      *
-     * @param  \Illuminate\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \PRipple\Illuminate\Database\Schema\Grammars\Grammar  $grammar
      * @return $this
      */
     public function setSchemaGrammar(Schema\Grammars\Grammar $grammar)
@@ -1496,7 +1496,7 @@ class Connection implements ConnectionInterface
     /**
      * Get the query post processor used by the connection.
      *
-     * @return \Illuminate\Database\Query\Processors\Processor
+     * @return \PRipple\Illuminate\Database\Query\Processors\Processor
      */
     public function getPostProcessor()
     {
@@ -1506,7 +1506,7 @@ class Connection implements ConnectionInterface
     /**
      * Set the query post processor used by the connection.
      *
-     * @param  \Illuminate\Database\Query\Processors\Processor  $processor
+     * @param  \PRipple\Illuminate\Database\Query\Processors\Processor  $processor
      * @return $this
      */
     public function setPostProcessor(Processor $processor)
@@ -1552,7 +1552,7 @@ class Connection implements ConnectionInterface
     /**
      * Set the transaction manager instance on the connection.
      *
-     * @param  \Illuminate\Database\DatabaseTransactionsManager  $manager
+     * @param  \PRipple\Illuminate\Database\DatabaseTransactionsManager  $manager
      * @return $this
      */
     public function setTransactionManager($manager)
@@ -1712,8 +1712,8 @@ class Connection implements ConnectionInterface
     /**
      * Set the table prefix and return the grammar.
      *
-     * @param  \Illuminate\Database\Grammar  $grammar
-     * @return \Illuminate\Database\Grammar
+     * @param  \PRipple\Illuminate\Database\Grammar  $grammar
+     * @return \PRipple\Illuminate\Database\Grammar
      */
     public function withTablePrefix(Grammar $grammar)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Query;
+namespace Cclilshy\PRipple\Database\Query;
 
 use BackedEnum;
 use Carbon\CarbonPeriod;
@@ -10,13 +10,13 @@ use Illuminate\Contracts\Database\Query\Builder as BuilderContract;
 use Illuminate\Contracts\Database\Query\ConditionExpression;
 use Illuminate\Contracts\Database\Query\Expression as ExpressionContract;
 use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Database\Concerns\BuildsQueries;
-use Illuminate\Database\Concerns\ExplainsQueries;
-use Illuminate\Database\ConnectionInterface;
-use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
-use Illuminate\Database\Eloquent\Relations\Relation;
-use Illuminate\Database\Query\Grammars\Grammar;
-use Illuminate\Database\Query\Processors\Processor;
+use Cclilshy\PRipple\Database\Concerns\BuildsQueries;
+use Cclilshy\PRipple\Database\Concerns\ExplainsQueries;
+use Cclilshy\PRipple\Database\ConnectionInterface;
+use Cclilshy\PRipple\Database\Eloquent\Builder as EloquentBuilder;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Relation;
+use Cclilshy\PRipple\Database\Query\Grammars\Grammar;
+use Cclilshy\PRipple\Database\Query\Processors\Processor;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
@@ -37,21 +37,21 @@ class Builder implements BuilderContract
     /**
      * The database connection instance.
      *
-     * @var \Illuminate\Database\ConnectionInterface
+     * @var \PRipple\Illuminate\Database\ConnectionInterface
      */
     public $connection;
 
     /**
      * The database query grammar instance.
      *
-     * @var \Illuminate\Database\Query\Grammars\Grammar
+     * @var \PRipple\Illuminate\Database\Query\Grammars\Grammar
      */
     public $grammar;
 
     /**
      * The database query post processor instance.
      *
-     * @var \Illuminate\Database\Query\Processors\Processor
+     * @var \PRipple\Illuminate\Database\Query\Processors\Processor
      */
     public $processor;
 
@@ -105,7 +105,7 @@ class Builder implements BuilderContract
     /**
      * The index hint for the query.
      *
-     * @var \Illuminate\Database\Query\IndexHint
+     * @var \PRipple\Illuminate\Database\Query\IndexHint
      */
     public $indexHint;
 
@@ -233,9 +233,9 @@ class Builder implements BuilderContract
     /**
      * Create a new query builder instance.
      *
-     * @param  \Illuminate\Database\ConnectionInterface  $connection
-     * @param  \Illuminate\Database\Query\Grammars\Grammar|null  $grammar
-     * @param  \Illuminate\Database\Query\Processors\Processor|null  $processor
+     * @param  \PRipple\Illuminate\Database\ConnectionInterface  $connection
+     * @param  \PRipple\Illuminate\Database\Query\Grammars\Grammar|null  $grammar
+     * @param  \PRipple\Illuminate\Database\Query\Processors\Processor|null  $processor
      * @return void
      */
     public function __construct(ConnectionInterface $connection,
@@ -274,7 +274,7 @@ class Builder implements BuilderContract
     /**
      * Add a subselect expression to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string  $query
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder|string  $query
      * @param  string  $as
      * @return $this
      *
@@ -310,7 +310,7 @@ class Builder implements BuilderContract
     /**
      * Makes "from" fetch from a subquery.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string  $query
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder|string  $query
      * @param  string  $as
      * @return $this
      *
@@ -342,7 +342,7 @@ class Builder implements BuilderContract
     /**
      * Creates a subquery and parse it.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string  $query
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder|string  $query
      * @return array
      */
     protected function createSub($query)
@@ -452,7 +452,7 @@ class Builder implements BuilderContract
     /**
      * Set the table which the query is targeting.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string  $table
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder|string  $table
      * @param  string|null  $as
      * @return $this
      */
@@ -564,7 +564,7 @@ class Builder implements BuilderContract
     /**
      * Add a subquery join clause to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string  $query
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder|string  $query
      * @param  string  $as
      * @param  \Closure|string  $first
      * @param  string|null  $operator
@@ -617,7 +617,7 @@ class Builder implements BuilderContract
     /**
      * Add a subquery left join to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string  $query
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder|string  $query
      * @param  string  $as
      * @param  \Closure|string  $first
      * @param  string|null  $operator
@@ -660,7 +660,7 @@ class Builder implements BuilderContract
     /**
      * Add a subquery right join to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string  $query
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder|string  $query
      * @param  string  $as
      * @param  \Closure|string  $first
      * @param  string|null  $operator
@@ -695,7 +695,7 @@ class Builder implements BuilderContract
     /**
      * Add a subquery cross join to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string  $query
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder|string  $query
      * @param  string  $as
      * @return $this
      */
@@ -715,10 +715,10 @@ class Builder implements BuilderContract
     /**
      * Get a new join clause.
      *
-     * @param  \Illuminate\Database\Query\Builder  $parentQuery
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $parentQuery
      * @param  string  $type
      * @param  string  $table
-     * @return \Illuminate\Database\Query\JoinClause
+     * @return \PRipple\Illuminate\Database\Query\JoinClause
      */
     protected function newJoinClause(self $parentQuery, $type, $table)
     {
@@ -1626,7 +1626,7 @@ class Builder implements BuilderContract
     /**
      * Create a new query instance for nested where condition.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function forNestedWhere()
     {
@@ -1636,7 +1636,7 @@ class Builder implements BuilderContract
     /**
      * Add another query builder as a nested where to the query builder.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $query
      * @param  string  $boolean
      * @return $this
      */
@@ -1658,7 +1658,7 @@ class Builder implements BuilderContract
      *
      * @param  \Illuminate\Contracts\Database\Query\Expression|string  $column
      * @param  string  $operator
-     * @param  \Closure||\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder  $callback
+     * @param  \Closure||\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder  $callback
      * @param  string  $boolean
      * @return $this
      */
@@ -1687,7 +1687,7 @@ class Builder implements BuilderContract
     /**
      * Add an exists clause to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder  $callback
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder  $callback
      * @param  string  $boolean
      * @param  bool  $not
      * @return $this
@@ -1711,7 +1711,7 @@ class Builder implements BuilderContract
     /**
      * Add an or exists clause to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder  $callback
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder  $callback
      * @param  bool  $not
      * @return $this
      */
@@ -1723,7 +1723,7 @@ class Builder implements BuilderContract
     /**
      * Add a where not exists clause to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder  $callback
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder  $callback
      * @param  string  $boolean
      * @return $this
      */
@@ -1735,7 +1735,7 @@ class Builder implements BuilderContract
     /**
      * Add a where not exists clause to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder  $callback
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder  $callback
      * @return $this
      */
     public function orWhereNotExists($callback)
@@ -1746,7 +1746,7 @@ class Builder implements BuilderContract
     /**
      * Add an exists clause to the query.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $query
      * @param  string  $boolean
      * @param  bool  $not
      * @return $this
@@ -2169,7 +2169,7 @@ class Builder implements BuilderContract
     /**
      * Add another query builder as a nested having to the query builder.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $query
      * @param  string  $boolean
      * @return $this
      */
@@ -2297,7 +2297,7 @@ class Builder implements BuilderContract
     /**
      * Add an "order by" clause to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|\Illuminate\Contracts\Database\Query\Expression|string  $column
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder|\Illuminate\Contracts\Database\Query\Expression|string  $column
      * @param  string  $direction
      * @return $this
      *
@@ -2330,7 +2330,7 @@ class Builder implements BuilderContract
     /**
      * Add a descending "order by" clause to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|\Illuminate\Contracts\Database\Query\Expression|string  $column
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder|\Illuminate\Contracts\Database\Query\Expression|string  $column
      * @return $this
      */
     public function orderByDesc($column)
@@ -2341,7 +2341,7 @@ class Builder implements BuilderContract
     /**
      * Add an "order by" clause for a timestamp to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Contracts\Database\Query\Expression|string  $column
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\Illuminate\Contracts\Database\Query\Expression|string  $column
      * @return $this
      */
     public function latest($column = 'created_at')
@@ -2352,7 +2352,7 @@ class Builder implements BuilderContract
     /**
      * Add an "order by" clause for a timestamp to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Contracts\Database\Query\Expression|string  $column
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\Illuminate\Contracts\Database\Query\Expression|string  $column
      * @return $this
      */
     public function oldest($column = 'created_at')
@@ -2498,7 +2498,7 @@ class Builder implements BuilderContract
     /**
      * Remove all existing orders and optionally add a new order.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Contracts\Database\Query\Expression|string|null  $column
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\Illuminate\Contracts\Database\Query\Expression|string|null  $column
      * @param  string  $direction
      * @return $this
      */
@@ -2534,7 +2534,7 @@ class Builder implements BuilderContract
     /**
      * Add a union statement to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder  $query
      * @param  bool  $all
      * @return $this
      */
@@ -2554,7 +2554,7 @@ class Builder implements BuilderContract
     /**
      * Add a union all statement to the query.
      *
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder  $query
      * @return $this
      */
     public function unionAll($query)
@@ -2718,8 +2718,8 @@ class Builder implements BuilderContract
      * @param  string  $column
      * @return mixed
      *
-     * @throws \Illuminate\Database\RecordsNotFoundException
-     * @throws \Illuminate\Database\MultipleRecordsFoundException
+     * @throws \PRipple\Illuminate\Database\RecordsNotFoundException
+     * @throws \PRipple\Illuminate\Database\MultipleRecordsFoundException
      */
     public function soleValue($column)
     {
@@ -3391,7 +3391,7 @@ class Builder implements BuilderContract
      * Insert new records into the table using a subquery.
      *
      * @param  array  $columns
-     * @param  \Closure|\Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder|string  $query
+     * @param  \Closure|\PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder|string  $query
      * @return int
      */
     public function insertUsing(array $columns, $query)
@@ -3636,7 +3636,7 @@ class Builder implements BuilderContract
     /**
      * Get a new instance of the query builder.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function newQuery()
     {
@@ -3646,7 +3646,7 @@ class Builder implements BuilderContract
     /**
      * Create a new query instance for a sub-query.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     protected function forSubQuery()
     {
@@ -3757,7 +3757,7 @@ class Builder implements BuilderContract
     /**
      * Merge an array of bindings into our bindings.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $query
      * @return $this
      */
     public function mergeBindings(self $query)
@@ -3808,7 +3808,7 @@ class Builder implements BuilderContract
     /**
      * Get the database connection instance.
      *
-     * @return \Illuminate\Database\ConnectionInterface
+     * @return \PRipple\Illuminate\Database\ConnectionInterface
      */
     public function getConnection()
     {
@@ -3818,7 +3818,7 @@ class Builder implements BuilderContract
     /**
      * Get the database query processor instance.
      *
-     * @return \Illuminate\Database\Query\Processors\Processor
+     * @return \PRipple\Illuminate\Database\Query\Processors\Processor
      */
     public function getProcessor()
     {
@@ -3828,7 +3828,7 @@ class Builder implements BuilderContract
     /**
      * Get the query grammar instance.
      *
-     * @return \Illuminate\Database\Query\Grammars\Grammar
+     * @return \PRipple\Illuminate\Database\Query\Grammars\Grammar
      */
     public function getGrammar()
     {

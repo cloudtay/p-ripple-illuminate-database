@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Relations\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations\Concerns;
 
-use Illuminate\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Model;
 
 trait SupportsDefaultModels
 {
@@ -18,8 +18,8 @@ trait SupportsDefaultModels
     /**
      * Make a new related instance for the given model.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
-     * @return \Illuminate\Database\Eloquent\Model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     abstract protected function newRelatedInstanceFor(Model $parent);
 
@@ -39,8 +39,8 @@ trait SupportsDefaultModels
     /**
      * Get the default value for this relation.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
-     * @return \Illuminate\Database\Eloquent\Model|null
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|null
      */
     protected function getDefaultFor(Model $parent)
     {

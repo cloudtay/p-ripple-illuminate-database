@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\Database\Concerns;
+namespace Cclilshy\PRipple\Database\Concerns;
 
 use Illuminate\Container\Container;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\MultipleRecordsFoundException;
-use Illuminate\Database\Query\Expression;
-use Illuminate\Database\RecordsNotFoundException;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\MultipleRecordsFoundException;
+use Cclilshy\PRipple\Database\Query\Expression;
+use Cclilshy\PRipple\Database\RecordsNotFoundException;
 use Illuminate\Pagination\Cursor;
 use Illuminate\Pagination\CursorPaginator;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -326,7 +326,7 @@ trait BuildsQueries
      * Execute the query and get the first result.
      *
      * @param  array|string  $columns
-     * @return \Illuminate\Database\Eloquent\Model|object|static|null
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|object|static|null
      */
     public function first($columns = ['*'])
     {
@@ -337,10 +337,10 @@ trait BuildsQueries
      * Execute the query and get the first result if it's the sole matching record.
      *
      * @param  array|string  $columns
-     * @return \Illuminate\Database\Eloquent\Model|object|static|null
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|object|static|null
      *
-     * @throws \Illuminate\Database\RecordsNotFoundException
-     * @throws \Illuminate\Database\MultipleRecordsFoundException
+     * @throws \PRipple\Illuminate\Database\RecordsNotFoundException
+     * @throws \PRipple\Illuminate\Database\MultipleRecordsFoundException
      */
     public function sole($columns = ['*'])
     {
@@ -454,7 +454,7 @@ trait BuildsQueries
     /**
      * Get the original column name of the given column, without any aliasing.
      *
-     * @param  \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder  $builder
+     * @param  \PRipple\Illuminate\Database\Query\Builder|\PRipple\Illuminate\Database\Eloquent\Builder  $builder
      * @param  string  $parameter
      * @return string
      */

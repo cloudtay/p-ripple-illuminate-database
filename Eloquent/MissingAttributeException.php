@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
 use OutOfBoundsException;
 
@@ -9,7 +9,7 @@ class MissingAttributeException extends OutOfBoundsException
     /**
      * Create a new missing attribute exception instance.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @param  string  $key
      * @return void
      */

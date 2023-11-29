@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Casts;
+namespace Cclilshy\PRipple\Database\Eloquent\Casts;
 
 class Json
 {

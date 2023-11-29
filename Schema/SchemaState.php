@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Database\Schema;
+namespace Cclilshy\PRipple\Database\Schema;
 
-use Illuminate\Database\Connection;
+use Cclilshy\PRipple\Database\Connection;
 use Illuminate\Filesystem\Filesystem;
 use Symfony\Component\Process\Process;
 
@@ -11,7 +11,7 @@ abstract class SchemaState
     /**
      * The connection instance.
      *
-     * @var \Illuminate\Database\Connection
+     * @var \PRipple\Illuminate\Database\Connection
      */
     protected $connection;
 
@@ -46,7 +46,7 @@ abstract class SchemaState
     /**
      * Create a new dumper instance.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @param  \Illuminate\Filesystem\Filesystem|null  $files
      * @param  callable|null  $processFactory
      * @return void
@@ -69,7 +69,7 @@ abstract class SchemaState
     /**
      * Dump the database's schema into a file.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @param  string  $path
      * @return void
      */

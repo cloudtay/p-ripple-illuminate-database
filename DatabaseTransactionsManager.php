@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Illuminate\Support\Collection;
 
@@ -9,14 +9,14 @@ class DatabaseTransactionsManager
     /**
      * All of the committed transactions.
      *
-     * @var \Illuminate\Support\Collection<int, \Illuminate\Database\DatabaseTransactionRecord>
+     * @var \Illuminate\Support\Collection<int, \PRipple\Illuminate\Database\DatabaseTransactionRecord>
      */
     protected $committedTransactions;
 
     /**
      * All of the pending transactions.
      *
-     * @var \Illuminate\Support\Collection<int, \Illuminate\Database\DatabaseTransactionRecord>
+     * @var \Illuminate\Support\Collection<int, \PRipple\Illuminate\Database\DatabaseTransactionRecord>
      */
     protected $pendingTransactions;
 
@@ -111,7 +111,7 @@ class DatabaseTransactionsManager
     /**
      * Get the transactions that are applicable to callbacks.
      *
-     * @return \Illuminate\Support\Collection<int, \Illuminate\Database\DatabaseTransactionRecord>
+     * @return \Illuminate\Support\Collection<int, \PRipple\Illuminate\Database\DatabaseTransactionRecord>
      */
     public function callbackApplicableTransactions()
     {

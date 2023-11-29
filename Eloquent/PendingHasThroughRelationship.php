@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
 use BadMethodCallException;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Str;
 
 class PendingHasThroughRelationship
@@ -11,22 +11,22 @@ class PendingHasThroughRelationship
     /**
      * The root model that the relationship exists on.
      *
-     * @var \Illuminate\Database\Eloquent\Model
+     * @var \PRipple\Illuminate\Database\Eloquent\Model
      */
     protected $rootModel;
 
     /**
      * The local relationship.
      *
-     * @var \Illuminate\Database\Eloquent\Relations\HasMany|\Illuminate\Database\Eloquent\Relations\HasOne
+     * @var \PRipple\Illuminate\Database\Eloquent\Relations\HasMany|\PRipple\Illuminate\Database\Eloquent\Relations\HasOne
      */
     protected $localRelationship;
 
     /**
      * Create a pending has-many-through or has-one-through relationship.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $rootModel
-     * @param  \Illuminate\Database\Eloquent\Relations\HasMany|\Illuminate\Database\Eloquent\Relations\HasOne  $localRelationship
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $rootModel
+     * @param  \PRipple\Illuminate\Database\Eloquent\Relations\HasMany|\PRipple\Illuminate\Database\Eloquent\Relations\HasOne  $localRelationship
      */
     public function __construct($rootModel, $localRelationship)
     {
@@ -38,8 +38,8 @@ class PendingHasThroughRelationship
     /**
      * Define the distant relationship that this model has.
      *
-     * @param  string|(callable(\Illuminate\Database\Eloquent\Model): (\Illuminate\Database\Eloquent\Relations\HasOne|\Illuminate\Database\Eloquent\Relations\HasMany))  $callback
-     * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough|\Illuminate\Database\Eloquent\Relations\HasOneThrough
+     * @param  string|(callable(\PRipple\Illuminate\Database\Eloquent\Model): (\PRipple\Illuminate\Database\Eloquent\Relations\HasOne|\PRipple\Illuminate\Database\Eloquent\Relations\HasMany))  $callback
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\HasManyThrough|\PRipple\Illuminate\Database\Eloquent\Relations\HasOneThrough
      */
     public function has($callback)
     {

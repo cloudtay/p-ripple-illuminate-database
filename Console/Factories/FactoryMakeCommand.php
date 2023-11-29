@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Console\Factories;
+namespace Cclilshy\PRipple\Database\Console\Factories;
 
 use Illuminate\Console\GeneratorCommand;
 use Illuminate\Support\Str;

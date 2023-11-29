@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Query;
+namespace Cclilshy\PRipple\Database\Query;
 
 class IndexHint
 {

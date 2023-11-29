@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Database\Console;
+namespace Cclilshy\PRipple\Database\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Database\Eloquent\MassPrunable;
-use Illuminate\Database\Eloquent\Prunable;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Events\ModelPruningFinished;
-use Illuminate\Database\Events\ModelPruningStarting;
-use Illuminate\Database\Events\ModelsPruned;
+use Cclilshy\PRipple\Database\Eloquent\MassPrunable;
+use Cclilshy\PRipple\Database\Eloquent\Prunable;
+use Cclilshy\PRipple\Database\Eloquent\SoftDeletes;
+use Cclilshy\PRipple\Database\Events\ModelPruningFinished;
+use Cclilshy\PRipple\Database\Events\ModelPruningStarting;
+use Cclilshy\PRipple\Database\Events\ModelsPruned;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 use Symfony\Component\Finder\Finder;

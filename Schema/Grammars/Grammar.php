@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Database\Schema\Grammars;
+namespace Cclilshy\PRipple\Database\Schema\Grammars;
 
 use BackedEnum;
 use Doctrine\DBAL\Schema\AbstractSchemaManager as SchemaManager;
 use Doctrine\DBAL\Schema\TableDiff;
 use Illuminate\Contracts\Database\Query\Expression;
-use Illuminate\Database\Concerns\CompilesJsonPaths;
-use Illuminate\Database\Connection;
-use Illuminate\Database\Grammar as BaseGrammar;
-use Illuminate\Database\Schema\Blueprint;
+use Cclilshy\PRipple\Database\Concerns\CompilesJsonPaths;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\Grammar as BaseGrammar;
+use Cclilshy\PRipple\Database\Schema\Blueprint;
 use Illuminate\Support\Fluent;
 use LogicException;
 use RuntimeException;
@@ -43,7 +43,7 @@ abstract class Grammar extends BaseGrammar
      * Compile a create database command.
      *
      * @param  string  $name
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return void
      *
      * @throws \LogicException
@@ -69,9 +69,9 @@ abstract class Grammar extends BaseGrammar
     /**
      * Compile a rename column command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return array|string
      */
     public function compileRenameColumn(Blueprint $blueprint, Fluent $command, Connection $connection)
@@ -82,9 +82,9 @@ abstract class Grammar extends BaseGrammar
     /**
      * Compile a change column command into a series of SQL statements.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return array|string
      *
      * @throws \RuntimeException
@@ -97,7 +97,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Compile a fulltext index key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      *
@@ -111,7 +111,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Compile a drop fulltext index command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      *
@@ -125,7 +125,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Compile a foreign key command.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
      * @return string
      */
@@ -165,7 +165,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Compile the blueprint's added column definitions.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @return array
      */
     protected function getColumns(Blueprint $blueprint)
@@ -212,7 +212,7 @@ abstract class Grammar extends BaseGrammar
      * Add the column modifiers to the definition.
      *
      * @param  string  $sql
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $column
      * @return string
      */
@@ -230,7 +230,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Get the primary key command if it exists on the blueprint.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  string  $name
      * @return \Illuminate\Support\Fluent|null
      */
@@ -246,7 +246,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Get all of the commands with a given name.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  string  $name
      * @return array
      */
@@ -322,7 +322,7 @@ abstract class Grammar extends BaseGrammar
     /**
      * Create an empty Doctrine DBAL TableDiff from the Blueprint.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Doctrine\DBAL\Schema\AbstractSchemaManager  $schema
      * @return \Doctrine\DBAL\Schema\TableDiff
      */

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use RuntimeException;
 

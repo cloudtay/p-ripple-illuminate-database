@@ -1,25 +1,25 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Concerns;
 
 use Closure;
-use Illuminate\Database\ClassMorphViolationException;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\PendingHasThroughRelationship;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasManyThrough;
-use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Database\Eloquent\Relations\HasOneThrough;
-use Illuminate\Database\Eloquent\Relations\MorphMany;
-use Illuminate\Database\Eloquent\Relations\MorphOne;
-use Illuminate\Database\Eloquent\Relations\MorphTo;
-use Illuminate\Database\Eloquent\Relations\MorphToMany;
-use Illuminate\Database\Eloquent\Relations\Pivot;
-use Illuminate\Database\Eloquent\Relations\Relation;
+use Cclilshy\PRipple\Database\ClassMorphViolationException;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\Eloquent\Collection;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\PendingHasThroughRelationship;
+use Cclilshy\PRipple\Database\Eloquent\Relations\BelongsTo;
+use Cclilshy\PRipple\Database\Eloquent\Relations\BelongsToMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasManyThrough;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasOne;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasOneThrough;
+use Cclilshy\PRipple\Database\Eloquent\Relations\MorphMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\MorphOne;
+use Cclilshy\PRipple\Database\Eloquent\Relations\MorphTo;
+use Cclilshy\PRipple\Database\Eloquent\Relations\MorphToMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Pivot;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
@@ -96,7 +96,7 @@ trait HasRelationships
      * @param  string  $related
      * @param  string|null  $foreignKey
      * @param  string|null  $localKey
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function hasOne($related, $foreignKey = null, $localKey = null)
     {
@@ -112,11 +112,11 @@ trait HasRelationships
     /**
      * Instantiate a new HasOne relationship.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
      * @param  string  $foreignKey
      * @param  string  $localKey
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\HasOne
      */
     protected function newHasOne(Builder $query, Model $parent, $foreignKey, $localKey)
     {
@@ -132,7 +132,7 @@ trait HasRelationships
      * @param  string|null  $secondKey
      * @param  string|null  $localKey
      * @param  string|null  $secondLocalKey
-     * @return \Illuminate\Database\Eloquent\Relations\HasOneThrough
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\HasOneThrough
      */
     public function hasOneThrough($related, $through, $firstKey = null, $secondKey = null, $localKey = null, $secondLocalKey = null)
     {
@@ -152,14 +152,14 @@ trait HasRelationships
     /**
      * Instantiate a new HasOneThrough relationship.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $farParent
-     * @param  \Illuminate\Database\Eloquent\Model  $throughParent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $farParent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $throughParent
      * @param  string  $firstKey
      * @param  string  $secondKey
      * @param  string  $localKey
      * @param  string  $secondLocalKey
-     * @return \Illuminate\Database\Eloquent\Relations\HasOneThrough
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\HasOneThrough
      */
     protected function newHasOneThrough(Builder $query, Model $farParent, Model $throughParent, $firstKey, $secondKey, $localKey, $secondLocalKey)
     {
@@ -174,7 +174,7 @@ trait HasRelationships
      * @param  string|null  $type
      * @param  string|null  $id
      * @param  string|null  $localKey
-     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\MorphOne
      */
     public function morphOne($related, $name, $type = null, $id = null, $localKey = null)
     {
@@ -192,12 +192,12 @@ trait HasRelationships
     /**
      * Instantiate a new MorphOne relationship.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
      * @param  string  $type
      * @param  string  $id
      * @param  string  $localKey
-     * @return \Illuminate\Database\Eloquent\Relations\MorphOne
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\MorphOne
      */
     protected function newMorphOne(Builder $query, Model $parent, $type, $id, $localKey)
     {
@@ -211,7 +211,7 @@ trait HasRelationships
      * @param  string|null  $foreignKey
      * @param  string|null  $ownerKey
      * @param  string|null  $relation
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function belongsTo($related, $foreignKey = null, $ownerKey = null, $relation = null)
     {
@@ -244,12 +244,12 @@ trait HasRelationships
     /**
      * Instantiate a new BelongsTo relationship.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $child
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $child
      * @param  string  $foreignKey
      * @param  string  $ownerKey
      * @param  string  $relation
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     protected function newBelongsTo(Builder $query, Model $child, $foreignKey, $ownerKey, $relation)
     {
@@ -263,7 +263,7 @@ trait HasRelationships
      * @param  string|null  $type
      * @param  string|null  $id
      * @param  string|null  $ownerKey
-     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\MorphTo
      */
     public function morphTo($name = null, $type = null, $id = null, $ownerKey = null)
     {
@@ -291,7 +291,7 @@ trait HasRelationships
      * @param  string  $type
      * @param  string  $id
      * @param  string  $ownerKey
-     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\MorphTo
      */
     protected function morphEagerTo($name, $type, $id, $ownerKey)
     {
@@ -308,7 +308,7 @@ trait HasRelationships
      * @param  string  $type
      * @param  string  $id
      * @param  string  $ownerKey
-     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\MorphTo
      */
     protected function morphInstanceTo($target, $name, $type, $id, $ownerKey)
     {
@@ -324,13 +324,13 @@ trait HasRelationships
     /**
      * Instantiate a new MorphTo relationship.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
      * @param  string  $foreignKey
      * @param  string  $ownerKey
      * @param  string  $type
      * @param  string  $relation
-     * @return \Illuminate\Database\Eloquent\Relations\MorphTo
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\MorphTo
      */
     protected function newMorphTo(Builder $query, Model $parent, $foreignKey, $ownerKey, $type, $relation)
     {
@@ -363,8 +363,8 @@ trait HasRelationships
     /**
      * Create a pending has-many-through or has-one-through relationship.
      *
-     * @param  string|\Illuminate\Database\Eloquent\Relations\HasMany|\Illuminate\Database\Eloquent\Relations\HasOne  $relationship
-     * @return \Illuminate\Database\Eloquent\PendingHasThroughRelationship
+     * @param  string|\PRipple\Illuminate\Database\Eloquent\Relations\HasMany|\PRipple\Illuminate\Database\Eloquent\Relations\HasOne  $relationship
+     * @return \PRipple\Illuminate\Database\Eloquent\PendingHasThroughRelationship
      */
     public function through($relationship)
     {
@@ -381,7 +381,7 @@ trait HasRelationships
      * @param  string  $related
      * @param  string|null  $foreignKey
      * @param  string|null  $localKey
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function hasMany($related, $foreignKey = null, $localKey = null)
     {
@@ -399,11 +399,11 @@ trait HasRelationships
     /**
      * Instantiate a new HasMany relationship.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
      * @param  string  $foreignKey
      * @param  string  $localKey
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\HasMany
      */
     protected function newHasMany(Builder $query, Model $parent, $foreignKey, $localKey)
     {
@@ -419,7 +419,7 @@ trait HasRelationships
      * @param  string|null  $secondKey
      * @param  string|null  $localKey
      * @param  string|null  $secondLocalKey
-     * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\HasManyThrough
      */
     public function hasManyThrough($related, $through, $firstKey = null, $secondKey = null, $localKey = null, $secondLocalKey = null)
     {
@@ -443,14 +443,14 @@ trait HasRelationships
     /**
      * Instantiate a new HasManyThrough relationship.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $farParent
-     * @param  \Illuminate\Database\Eloquent\Model  $throughParent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $farParent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $throughParent
      * @param  string  $firstKey
      * @param  string  $secondKey
      * @param  string  $localKey
      * @param  string  $secondLocalKey
-     * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\HasManyThrough
      */
     protected function newHasManyThrough(Builder $query, Model $farParent, Model $throughParent, $firstKey, $secondKey, $localKey, $secondLocalKey)
     {
@@ -465,7 +465,7 @@ trait HasRelationships
      * @param  string|null  $type
      * @param  string|null  $id
      * @param  string|null  $localKey
-     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\MorphMany
      */
     public function morphMany($related, $name, $type = null, $id = null, $localKey = null)
     {
@@ -486,12 +486,12 @@ trait HasRelationships
     /**
      * Instantiate a new MorphMany relationship.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
      * @param  string  $type
      * @param  string  $id
      * @param  string  $localKey
-     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\MorphMany
      */
     protected function newMorphMany(Builder $query, Model $parent, $type, $id, $localKey)
     {
@@ -502,13 +502,13 @@ trait HasRelationships
      * Define a many-to-many relationship.
      *
      * @param  string  $related
-     * @param  string|class-string<\Illuminate\Database\Eloquent\Model>|null  $table
+     * @param  string|class-string<\PRipple\Illuminate\Database\Eloquent\Model>|null  $table
      * @param  string|null  $foreignPivotKey
      * @param  string|null  $relatedPivotKey
      * @param  string|null  $parentKey
      * @param  string|null  $relatedKey
      * @param  string|null  $relation
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function belongsToMany($related, $table = null, $foreignPivotKey = null, $relatedPivotKey = null,
                                   $parentKey = null, $relatedKey = null, $relation = null)
@@ -546,15 +546,15 @@ trait HasRelationships
     /**
      * Instantiate a new BelongsToMany relationship.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
-     * @param  string|class-string<\Illuminate\Database\Eloquent\Model>  $table
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
+     * @param  string|class-string<\PRipple\Illuminate\Database\Eloquent\Model>  $table
      * @param  string  $foreignPivotKey
      * @param  string  $relatedPivotKey
      * @param  string  $parentKey
      * @param  string  $relatedKey
      * @param  string|null  $relationName
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     protected function newBelongsToMany(Builder $query, Model $parent, $table, $foreignPivotKey, $relatedPivotKey,
                                         $parentKey, $relatedKey, $relationName = null)
@@ -574,7 +574,7 @@ trait HasRelationships
      * @param  string|null  $relatedKey
      * @param  string|null  $relation
      * @param  bool  $inverse
-     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\MorphToMany
      */
     public function morphToMany($related, $name, $table = null, $foreignPivotKey = null,
                                 $relatedPivotKey = null, $parentKey = null,
@@ -612,8 +612,8 @@ trait HasRelationships
     /**
      * Instantiate a new MorphToMany relationship.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
      * @param  string  $name
      * @param  string  $table
      * @param  string  $foreignPivotKey
@@ -622,7 +622,7 @@ trait HasRelationships
      * @param  string  $relatedKey
      * @param  string|null  $relationName
      * @param  bool  $inverse
-     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\MorphToMany
      */
     protected function newMorphToMany(Builder $query, Model $parent, $name, $table, $foreignPivotKey,
                                       $relatedPivotKey, $parentKey, $relatedKey,
@@ -643,7 +643,7 @@ trait HasRelationships
      * @param  string|null  $parentKey
      * @param  string|null  $relatedKey
      * @param  string|null  $relation
-     * @return \Illuminate\Database\Eloquent\Relations\MorphToMany
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\MorphToMany
      */
     public function morphedByMany($related, $name, $table = null, $foreignPivotKey = null,
                                   $relatedPivotKey = null, $parentKey = null, $relatedKey = null, $relation = null)
@@ -682,7 +682,7 @@ trait HasRelationships
      * Get the joining table name for a many-to-many relation.
      *
      * @param  string  $related
-     * @param  \Illuminate\Database\Eloquent\Model|null  $instance
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model|null  $instance
      * @return string
      */
     public function joiningTable($related, $instance = null)

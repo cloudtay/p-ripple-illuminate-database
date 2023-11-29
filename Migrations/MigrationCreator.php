@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Migrations;
+namespace Cclilshy\PRipple\Database\Migrations;
 
 use Closure;
 use Illuminate\Filesystem\Filesystem;

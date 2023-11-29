@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\Database\Schema\Grammars;
+namespace Cclilshy\PRipple\Database\Schema\Grammars;
 
 use Doctrine\DBAL\Schema\AbstractSchemaManager as SchemaManager;
 use Doctrine\DBAL\Schema\Table;
 use Doctrine\DBAL\Types\Type;
-use Illuminate\Database\Connection;
-use Illuminate\Database\Schema\Blueprint;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\Schema\Blueprint;
 use Illuminate\Support\Fluent;
 use RuntimeException;
 
@@ -15,10 +15,10 @@ class ChangeColumn
     /**
      * Compile a change column command into a series of SQL statements.
      *
-     * @param  \Illuminate\Database\Schema\Grammars\Grammar  $grammar
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return array
      *
      * @throws \RuntimeException
@@ -50,8 +50,8 @@ class ChangeColumn
     /**
      * Get the Doctrine table difference for the given changes.
      *
-     * @param  \Illuminate\Database\Schema\Grammars\Grammar  $grammar
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Grammars\Grammar  $grammar
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Doctrine\DBAL\Schema\AbstractSchemaManager  $schema
      * @return \Doctrine\DBAL\Schema\TableDiff
      */
@@ -67,7 +67,7 @@ class ChangeColumn
     /**
      * Get a copy of the given Doctrine table after making the column changes.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Doctrine\DBAL\Schema\Table  $table
      * @return \Doctrine\DBAL\Schema\Table
      */

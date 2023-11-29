@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Exception;
-use Illuminate\Database\PDO\SQLiteDriver;
-use Illuminate\Database\Query\Grammars\SQLiteGrammar as QueryGrammar;
-use Illuminate\Database\Query\Processors\SQLiteProcessor;
-use Illuminate\Database\Schema\Grammars\SQLiteGrammar as SchemaGrammar;
-use Illuminate\Database\Schema\SQLiteBuilder;
-use Illuminate\Database\Schema\SqliteSchemaState;
+use Cclilshy\PRipple\Database\PDO\SQLiteDriver;
+use Cclilshy\PRipple\Database\Query\Grammars\SQLiteGrammar as QueryGrammar;
+use Cclilshy\PRipple\Database\Query\Processors\SQLiteProcessor;
+use Cclilshy\PRipple\Database\Schema\Grammars\SQLiteGrammar as SchemaGrammar;
+use Cclilshy\PRipple\Database\Schema\SQLiteBuilder;
+use Cclilshy\PRipple\Database\Schema\SqliteSchemaState;
 use Illuminate\Filesystem\Filesystem;
 
 class SQLiteConnection extends ConnectionHook
@@ -64,7 +64,7 @@ class SQLiteConnection extends ConnectionHook
     /**
      * Get the default query grammar instance.
      *
-     * @return \Illuminate\Database\Query\Grammars\SQLiteGrammar
+     * @return \PRipple\Illuminate\Database\Query\Grammars\SQLiteGrammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -76,7 +76,7 @@ class SQLiteConnection extends ConnectionHook
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \Illuminate\Database\Schema\SQLiteBuilder
+     * @return \PRipple\Illuminate\Database\Schema\SQLiteBuilder
      */
     public function getSchemaBuilder()
     {
@@ -90,7 +90,7 @@ class SQLiteConnection extends ConnectionHook
     /**
      * Get the default schema grammar instance.
      *
-     * @return \Illuminate\Database\Schema\Grammars\SQLiteGrammar
+     * @return \PRipple\Illuminate\Database\Schema\Grammars\SQLiteGrammar
      */
     protected function getDefaultSchemaGrammar()
     {
@@ -115,7 +115,7 @@ class SQLiteConnection extends ConnectionHook
     /**
      * Get the default post processor instance.
      *
-     * @return \Illuminate\Database\Query\Processors\SQLiteProcessor
+     * @return \PRipple\Illuminate\Database\Query\Processors\SQLiteProcessor
      */
     protected function getDefaultPostProcessor()
     {
@@ -125,7 +125,7 @@ class SQLiteConnection extends ConnectionHook
     /**
      * Get the Doctrine DBAL driver.
      *
-     * @return \Illuminate\Database\PDO\SQLiteDriver
+     * @return \PRipple\Illuminate\Database\PDO\SQLiteDriver
      */
     protected function getDoctrineDriver()
     {
