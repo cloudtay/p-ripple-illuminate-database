@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Concerns;
+namespace PRipple\Illuminate\Database\Eloquent\Concerns;
 
-use Illuminate\Database\Eloquent\ModelNotFoundException;
+use PRipple\Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Str;
 
 trait HasUuids
@@ -40,12 +40,12 @@ trait HasUuids
     /**
      * Retrieve the model for a bound value.
      *
-     * @param  \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Relations\Relation  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model|\PRipple\Illuminate\Database\Eloquent\Relations\Relation  $query
      * @param  mixed  $value
      * @param  string|null  $field
-     * @return \Illuminate\Database\Eloquent\Relations\Relation
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\Relation
      *
-     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException
+     * @throws \PRipple\Illuminate\Database\Eloquent\ModelNotFoundException
      */
     public function resolveRouteBindingQuery($query, $value, $field = null)
     {

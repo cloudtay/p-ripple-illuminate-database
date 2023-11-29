@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Casts;
+namespace PRipple\Illuminate\Database\Eloquent\Casts;
 
 use BackedEnum;
 use Illuminate\Contracts\Database\Eloquent\Castable;

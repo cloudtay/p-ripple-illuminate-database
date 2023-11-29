@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Concerns;
+namespace PRipple\Illuminate\Database\Concerns;
 
 use Illuminate\Support\Str;
 

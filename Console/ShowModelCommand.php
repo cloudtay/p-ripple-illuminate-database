@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\Database\Console;
+namespace PRipple\Illuminate\Database\Console;
 
 use BackedEnum;
 use Doctrine\DBAL\Schema\Column;
 use Doctrine\DBAL\Schema\Index;
 use Doctrine\DBAL\Types\DecimalType;
 use Illuminate\Contracts\Container\BindingResolutionException;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Relation;
+use PRipple\Illuminate\Database\Eloquent\Model;
+use PRipple\Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;
 use ReflectionClass;
@@ -102,7 +102,7 @@ class ShowModelCommand extends DatabaseInspectionCommand
     /**
      * Get the first policy associated with this model.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return string
      */
     protected function getPolicy($model)
@@ -115,7 +115,7 @@ class ShowModelCommand extends DatabaseInspectionCommand
     /**
      * Get the column attributes for the given model.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return \Illuminate\Support\Collection
      */
     protected function getAttributes($model)
@@ -147,7 +147,7 @@ class ShowModelCommand extends DatabaseInspectionCommand
     /**
      * Get the virtual (non-column) attributes for the given model.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @param  \Doctrine\DBAL\Schema\Column[]  $columns
      * @return \Illuminate\Support\Collection
      */
@@ -189,7 +189,7 @@ class ShowModelCommand extends DatabaseInspectionCommand
     /**
      * Get the relations from the given model.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return \Illuminate\Support\Collection
      */
     protected function getRelations($model)
@@ -233,7 +233,7 @@ class ShowModelCommand extends DatabaseInspectionCommand
     /**
      * Get the Observers watching this model.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return \Illuminate\Support\Collection
      */
     protected function getObservers($model)
@@ -397,7 +397,7 @@ class ShowModelCommand extends DatabaseInspectionCommand
      * Get the cast type for the given column.
      *
      * @param  string  $column
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return string|null
      */
     protected function getCastType($column, $model)
@@ -416,7 +416,7 @@ class ShowModelCommand extends DatabaseInspectionCommand
     /**
      * Get the model casts, including any date casts.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return \Illuminate\Support\Collection
      */
     protected function getCastsWithDates($model)
@@ -456,7 +456,7 @@ class ShowModelCommand extends DatabaseInspectionCommand
      * Get the default value for the given column.
      *
      * @param  \Doctrine\DBAL\Schema\Column  $column
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return mixed|null
      */
     protected function getColumnDefault($column, $model)
@@ -474,7 +474,7 @@ class ShowModelCommand extends DatabaseInspectionCommand
      * Determine if the given attribute is hidden.
      *
      * @param  string  $attribute
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return bool
      */
     protected function attributeIsHidden($attribute, $model)

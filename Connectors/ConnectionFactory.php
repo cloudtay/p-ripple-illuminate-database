@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\Database\Connectors;
+namespace PRipple\Illuminate\Database\Connectors;
 
 use Illuminate\Contracts\Container\Container;
-use Illuminate\Database\Connection;
-use Illuminate\Database\MySqlConnection;
-use Illuminate\Database\PostgresConnection;
-use Illuminate\Database\SQLiteConnection;
-use Illuminate\Database\SqlServerConnection;
+use PRipple\Illuminate\Database\Connection;
+use PRipple\Illuminate\Database\MySqlConnection;
+use PRipple\Illuminate\Database\PostgresConnection;
+use PRipple\Illuminate\Database\SQLiteConnection;
+use PRipple\Illuminate\Database\SqlServerConnection;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 use PDOException;
@@ -37,7 +37,7 @@ class ConnectionFactory
      *
      * @param  array  $config
      * @param  string|null  $name
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      */
     public function make(array $config, $name = null)
     {
@@ -66,7 +66,7 @@ class ConnectionFactory
      * Create a single database connection instance.
      *
      * @param  array  $config
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      */
     protected function createSingleConnection(array $config)
     {
@@ -81,7 +81,7 @@ class ConnectionFactory
      * Create a read / write database connection instance.
      *
      * @param  array  $config
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      */
     protected function createReadWriteConnection(array $config)
     {
@@ -225,7 +225,7 @@ class ConnectionFactory
      * Create a connector instance based on the configuration.
      *
      * @param  array  $config
-     * @return \Illuminate\Database\Connectors\ConnectorInterface
+     * @return \PRipple\Illuminate\Database\Connectors\ConnectorInterface
      *
      * @throws \InvalidArgumentException
      */
@@ -256,7 +256,7 @@ class ConnectionFactory
      * @param  string  $database
      * @param  string  $prefix
      * @param  array  $config
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      *
      * @throws \InvalidArgumentException
      */

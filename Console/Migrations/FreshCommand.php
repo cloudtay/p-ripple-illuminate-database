@@ -1,11 +1,11 @@
 <?php
 
-namespace Illuminate\Database\Console\Migrations;
+namespace PRipple\Illuminate\Database\Console\Migrations;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Database\Events\DatabaseRefreshed;
+use PRipple\Illuminate\Database\Events\DatabaseRefreshed;
 use Symfony\Component\Console\Input\InputOption;
 
 class FreshCommand extends Command

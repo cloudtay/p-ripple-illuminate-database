@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Relations;
+namespace PRipple\Illuminate\Database\Eloquent\Relations;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Concerns\AsPivot;
+use PRipple\Illuminate\Database\Eloquent\Model;
+use PRipple\Illuminate\Database\Eloquent\Relations\Concerns\AsPivot;
 
 class Pivot extends Model
 {

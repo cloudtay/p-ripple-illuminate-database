@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Eloquent;
+namespace PRipple\Illuminate\Database\Eloquent;
 
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
@@ -14,7 +14,7 @@ class BroadcastableModelEventOccurred implements ShouldBroadcast
     /**
      * The model instance corresponding to the event.
      *
-     * @var \Illuminate\Database\Eloquent\Model
+     * @var \PRipple\Illuminate\Database\Eloquent\Model
      */
     public $model;
 
@@ -56,7 +56,7 @@ class BroadcastableModelEventOccurred implements ShouldBroadcast
     /**
      * Create a new event instance.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @param  string  $event
      * @return void
      */

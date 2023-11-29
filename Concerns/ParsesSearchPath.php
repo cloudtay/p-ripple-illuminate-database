@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Concerns;
+namespace PRipple\Illuminate\Database\Concerns;
 
 trait ParsesSearchPath
 {

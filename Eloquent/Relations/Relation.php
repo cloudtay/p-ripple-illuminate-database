@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Relations;
+namespace PRipple\Illuminate\Database\Eloquent\Relations;
 
 use Closure;
 use Illuminate\Contracts\Database\Eloquent\Builder as BuilderContract;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
-use Illuminate\Database\MultipleRecordsFoundException;
-use Illuminate\Database\Query\Expression;
+use PRipple\Illuminate\Database\Eloquent\Builder;
+use PRipple\Illuminate\Database\Eloquent\Collection;
+use PRipple\Illuminate\Database\Eloquent\Model;
+use PRipple\Illuminate\Database\Eloquent\ModelNotFoundException;
+use PRipple\Illuminate\Database\MultipleRecordsFoundException;
+use PRipple\Illuminate\Database\Query\Expression;
 use Illuminate\Support\Traits\ForwardsCalls;
 use Illuminate\Support\Traits\Macroable;
 
@@ -22,21 +22,21 @@ abstract class Relation implements BuilderContract
     /**
      * The Eloquent query builder instance.
      *
-     * @var \Illuminate\Database\Eloquent\Builder
+     * @var \PRipple\Illuminate\Database\Eloquent\Builder
      */
     protected $query;
 
     /**
      * The parent model instance.
      *
-     * @var \Illuminate\Database\Eloquent\Model
+     * @var \PRipple\Illuminate\Database\Eloquent\Model
      */
     protected $parent;
 
     /**
      * The related model instance.
      *
-     * @var \Illuminate\Database\Eloquent\Model
+     * @var \PRipple\Illuminate\Database\Eloquent\Model
      */
     protected $related;
 
@@ -78,8 +78,8 @@ abstract class Relation implements BuilderContract
     /**
      * Create a new relation instance.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
      * @return void
      */
     public function __construct(Builder $query, Model $parent)
@@ -141,7 +141,7 @@ abstract class Relation implements BuilderContract
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \Illuminate\Database\Eloquent\Collection  $results
+     * @param  \PRipple\Illuminate\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */
@@ -157,7 +157,7 @@ abstract class Relation implements BuilderContract
     /**
      * Get the relationship for eager loading.
      *
-     * @return \Illuminate\Database\Eloquent\Collection
+     * @return \PRipple\Illuminate\Database\Eloquent\Collection
      */
     public function getEager()
     {
@@ -170,10 +170,10 @@ abstract class Relation implements BuilderContract
      * Execute the query and get the first result if it's the sole matching record.
      *
      * @param  array|string  $columns
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      *
-     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>
-     * @throws \Illuminate\Database\MultipleRecordsFoundException
+     * @throws \PRipple\Illuminate\Database\Eloquent\ModelNotFoundException<\PRipple\Illuminate\Database\Eloquent\Model>
+     * @throws \PRipple\Illuminate\Database\MultipleRecordsFoundException
      */
     public function sole($columns = ['*'])
     {
@@ -196,7 +196,7 @@ abstract class Relation implements BuilderContract
      * Execute the query as a "select" statement.
      *
      * @param  array  $columns
-     * @return \Illuminate\Database\Eloquent\Collection
+     * @return \PRipple\Illuminate\Database\Eloquent\Collection
      */
     public function get($columns = ['*'])
     {
@@ -233,9 +233,9 @@ abstract class Relation implements BuilderContract
     /**
      * Add the constraints for a relationship count query.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Builder  $parentQuery
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $parentQuery
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     public function getRelationExistenceCountQuery(Builder $query, Builder $parentQuery)
     {
@@ -249,10 +249,10 @@ abstract class Relation implements BuilderContract
      *
      * Essentially, these queries compare on column names like whereColumn.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Builder  $parentQuery
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -289,7 +289,7 @@ abstract class Relation implements BuilderContract
     /**
      * Get the query builder that will contain the relationship constraints.
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     protected function getRelationQuery()
     {
@@ -299,7 +299,7 @@ abstract class Relation implements BuilderContract
     /**
      * Get the underlying query for the relation.
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     public function getQuery()
     {
@@ -309,7 +309,7 @@ abstract class Relation implements BuilderContract
     /**
      * Get the base query builder driving the Eloquent builder.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function getBaseQuery()
     {
@@ -319,7 +319,7 @@ abstract class Relation implements BuilderContract
     /**
      * Get a base query builder instance.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function toBase()
     {
@@ -329,7 +329,7 @@ abstract class Relation implements BuilderContract
     /**
      * Get the parent model of the relation.
      *
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     public function getParent()
     {
@@ -349,7 +349,7 @@ abstract class Relation implements BuilderContract
     /**
      * Get the related model of the relation.
      *
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      */
     public function getRelated()
     {
@@ -392,7 +392,7 @@ abstract class Relation implements BuilderContract
      * @param  string  $whereIn
      * @param  string  $key
      * @param  array  $modelKeys
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
      * @return void
      */
     protected function whereInEager(string $whereIn, string $key, array $modelKeys, $query = null)
@@ -407,7 +407,7 @@ abstract class Relation implements BuilderContract
     /**
      * Get the name of the "where in" method for eager loading.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @param  string  $key
      * @return string
      */

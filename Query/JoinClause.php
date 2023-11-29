@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Query;
+namespace PRipple\Illuminate\Database\Query;
 
 use Closure;
 
@@ -23,21 +23,21 @@ class JoinClause extends Builder
     /**
      * The connection of the parent query builder.
      *
-     * @var \Illuminate\Database\ConnectionInterface
+     * @var \PRipple\Illuminate\Database\ConnectionInterface
      */
     protected $parentConnection;
 
     /**
      * The grammar of the parent query builder.
      *
-     * @var \Illuminate\Database\Query\Grammars\Grammar
+     * @var \PRipple\Illuminate\Database\Query\Grammars\Grammar
      */
     protected $parentGrammar;
 
     /**
      * The processor of the parent query builder.
      *
-     * @var \Illuminate\Database\Query\Processors\Processor
+     * @var \PRipple\Illuminate\Database\Query\Processors\Processor
      */
     protected $parentProcessor;
 
@@ -51,7 +51,7 @@ class JoinClause extends Builder
     /**
      * Create a new join clause instance.
      *
-     * @param  \Illuminate\Database\Query\Builder  $parentQuery
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $parentQuery
      * @param  string  $type
      * @param  string  $table
      * @return void
@@ -105,7 +105,7 @@ class JoinClause extends Builder
      * @param  \Closure|string  $first
      * @param  string|null  $operator
      * @param  \Illuminate\Contracts\Database\Query\Expression|string|null  $second
-     * @return \Illuminate\Database\Query\JoinClause
+     * @return \PRipple\Illuminate\Database\Query\JoinClause
      */
     public function orOn($first, $operator = null, $second = null)
     {
@@ -115,7 +115,7 @@ class JoinClause extends Builder
     /**
      * Get a new instance of the join clause builder.
      *
-     * @return \Illuminate\Database\Query\JoinClause
+     * @return \PRipple\Illuminate\Database\Query\JoinClause
      */
     public function newQuery()
     {
@@ -125,7 +125,7 @@ class JoinClause extends Builder
     /**
      * Create a new query instance for sub-query.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     protected function forSubQuery()
     {
@@ -135,7 +135,7 @@ class JoinClause extends Builder
     /**
      * Create a new parent query instance.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     protected function newParentQuery()
     {

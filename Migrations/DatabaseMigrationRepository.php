@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Database\Migrations;
+namespace PRipple\Illuminate\Database\Migrations;
 
-use Illuminate\Database\ConnectionResolverInterface as Resolver;
+use PRipple\Illuminate\Database\ConnectionResolverInterface as Resolver;
 
 class DatabaseMigrationRepository implements MigrationRepositoryInterface
 {
     /**
      * The database connection resolver instance.
      *
-     * @var \Illuminate\Database\ConnectionResolverInterface
+     * @var \PRipple\Illuminate\Database\ConnectionResolverInterface
      */
     protected $resolver;
 
@@ -30,7 +30,7 @@ class DatabaseMigrationRepository implements MigrationRepositoryInterface
     /**
      * Create a new database migration repository instance.
      *
-     * @param  \Illuminate\Database\ConnectionResolverInterface  $resolver
+     * @param  \PRipple\Illuminate\Database\ConnectionResolverInterface  $resolver
      * @param  string  $table
      * @return void
      */
@@ -199,7 +199,7 @@ class DatabaseMigrationRepository implements MigrationRepositoryInterface
     /**
      * Get a query builder for the migration table.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     protected function table()
     {
@@ -209,7 +209,7 @@ class DatabaseMigrationRepository implements MigrationRepositoryInterface
     /**
      * Get the connection resolver instance.
      *
-     * @return \Illuminate\Database\ConnectionResolverInterface
+     * @return \PRipple\Illuminate\Database\ConnectionResolverInterface
      */
     public function getConnectionResolver()
     {
@@ -219,7 +219,7 @@ class DatabaseMigrationRepository implements MigrationRepositoryInterface
     /**
      * Resolve the database connection instance.
      *
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      */
     public function getConnection()
     {

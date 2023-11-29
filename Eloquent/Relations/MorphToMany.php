@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Relations;
+namespace PRipple\Illuminate\Database\Eloquent\Relations;
 
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
+use PRipple\Illuminate\Database\Eloquent\Builder;
+use PRipple\Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 
 class MorphToMany extends BelongsToMany
@@ -34,8 +34,8 @@ class MorphToMany extends BelongsToMany
     /**
      * Create a new morph to many relationship instance.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
      * @param  string  $name
      * @param  string  $table
      * @param  string  $foreignPivotKey
@@ -103,10 +103,10 @@ class MorphToMany extends BelongsToMany
     /**
      * Add the constraints for a relationship count query.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $query
-     * @param  \Illuminate\Database\Eloquent\Builder  $parentQuery
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $parentQuery
      * @param  array|mixed  $columns
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     public function getRelationExistenceQuery(Builder $query, Builder $parentQuery, $columns = ['*'])
     {
@@ -133,7 +133,7 @@ class MorphToMany extends BelongsToMany
     /**
      * Create a new query builder for the pivot table.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function newPivotQuery()
     {
@@ -145,7 +145,7 @@ class MorphToMany extends BelongsToMany
      *
      * @param  array  $attributes
      * @param  bool  $exists
-     * @return \Illuminate\Database\Eloquent\Relations\Pivot
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\Pivot
      */
     public function newPivot(array $attributes = [], $exists = false)
     {

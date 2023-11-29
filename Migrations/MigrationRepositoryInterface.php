@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Migrations;
+namespace PRipple\Illuminate\Database\Migrations;
 
 interface MigrationRepositoryInterface
 {

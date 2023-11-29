@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Database\Eloquent;
+namespace PRipple\Illuminate\Database\Eloquent;
 
-use Illuminate\Database\Events\ModelsPruned;
+use PRipple\Illuminate\Database\Events\ModelsPruned;
 use LogicException;
 
 trait Prunable
@@ -34,7 +34,7 @@ trait Prunable
     /**
      * Get the prunable model query.
      *
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @return \PRipple\Illuminate\Database\Eloquent\Builder
      */
     public function prunable()
     {

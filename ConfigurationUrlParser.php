@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database;
+namespace PRipple\Illuminate\Database;
 
 use Illuminate\Support\ConfigurationUrlParser as BaseConfigurationUrlParser;
 

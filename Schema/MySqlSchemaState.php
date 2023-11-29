@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Database\Schema;
+namespace PRipple\Illuminate\Database\Schema;
 
 use Exception;
-use Illuminate\Database\Connection;
+use PRipple\Illuminate\Database\Connection;
 use Illuminate\Support\Str;
 use Symfony\Component\Process\Process;
 
@@ -12,7 +12,7 @@ class MySqlSchemaState extends SchemaState
     /**
      * Dump the database's schema into a file.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @param  string  $path
      * @return void
      */

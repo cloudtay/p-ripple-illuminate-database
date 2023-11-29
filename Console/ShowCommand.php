@@ -1,12 +1,12 @@
 <?php
 
-namespace Illuminate\Database\Console;
+namespace PRipple\Illuminate\Database\Console;
 
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
 use Doctrine\DBAL\Schema\Table;
 use Doctrine\DBAL\Schema\View;
-use Illuminate\Database\ConnectionInterface;
-use Illuminate\Database\ConnectionResolverInterface;
+use PRipple\Illuminate\Database\ConnectionInterface;
+use PRipple\Illuminate\Database\ConnectionResolverInterface;
 use Illuminate\Support\Arr;
 use Symfony\Component\Console\Attribute\AsCommand;
 
@@ -33,7 +33,7 @@ class ShowCommand extends DatabaseInspectionCommand
     /**
      * Execute the console command.
      *
-     * @param  \Illuminate\Database\ConnectionResolverInterface  $connections
+     * @param  \PRipple\Illuminate\Database\ConnectionResolverInterface  $connections
      * @return int
      */
     public function handle(ConnectionResolverInterface $connections)
@@ -70,7 +70,7 @@ class ShowCommand extends DatabaseInspectionCommand
     /**
      * Get information regarding the tables within the database.
      *
-     * @param  \Illuminate\Database\ConnectionInterface  $connection
+     * @param  \PRipple\Illuminate\Database\ConnectionInterface  $connection
      * @param  \Doctrine\DBAL\Schema\AbstractSchemaManager  $schema
      * @return \Illuminate\Support\Collection
      */
@@ -88,7 +88,7 @@ class ShowCommand extends DatabaseInspectionCommand
     /**
      * Get information regarding the views within the database.
      *
-     * @param  \Illuminate\Database\ConnectionInterface  $connection
+     * @param  \PRipple\Illuminate\Database\ConnectionInterface  $connection
      * @param  \Doctrine\DBAL\Schema\AbstractSchemaManager  $schema
      * @return \Illuminate\Support\Collection
      */

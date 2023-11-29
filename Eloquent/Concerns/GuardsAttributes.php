@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Concerns;
+namespace PRipple\Illuminate\Database\Eloquent\Concerns;
 
 trait GuardsAttributes
 {

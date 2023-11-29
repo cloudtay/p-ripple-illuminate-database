@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\Database;
+namespace PRipple\Illuminate\Database;
 
 use Faker\Factory as FakerFactory;
 use Faker\Generator as FakerGenerator;
 use Illuminate\Contracts\Queue\EntityResolver;
-use Illuminate\Database\Connectors\ConnectionFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\QueueEntityResolver;
+use PRipple\Illuminate\Database\Connectors\ConnectionFactory;
+use PRipple\Illuminate\Database\Eloquent\Model;
+use PRipple\Illuminate\Database\Eloquent\QueueEntityResolver;
 use Illuminate\Support\ServiceProvider;
 
 class DatabaseServiceProvider extends ServiceProvider

@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Relations;
+namespace PRipple\Illuminate\Database\Eloquent\Relations;
 
-use Illuminate\Database\Eloquent\Collection;
+use PRipple\Illuminate\Database\Eloquent\Collection;
 
 class HasMany extends HasOneOrMany
 {
     /**
      * Convert the relationship to a "has one" relationship.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function one()
     {
@@ -53,7 +53,7 @@ class HasMany extends HasOneOrMany
      * Match the eagerly loaded results to their parents.
      *
      * @param  array  $models
-     * @param  \Illuminate\Database\Eloquent\Collection  $results
+     * @param  \PRipple\Illuminate\Database\Eloquent\Collection  $results
      * @param  string  $relation
      * @return array
      */

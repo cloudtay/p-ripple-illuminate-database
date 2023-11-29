@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Casts;
+namespace PRipple\Illuminate\Database\Eloquent\Casts;
 
 use ArrayObject as BaseArrayObject;
 use Illuminate\Contracts\Support\Arrayable;

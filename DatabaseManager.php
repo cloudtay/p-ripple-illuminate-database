@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Database;
+namespace PRipple\Illuminate\Database;
 
 use Doctrine\DBAL\Types\Type;
-use Illuminate\Database\Connectors\ConnectionFactory;
-use Illuminate\Database\Events\ConnectionEstablished;
+use PRipple\Illuminate\Database\Connectors\ConnectionFactory;
+use PRipple\Illuminate\Database\Events\ConnectionEstablished;
 use Illuminate\Support\Arr;
 use Illuminate\Support\ConfigurationUrlParser;
 use Illuminate\Support\Str;
@@ -14,7 +14,7 @@ use PDO;
 use RuntimeException;
 
 /**
- * @mixin \Illuminate\Database\Connection
+ * @mixin \PRipple\Illuminate\Database\Connection
  */
 class DatabaseManager implements ConnectionResolverInterface
 {
@@ -32,14 +32,14 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * The database connection factory instance.
      *
-     * @var \Illuminate\Database\Connectors\ConnectionFactory
+     * @var \PRipple\Illuminate\Database\Connectors\ConnectionFactory
      */
     protected $factory;
 
     /**
      * The active connection instances.
      *
-     * @var array<string, \Illuminate\Database\Connection>
+     * @var array<string, \PRipple\Illuminate\Database\Connection>
      */
     protected $connections = [];
 
@@ -68,7 +68,7 @@ class DatabaseManager implements ConnectionResolverInterface
      * Create a new database manager instance.
      *
      * @param  \Illuminate\Contracts\Foundation\Application  $app
-     * @param  \Illuminate\Database\Connectors\ConnectionFactory  $factory
+     * @param  \PRipple\Illuminate\Database\Connectors\ConnectionFactory  $factory
      * @return void
      */
     public function __construct($app, ConnectionFactory $factory)
@@ -85,7 +85,7 @@ class DatabaseManager implements ConnectionResolverInterface
      * Get a database connection instance.
      *
      * @param  string|null  $name
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\ConnectionHook
      */
     public function connection($name = null)
     {
@@ -129,7 +129,7 @@ class DatabaseManager implements ConnectionResolverInterface
      * Make the database connection instance.
      *
      * @param  string  $name
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      */
     protected function makeConnection($name)
     {
@@ -180,9 +180,9 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * Prepare the database connection instance.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @param  string  $type
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      */
     protected function configure(Connection $connection, $type)
     {
@@ -212,9 +212,9 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * Prepare the read / write mode for database connection instance.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @param  string|null  $type
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      */
     protected function setPdoForType(Connection $connection, $type = null)
     {
@@ -230,7 +230,7 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * Register custom Doctrine types with the connection.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return void
      */
     protected function registerConfiguredDoctrineTypes(Connection $connection): void
@@ -302,7 +302,7 @@ class DatabaseManager implements ConnectionResolverInterface
      * Reconnect to the given database.
      *
      * @param  string|null  $name
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      */
     public function reconnect($name = null)
     {
@@ -337,7 +337,7 @@ class DatabaseManager implements ConnectionResolverInterface
      * Refresh the PDO connections on a given connection.
      *
      * @param  string  $name
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      */
     protected function refreshPdoConnections($name)
     {
@@ -422,7 +422,7 @@ class DatabaseManager implements ConnectionResolverInterface
     /**
      * Return all of the created connections.
      *
-     * @return array<string, \Illuminate\Database\Connection>
+     * @return array<string, \PRipple\Illuminate\Database\Connection>
      */
     public function getConnections()
     {

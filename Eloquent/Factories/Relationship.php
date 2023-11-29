@@ -1,18 +1,18 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Factories;
+namespace PRipple\Illuminate\Database\Eloquent\Factories;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasOneOrMany;
-use Illuminate\Database\Eloquent\Relations\MorphOneOrMany;
+use PRipple\Illuminate\Database\Eloquent\Model;
+use PRipple\Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use PRipple\Illuminate\Database\Eloquent\Relations\HasOneOrMany;
+use PRipple\Illuminate\Database\Eloquent\Relations\MorphOneOrMany;
 
 class Relationship
 {
     /**
      * The related factory instance.
      *
-     * @var \Illuminate\Database\Eloquent\Factories\Factory
+     * @var \PRipple\Illuminate\Database\Eloquent\Factories\Factory
      */
     protected $factory;
 
@@ -26,7 +26,7 @@ class Relationship
     /**
      * Create a new child relationship instance.
      *
-     * @param  \Illuminate\Database\Eloquent\Factories\Factory  $factory
+     * @param  \PRipple\Illuminate\Database\Eloquent\Factories\Factory  $factory
      * @param  string  $relationship
      * @return void
      */
@@ -39,7 +39,7 @@ class Relationship
     /**
      * Create the child relationship for the given parent model.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $parent
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $parent
      * @return void
      */
     public function createFor(Model $parent)

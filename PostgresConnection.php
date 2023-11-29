@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\Database;
+namespace PRipple\Illuminate\Database;
 
 use Exception;
-use Illuminate\Database\PDO\PostgresDriver;
-use Illuminate\Database\Query\Grammars\PostgresGrammar as QueryGrammar;
-use Illuminate\Database\Query\Processors\PostgresProcessor;
-use Illuminate\Database\Schema\Grammars\PostgresGrammar as SchemaGrammar;
-use Illuminate\Database\Schema\PostgresBuilder;
-use Illuminate\Database\Schema\PostgresSchemaState;
+use PRipple\Illuminate\Database\PDO\PostgresDriver;
+use PRipple\Illuminate\Database\Query\Grammars\PostgresGrammar as QueryGrammar;
+use PRipple\Illuminate\Database\Query\Processors\PostgresProcessor;
+use PRipple\Illuminate\Database\Schema\Grammars\PostgresGrammar as SchemaGrammar;
+use PRipple\Illuminate\Database\Schema\PostgresBuilder;
+use PRipple\Illuminate\Database\Schema\PostgresSchemaState;
 use Illuminate\Filesystem\Filesystem;
 
 class PostgresConnection extends ConnectionHook
@@ -51,7 +51,7 @@ class PostgresConnection extends ConnectionHook
     /**
      * Get the default query grammar instance.
      *
-     * @return \Illuminate\Database\Query\Grammars\PostgresGrammar
+     * @return \PRipple\Illuminate\Database\Query\Grammars\PostgresGrammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -63,7 +63,7 @@ class PostgresConnection extends ConnectionHook
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \Illuminate\Database\Schema\PostgresBuilder
+     * @return \PRipple\Illuminate\Database\Schema\PostgresBuilder
      */
     public function getSchemaBuilder()
     {
@@ -77,7 +77,7 @@ class PostgresConnection extends ConnectionHook
     /**
      * Get the default schema grammar instance.
      *
-     * @return \Illuminate\Database\Schema\Grammars\PostgresGrammar
+     * @return \PRipple\Illuminate\Database\Schema\Grammars\PostgresGrammar
      */
     protected function getDefaultSchemaGrammar()
     {
@@ -91,7 +91,7 @@ class PostgresConnection extends ConnectionHook
      *
      * @param  \Illuminate\Filesystem\Filesystem|null  $files
      * @param  callable|null  $processFactory
-     * @return \Illuminate\Database\Schema\PostgresSchemaState
+     * @return \PRipple\Illuminate\Database\Schema\PostgresSchemaState
      */
     public function getSchemaState(Filesystem $files = null, callable $processFactory = null)
     {
@@ -101,7 +101,7 @@ class PostgresConnection extends ConnectionHook
     /**
      * Get the default post processor instance.
      *
-     * @return \Illuminate\Database\Query\Processors\PostgresProcessor
+     * @return \PRipple\Illuminate\Database\Query\Processors\PostgresProcessor
      */
     protected function getDefaultPostProcessor()
     {
@@ -111,7 +111,7 @@ class PostgresConnection extends ConnectionHook
     /**
      * Get the Doctrine DBAL driver.
      *
-     * @return \Illuminate\Database\PDO\PostgresDriver
+     * @return \PRipple\Illuminate\Database\PDO\PostgresDriver
      */
     protected function getDoctrineDriver()
     {

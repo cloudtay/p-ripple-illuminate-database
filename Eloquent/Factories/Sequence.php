@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Factories;
+namespace PRipple\Illuminate\Database\Eloquent\Factories;
 
 use Countable;
 

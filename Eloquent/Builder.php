@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Eloquent;
+namespace PRipple\Illuminate\Database\Eloquent;
 
 use BadMethodCallException;
 use Closure;
@@ -8,13 +8,13 @@ use Exception;
 use Illuminate\Contracts\Database\Eloquent\Builder as BuilderContract;
 use Illuminate\Contracts\Database\Query\Expression;
 use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Database\Concerns\BuildsQueries;
-use Illuminate\Database\Eloquent\Concerns\QueriesRelationships;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\Relation;
-use Illuminate\Database\Query\Builder as QueryBuilder;
-use Illuminate\Database\RecordsNotFoundException;
-use Illuminate\Database\UniqueConstraintViolationException;
+use PRipple\Illuminate\Database\Concerns\BuildsQueries;
+use PRipple\Illuminate\Database\Eloquent\Concerns\QueriesRelationships;
+use PRipple\Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use PRipple\Illuminate\Database\Eloquent\Relations\Relation;
+use PRipple\Illuminate\Database\Query\Builder as QueryBuilder;
+use PRipple\Illuminate\Database\RecordsNotFoundException;
+use PRipple\Illuminate\Database\UniqueConstraintViolationException;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
@@ -27,7 +27,7 @@ use ReflectionMethod;
  * @property-read HigherOrderBuilderProxy $whereNot
  * @property-read HigherOrderBuilderProxy $orWhereNot
  *
- * @mixin \Illuminate\Database\Query\Builder
+ * @mixin \PRipple\Illuminate\Database\Query\Builder
  */
 class Builder implements BuilderContract
 {
@@ -38,14 +38,14 @@ class Builder implements BuilderContract
     /**
      * The base query builder instance.
      *
-     * @var \Illuminate\Database\Query\Builder
+     * @var \PRipple\Illuminate\Database\Query\Builder
      */
     protected $query;
 
     /**
      * The model being queried.
      *
-     * @var \Illuminate\Database\Eloquent\Model
+     * @var \PRipple\Illuminate\Database\Eloquent\Model
      */
     protected $model;
 
@@ -139,7 +139,7 @@ class Builder implements BuilderContract
     /**
      * Create a new Eloquent query builder instance.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $query
      * @return void
      */
     public function __construct(QueryBuilder $query)
@@ -151,7 +151,7 @@ class Builder implements BuilderContract
      * Create and return an un-saved model instance.
      *
      * @param  array  $attributes
-     * @return \Illuminate\Database\Eloquent\Model|static
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static
      */
     public function make(array $attributes = [])
     {
@@ -162,7 +162,7 @@ class Builder implements BuilderContract
      * Register a new global scope.
      *
      * @param  string  $identifier
-     * @param  \Illuminate\Database\Eloquent\Scope|\Closure  $scope
+     * @param  \PRipple\Illuminate\Database\Eloquent\Scope|\Closure  $scope
      * @return $this
      */
     public function withGlobalScope($identifier, $scope)
@@ -179,7 +179,7 @@ class Builder implements BuilderContract
     /**
      * Remove a registered global scope.
      *
-     * @param  \Illuminate\Database\Eloquent\Scope|string  $scope
+     * @param  \PRipple\Illuminate\Database\Eloquent\Scope|string  $scope
      * @return $this
      */
     public function withoutGlobalScope($scope)
@@ -311,7 +311,7 @@ class Builder implements BuilderContract
      * @param  mixed  $operator
      * @param  mixed  $value
      * @param  string  $boolean
-     * @return \Illuminate\Database\Eloquent\Model|static|null
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static|null
      */
     public function firstWhere($column, $operator = null, $value = null, $boolean = 'and')
     {
@@ -400,7 +400,7 @@ class Builder implements BuilderContract
      * Create a collection of models from plain arrays.
      *
      * @param  array  $items
-     * @return \Illuminate\Database\Eloquent\Collection
+     * @return \PRipple\Illuminate\Database\Eloquent\Collection
      */
     public function hydrate(array $items)
     {
@@ -422,7 +422,7 @@ class Builder implements BuilderContract
      *
      * @param  string  $query
      * @param  array  $bindings
-     * @return \Illuminate\Database\Eloquent\Collection
+     * @return \PRipple\Illuminate\Database\Eloquent\Collection
      */
     public function fromQuery($query, $bindings = [])
     {
@@ -436,7 +436,7 @@ class Builder implements BuilderContract
      *
      * @param  mixed  $id
      * @param  array|string  $columns
-     * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|static[]|static|null
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|\PRipple\Illuminate\Database\Eloquent\Collection|static[]|static|null
      */
     public function find($id, $columns = ['*'])
     {
@@ -452,7 +452,7 @@ class Builder implements BuilderContract
      *
      * @param  \Illuminate\Contracts\Support\Arrayable|array  $ids
      * @param  array|string  $columns
-     * @return \Illuminate\Database\Eloquent\Collection
+     * @return \PRipple\Illuminate\Database\Eloquent\Collection
      */
     public function findMany($ids, $columns = ['*'])
     {
@@ -470,9 +470,9 @@ class Builder implements BuilderContract
      *
      * @param  mixed  $id
      * @param  array|string  $columns
-     * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|static|static[]
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|\PRipple\Illuminate\Database\Eloquent\Collection|static|static[]
      *
-     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>
+     * @throws \PRipple\Illuminate\Database\Eloquent\ModelNotFoundException<\PRipple\Illuminate\Database\Eloquent\Model>
      */
     public function findOrFail($id, $columns = ['*'])
     {
@@ -504,7 +504,7 @@ class Builder implements BuilderContract
      *
      * @param  mixed  $id
      * @param  array|string  $columns
-     * @return \Illuminate\Database\Eloquent\Model|static
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static
      */
     public function findOrNew($id, $columns = ['*'])
     {
@@ -521,7 +521,7 @@ class Builder implements BuilderContract
      * @param  mixed  $id
      * @param  \Closure|array|string  $columns
      * @param  \Closure|null  $callback
-     * @return \Illuminate\Database\Eloquent\Model|\Illuminate\Database\Eloquent\Collection|static[]|static|mixed
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|\PRipple\Illuminate\Database\Eloquent\Collection|static[]|static|mixed
      */
     public function findOr($id, $columns = ['*'], Closure $callback = null)
     {
@@ -543,7 +543,7 @@ class Builder implements BuilderContract
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \Illuminate\Database\Eloquent\Model|static
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static
      */
     public function firstOrNew(array $attributes = [], array $values = [])
     {
@@ -559,7 +559,7 @@ class Builder implements BuilderContract
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \Illuminate\Database\Eloquent\Model|static
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static
      */
     public function firstOrCreate(array $attributes = [], array $values = [])
     {
@@ -575,7 +575,7 @@ class Builder implements BuilderContract
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \Illuminate\Database\Eloquent\Model|static
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static
      */
     public function createOrFirst(array $attributes = [], array $values = [])
     {
@@ -591,7 +591,7 @@ class Builder implements BuilderContract
      *
      * @param  array  $attributes
      * @param  array  $values
-     * @return \Illuminate\Database\Eloquent\Model|static
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static
      */
     public function updateOrCreate(array $attributes, array $values = [])
     {
@@ -606,9 +606,9 @@ class Builder implements BuilderContract
      * Execute the query and get the first result or throw an exception.
      *
      * @param  array|string  $columns
-     * @return \Illuminate\Database\Eloquent\Model|static
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static
      *
-     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>
+     * @throws \PRipple\Illuminate\Database\Eloquent\ModelNotFoundException<\PRipple\Illuminate\Database\Eloquent\Model>
      */
     public function firstOrFail($columns = ['*'])
     {
@@ -624,7 +624,7 @@ class Builder implements BuilderContract
      *
      * @param  \Closure|array|string  $columns
      * @param  \Closure|null  $callback
-     * @return \Illuminate\Database\Eloquent\Model|static|mixed
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static|mixed
      */
     public function firstOr($columns = ['*'], Closure $callback = null)
     {
@@ -645,10 +645,10 @@ class Builder implements BuilderContract
      * Execute the query and get the first result if it's the sole matching record.
      *
      * @param  array|string  $columns
-     * @return \Illuminate\Database\Eloquent\Model
+     * @return \PRipple\Illuminate\Database\Eloquent\Model
      *
-     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>
-     * @throws \Illuminate\Database\MultipleRecordsFoundException
+     * @throws \PRipple\Illuminate\Database\Eloquent\ModelNotFoundException<\PRipple\Illuminate\Database\Eloquent\Model>
+     * @throws \PRipple\Illuminate\Database\MultipleRecordsFoundException
      */
     public function sole($columns = ['*'])
     {
@@ -680,8 +680,8 @@ class Builder implements BuilderContract
      * @param  string|\Illuminate\Contracts\Database\Query\Expression  $column
      * @return mixed
      *
-     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>
-     * @throws \Illuminate\Database\MultipleRecordsFoundException
+     * @throws \PRipple\Illuminate\Database\Eloquent\ModelNotFoundException<\PRipple\Illuminate\Database\Eloquent\Model>
+     * @throws \PRipple\Illuminate\Database\MultipleRecordsFoundException
      */
     public function soleValue($column)
     {
@@ -696,7 +696,7 @@ class Builder implements BuilderContract
      * @param  string|\Illuminate\Contracts\Database\Query\Expression  $column
      * @return mixed
      *
-     * @throws \Illuminate\Database\Eloquent\ModelNotFoundException<\Illuminate\Database\Eloquent\Model>
+     * @throws \PRipple\Illuminate\Database\Eloquent\ModelNotFoundException<\PRipple\Illuminate\Database\Eloquent\Model>
      */
     public function valueOrFail($column)
     {
@@ -709,7 +709,7 @@ class Builder implements BuilderContract
      * Execute the query as a "select" statement.
      *
      * @param  array|string  $columns
-     * @return \Illuminate\Database\Eloquent\Collection|static[]
+     * @return \PRipple\Illuminate\Database\Eloquent\Collection|static[]
      */
     public function get($columns = ['*'])
     {
@@ -729,7 +729,7 @@ class Builder implements BuilderContract
      * Get the hydrated models without eager loading.
      *
      * @param  array|string  $columns
-     * @return \Illuminate\Database\Eloquent\Model[]|static[]
+     * @return \PRipple\Illuminate\Database\Eloquent\Model[]|static[]
      */
     public function getModels($columns = ['*'])
     {
@@ -790,7 +790,7 @@ class Builder implements BuilderContract
      * Get the relation instance for the given relation name.
      *
      * @param  string  $name
-     * @return \Illuminate\Database\Eloquent\Relations\Relation
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\Relation
      */
     public function getRelation($name)
     {
@@ -1015,7 +1015,7 @@ class Builder implements BuilderContract
      * Save a new model and return the instance.
      *
      * @param  array  $attributes
-     * @return \Illuminate\Database\Eloquent\Model|$this
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|$this
      */
     public function create(array $attributes = [])
     {
@@ -1028,7 +1028,7 @@ class Builder implements BuilderContract
      * Save a new model and return the instance. Allow mass-assignment.
      *
      * @param  array  $attributes
-     * @return \Illuminate\Database\Eloquent\Model|$this
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|$this
      */
     public function forceCreate(array $attributes)
     {
@@ -1041,7 +1041,7 @@ class Builder implements BuilderContract
      * Save a new model instance with mass assignment without raising model events.
      *
      * @param  array  $attributes
-     * @return \Illuminate\Database\Eloquent\Model|$this
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|$this
      */
     public function forceCreateQuietly(array $attributes = [])
     {
@@ -1417,7 +1417,7 @@ class Builder implements BuilderContract
     /**
      * Nest where conditions by slicing them at the given where count.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $query
      * @param  int  $originalWhereCount
      * @return void
      */
@@ -1442,7 +1442,7 @@ class Builder implements BuilderContract
     /**
      * Slice where conditions at the given offset and add them to the query as a nested condition.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $query
      * @param  array  $whereSlice
      * @return void
      */
@@ -1530,7 +1530,7 @@ class Builder implements BuilderContract
      * Create a new instance of the model being queried.
      *
      * @param  array  $attributes
-     * @return \Illuminate\Database\Eloquent\Model|static
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static
      */
     public function newModelInstance($attributes = [])
     {
@@ -1729,7 +1729,7 @@ class Builder implements BuilderContract
     /**
      * Get the underlying query builder instance.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function getQuery()
     {
@@ -1739,7 +1739,7 @@ class Builder implements BuilderContract
     /**
      * Set the underlying query builder instance.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $query
      * @return $this
      */
     public function setQuery($query)
@@ -1752,7 +1752,7 @@ class Builder implements BuilderContract
     /**
      * Get a base query builder instance.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function toBase()
     {
@@ -1818,7 +1818,7 @@ class Builder implements BuilderContract
     /**
      * Get the model instance being queried.
      *
-     * @return \Illuminate\Database\Eloquent\Model|static
+     * @return \PRipple\Illuminate\Database\Eloquent\Model|static
      */
     public function getModel()
     {
@@ -1828,7 +1828,7 @@ class Builder implements BuilderContract
     /**
      * Set a model instance for the model being queried.
      *
-     * @param  \Illuminate\Database\Eloquent\Model  $model
+     * @param  \PRipple\Illuminate\Database\Eloquent\Model  $model
      * @return $this
      */
     public function setModel(Model $model)

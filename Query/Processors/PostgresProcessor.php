@@ -1,15 +1,15 @@
 <?php
 
-namespace Illuminate\Database\Query\Processors;
+namespace PRipple\Illuminate\Database\Query\Processors;
 
-use Illuminate\Database\Query\Builder;
+use PRipple\Illuminate\Database\Query\Builder;
 
 class PostgresProcessor extends Processor
 {
     /**
      * Process an "insert get ID" query.
      *
-     * @param  \Illuminate\Database\Query\Builder  $query
+     * @param  \PRipple\Illuminate\Database\Query\Builder  $query
      * @param  string  $sql
      * @param  array  $values
      * @param  string|null  $sequence

@@ -1,16 +1,16 @@
 <?php
 
-namespace Illuminate\Database\Eloquent;
+namespace PRipple\Illuminate\Database\Eloquent;
 
 /**
- * @mixin \Illuminate\Database\Eloquent\Builder
+ * @mixin \PRipple\Illuminate\Database\Eloquent\Builder
  */
 class HigherOrderBuilderProxy
 {
     /**
      * The collection being operated on.
      *
-     * @var \Illuminate\Database\Eloquent\Builder
+     * @var \PRipple\Illuminate\Database\Eloquent\Builder
      */
     protected $builder;
 
@@ -24,7 +24,7 @@ class HigherOrderBuilderProxy
     /**
      * Create a new proxy instance.
      *
-     * @param  \Illuminate\Database\Eloquent\Builder  $builder
+     * @param  \PRipple\Illuminate\Database\Eloquent\Builder  $builder
      * @param  string  $method
      * @return void
      */

@@ -1,13 +1,13 @@
 <?php
 
-namespace Illuminate\Database\Events;
+namespace PRipple\Illuminate\Database\Events;
 
 class SchemaLoaded
 {
     /**
      * The database connection instance.
      *
-     * @var \Illuminate\Database\Connection
+     * @var \PRipple\Illuminate\Database\Connection
      */
     public $connection;
 
@@ -28,7 +28,7 @@ class SchemaLoaded
     /**
      * Create a new event instance.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @param  string  $path
      * @return void
      */

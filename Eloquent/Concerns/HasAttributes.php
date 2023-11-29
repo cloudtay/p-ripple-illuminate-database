@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Concerns;
+namespace PRipple\Illuminate\Database\Eloquent\Concerns;
 
 use BackedEnum;
 use Brick\Math\BigDecimal;
@@ -13,19 +13,19 @@ use DateTimeInterface;
 use Illuminate\Contracts\Database\Eloquent\Castable;
 use Illuminate\Contracts\Database\Eloquent\CastsInboundAttributes;
 use Illuminate\Contracts\Support\Arrayable;
-use Illuminate\Database\Eloquent\Casts\AsArrayObject;
-use Illuminate\Database\Eloquent\Casts\AsCollection;
-use Illuminate\Database\Eloquent\Casts\AsEncryptedArrayObject;
-use Illuminate\Database\Eloquent\Casts\AsEncryptedCollection;
-use Illuminate\Database\Eloquent\Casts\AsEnumArrayObject;
-use Illuminate\Database\Eloquent\Casts\AsEnumCollection;
-use Illuminate\Database\Eloquent\Casts\Attribute;
-use Illuminate\Database\Eloquent\Casts\Json;
-use Illuminate\Database\Eloquent\InvalidCastException;
-use Illuminate\Database\Eloquent\JsonEncodingException;
-use Illuminate\Database\Eloquent\MissingAttributeException;
-use Illuminate\Database\Eloquent\Relations\Relation;
-use Illuminate\Database\LazyLoadingViolationException;
+use PRipple\Illuminate\Database\Eloquent\Casts\AsArrayObject;
+use PRipple\Illuminate\Database\Eloquent\Casts\AsCollection;
+use PRipple\Illuminate\Database\Eloquent\Casts\AsEncryptedArrayObject;
+use PRipple\Illuminate\Database\Eloquent\Casts\AsEncryptedCollection;
+use PRipple\Illuminate\Database\Eloquent\Casts\AsEnumArrayObject;
+use PRipple\Illuminate\Database\Eloquent\Casts\AsEnumCollection;
+use PRipple\Illuminate\Database\Eloquent\Casts\Attribute;
+use PRipple\Illuminate\Database\Eloquent\Casts\Json;
+use PRipple\Illuminate\Database\Eloquent\InvalidCastException;
+use PRipple\Illuminate\Database\Eloquent\JsonEncodingException;
+use PRipple\Illuminate\Database\Eloquent\MissingAttributeException;
+use PRipple\Illuminate\Database\Eloquent\Relations\Relation;
+use PRipple\Illuminate\Database\LazyLoadingViolationException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection as BaseCollection;
@@ -461,7 +461,7 @@ trait HasAttributes
      * @param  string  $key
      * @return null
      *
-     * @throws \Illuminate\Database\Eloquent\MissingAttributeException
+     * @throws \PRipple\Illuminate\Database\Eloquent\MissingAttributeException
      */
     protected function throwMissingAttributeExceptionIfApplicable($key)
     {
@@ -1591,7 +1591,7 @@ trait HasAttributes
      * @param  string  $key
      * @return bool
      *
-     * @throws \Illuminate\Database\Eloquent\InvalidCastException
+     * @throws \PRipple\Illuminate\Database\Eloquent\InvalidCastException
      */
     protected function isClassCastable($key)
     {
@@ -1643,7 +1643,7 @@ trait HasAttributes
      * @param  string  $key
      * @return bool
      *
-     * @throws \Illuminate\Database\Eloquent\InvalidCastException
+     * @throws \PRipple\Illuminate\Database\Eloquent\InvalidCastException
      */
     protected function isClassDeviable($key)
     {
@@ -1662,7 +1662,7 @@ trait HasAttributes
      * @param  string  $key
      * @return bool
      *
-     * @throws \Illuminate\Database\Eloquent\InvalidCastException
+     * @throws \PRipple\Illuminate\Database\Eloquent\InvalidCastException
      */
     protected function isClassSerializable($key)
     {

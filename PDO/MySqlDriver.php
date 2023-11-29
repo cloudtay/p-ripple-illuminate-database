@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Database\PDO;
+namespace PRipple\Illuminate\Database\PDO;
 
 use Doctrine\DBAL\Driver\AbstractMySQLDriver;
-use Illuminate\Database\PDO\Concerns\ConnectsToDatabase;
+use PRipple\Illuminate\Database\PDO\Concerns\ConnectsToDatabase;
 
 class MySqlDriver extends AbstractMySQLDriver
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Database\Schema;
+namespace PRipple\Illuminate\Database\Schema;
 
 use Closure;
 use Illuminate\Container\Container;
-use Illuminate\Database\Connection;
+use PRipple\Illuminate\Database\Connection;
 use InvalidArgumentException;
 use LogicException;
 
@@ -13,14 +13,14 @@ class Builder
     /**
      * The database connection instance.
      *
-     * @var \Illuminate\Database\Connection
+     * @var \PRipple\Illuminate\Database\Connection
      */
     protected $connection;
 
     /**
      * The schema grammar instance.
      *
-     * @var \Illuminate\Database\Schema\Grammars\Grammar
+     * @var \PRipple\Illuminate\Database\Schema\Grammars\Grammar
      */
     protected $grammar;
 
@@ -55,7 +55,7 @@ class Builder
     /**
      * Create a new database Schema manager.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return void
      */
     public function __construct(Connection $connection)
@@ -455,7 +455,7 @@ class Builder
     /**
      * Execute the blueprint to build / modify the table.
      *
-     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  \PRipple\Illuminate\Database\Schema\Blueprint  $blueprint
      * @return void
      */
     protected function build(Blueprint $blueprint)
@@ -468,7 +468,7 @@ class Builder
      *
      * @param  string  $table
      * @param  \Closure|null  $callback
-     * @return \Illuminate\Database\Schema\Blueprint
+     * @return \PRipple\Illuminate\Database\Schema\Blueprint
      */
     protected function createBlueprint($table, Closure $callback = null)
     {
@@ -486,7 +486,7 @@ class Builder
     /**
      * Get the database connection instance.
      *
-     * @return \Illuminate\Database\Connection
+     * @return \PRipple\Illuminate\Database\Connection
      */
     public function getConnection()
     {
@@ -496,7 +496,7 @@ class Builder
     /**
      * Set the database connection instance.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return $this
      */
     public function setConnection(Connection $connection)

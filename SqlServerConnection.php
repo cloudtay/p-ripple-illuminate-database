@@ -1,14 +1,14 @@
 <?php
 
-namespace Illuminate\Database;
+namespace PRipple\Illuminate\Database;
 
 use Closure;
 use Exception;
-use Illuminate\Database\PDO\SqlServerDriver;
-use Illuminate\Database\Query\Grammars\SqlServerGrammar as QueryGrammar;
-use Illuminate\Database\Query\Processors\SqlServerProcessor;
-use Illuminate\Database\Schema\Grammars\SqlServerGrammar as SchemaGrammar;
-use Illuminate\Database\Schema\SqlServerBuilder;
+use PRipple\Illuminate\Database\PDO\SqlServerDriver;
+use PRipple\Illuminate\Database\Query\Grammars\SqlServerGrammar as QueryGrammar;
+use PRipple\Illuminate\Database\Query\Processors\SqlServerProcessor;
+use PRipple\Illuminate\Database\Schema\Grammars\SqlServerGrammar as SchemaGrammar;
+use PRipple\Illuminate\Database\Schema\SqlServerBuilder;
 use Illuminate\Filesystem\Filesystem;
 use RuntimeException;
 use Throwable;
@@ -82,7 +82,7 @@ class SqlServerConnection extends ConnectionHook
     /**
      * Get the default query grammar instance.
      *
-     * @return \Illuminate\Database\Query\Grammars\SqlServerGrammar
+     * @return \PRipple\Illuminate\Database\Query\Grammars\SqlServerGrammar
      */
     protected function getDefaultQueryGrammar()
     {
@@ -94,7 +94,7 @@ class SqlServerConnection extends ConnectionHook
     /**
      * Get a schema builder instance for the connection.
      *
-     * @return \Illuminate\Database\Schema\SqlServerBuilder
+     * @return \PRipple\Illuminate\Database\Schema\SqlServerBuilder
      */
     public function getSchemaBuilder()
     {
@@ -108,7 +108,7 @@ class SqlServerConnection extends ConnectionHook
     /**
      * Get the default schema grammar instance.
      *
-     * @return \Illuminate\Database\Schema\Grammars\SqlServerGrammar
+     * @return \PRipple\Illuminate\Database\Schema\Grammars\SqlServerGrammar
      */
     protected function getDefaultSchemaGrammar()
     {
@@ -133,7 +133,7 @@ class SqlServerConnection extends ConnectionHook
     /**
      * Get the default post processor instance.
      *
-     * @return \Illuminate\Database\Query\Processors\SqlServerProcessor
+     * @return \PRipple\Illuminate\Database\Query\Processors\SqlServerProcessor
      */
     protected function getDefaultPostProcessor()
     {
@@ -143,7 +143,7 @@ class SqlServerConnection extends ConnectionHook
     /**
      * Get the Doctrine DBAL driver.
      *
-     * @return \Illuminate\Database\PDO\SqlServerDriver
+     * @return \PRipple\Illuminate\Database\PDO\SqlServerDriver
      */
     protected function getDoctrineDriver()
     {

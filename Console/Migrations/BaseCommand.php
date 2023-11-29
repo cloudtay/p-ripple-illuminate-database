@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Console\Migrations;
+namespace PRipple\Illuminate\Database\Console\Migrations;
 
 use Illuminate\Console\Command;
 

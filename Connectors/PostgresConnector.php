@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Database\Connectors;
+namespace PRipple\Illuminate\Database\Connectors;
 
-use Illuminate\Database\Concerns\ParsesSearchPath;
+use PRipple\Illuminate\Database\Concerns\ParsesSearchPath;
 use PDO;
 
 class PostgresConnector extends Connector implements ConnectorInterface

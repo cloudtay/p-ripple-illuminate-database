@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Connectors;
+namespace PRipple\Illuminate\Database\Connectors;
 
 use PDO;
 

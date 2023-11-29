@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database\Schema;
+namespace PRipple\Illuminate\Database\Schema;
 
 use Illuminate\Support\Facades\File;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Database\Console;
+namespace PRipple\Illuminate\Database\Console;
 
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Database\ConnectionResolverInterface;
-use Illuminate\Database\Events\DatabaseBusy;
+use PRipple\Illuminate\Database\ConnectionResolverInterface;
+use PRipple\Illuminate\Database\Events\DatabaseBusy;
 use Illuminate\Support\Composer;
 use Symfony\Component\Console\Attribute\AsCommand;
 
@@ -30,7 +30,7 @@ class MonitorCommand extends DatabaseInspectionCommand
     /**
      * The connection resolver instance.
      *
-     * @var \Illuminate\Database\ConnectionResolverInterface
+     * @var \PRipple\Illuminate\Database\ConnectionResolverInterface
      */
     protected $connection;
 
@@ -44,7 +44,7 @@ class MonitorCommand extends DatabaseInspectionCommand
     /**
      * Create a new command instance.
      *
-     * @param  \Illuminate\Database\ConnectionResolverInterface  $connection
+     * @param  \PRipple\Illuminate\Database\ConnectionResolverInterface  $connection
      * @param  \Illuminate\Contracts\Events\Dispatcher  $events
      * @param  \Illuminate\Support\Composer  $composer
      */

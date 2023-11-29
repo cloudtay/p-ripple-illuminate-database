@@ -1,10 +1,10 @@
 <?php
 
-namespace Illuminate\Database\Eloquent\Relations\Concerns;
+namespace PRipple\Illuminate\Database\Eloquent\Relations\Concerns;
 
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\Pivot;
+use PRipple\Illuminate\Database\Eloquent\Collection;
+use PRipple\Illuminate\Database\Eloquent\Model;
+use PRipple\Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Collection as BaseCollection;
 
 trait InteractsWithPivotTable
@@ -65,7 +65,7 @@ trait InteractsWithPivotTable
     /**
      * Sync the intermediate tables with a list of IDs without detaching.
      *
-     * @param  \Illuminate\Support\Collection|\Illuminate\Database\Eloquent\Model|array  $ids
+     * @param  \Illuminate\Support\Collection|\PRipple\Illuminate\Database\Eloquent\Model|array  $ids
      * @return array
      */
     public function syncWithoutDetaching($ids)
@@ -76,7 +76,7 @@ trait InteractsWithPivotTable
     /**
      * Sync the intermediate tables with a list of IDs or collection of models.
      *
-     * @param  \Illuminate\Support\Collection|\Illuminate\Database\Eloquent\Model|array  $ids
+     * @param  \Illuminate\Support\Collection|\PRipple\Illuminate\Database\Eloquent\Model|array  $ids
      * @param  bool  $detaching
      * @return array
      */
@@ -129,7 +129,7 @@ trait InteractsWithPivotTable
     /**
      * Sync the intermediate tables with a list of IDs or collection of models with the given pivot values.
      *
-     * @param  \Illuminate\Support\Collection|\Illuminate\Database\Eloquent\Model|array  $ids
+     * @param  \Illuminate\Support\Collection|\PRipple\Illuminate\Database\Eloquent\Model|array  $ids
      * @param  array  $values
      * @param  bool  $detaching
      * @return array
@@ -506,7 +506,7 @@ trait InteractsWithPivotTable
      *
      * @param  array  $attributes
      * @param  bool  $exists
-     * @return \Illuminate\Database\Eloquent\Relations\Pivot
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\Pivot
      */
     public function newPivot(array $attributes = [], $exists = false)
     {
@@ -523,7 +523,7 @@ trait InteractsWithPivotTable
      * Create a new existing pivot model instance.
      *
      * @param  array  $attributes
-     * @return \Illuminate\Database\Eloquent\Relations\Pivot
+     * @return \PRipple\Illuminate\Database\Eloquent\Relations\Pivot
      */
     public function newExistingPivot(array $attributes = [])
     {
@@ -533,7 +533,7 @@ trait InteractsWithPivotTable
     /**
      * Get a new plain query builder for the pivot table.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function newPivotStatement()
     {
@@ -544,7 +544,7 @@ trait InteractsWithPivotTable
      * Get a new pivot statement for a given "other" ID.
      *
      * @param  mixed  $id
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function newPivotStatementForId($id)
     {
@@ -554,7 +554,7 @@ trait InteractsWithPivotTable
     /**
      * Create a new query builder for the pivot table.
      *
-     * @return \Illuminate\Database\Query\Builder
+     * @return \PRipple\Illuminate\Database\Query\Builder
      */
     public function newPivotQuery()
     {

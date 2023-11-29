@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database;
+namespace PRipple\Illuminate\Database;
 
 class DatabaseTransactionRecord
 {

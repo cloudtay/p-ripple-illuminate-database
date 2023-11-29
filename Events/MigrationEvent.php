@@ -1,16 +1,16 @@
 <?php
 
-namespace Illuminate\Database\Events;
+namespace PRipple\Illuminate\Database\Events;
 
 use Illuminate\Contracts\Database\Events\MigrationEvent as MigrationEventContract;
-use Illuminate\Database\Migrations\Migration;
+use PRipple\Illuminate\Database\Migrations\Migration;
 
 abstract class MigrationEvent implements MigrationEventContract
 {
     /**
      * A migration instance.
      *
-     * @var \Illuminate\Database\Migrations\Migration
+     * @var \PRipple\Illuminate\Database\Migrations\Migration
      */
     public $migration;
 
@@ -24,7 +24,7 @@ abstract class MigrationEvent implements MigrationEventContract
     /**
      * Create a new event instance.
      *
-     * @param  \Illuminate\Database\Migrations\Migration  $migration
+     * @param  \PRipple\Illuminate\Database\Migrations\Migration  $migration
      * @param  string  $method
      * @return void
      */

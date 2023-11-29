@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Database\PDO;
+namespace PRipple\Illuminate\Database\PDO;
 
 use Doctrine\DBAL\Driver\AbstractPostgreSQLDriver;
-use Illuminate\Database\PDO\Concerns\ConnectsToDatabase;
+use PRipple\Illuminate\Database\PDO\Concerns\ConnectsToDatabase;
 
 class PostgresDriver extends AbstractPostgreSQLDriver
 {

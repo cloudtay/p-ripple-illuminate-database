@@ -1,8 +1,8 @@
 <?php
 
-namespace Illuminate\Database\Console\Migrations;
+namespace PRipple\Illuminate\Database\Console\Migrations;
 
-use Illuminate\Database\Migrations\Migrator;
+use PRipple\Illuminate\Database\Migrations\Migrator;
 use Illuminate\Support\Collection;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -25,14 +25,14 @@ class StatusCommand extends BaseCommand
     /**
      * The migrator instance.
      *
-     * @var \Illuminate\Database\Migrations\Migrator
+     * @var \PRipple\Illuminate\Database\Migrations\Migrator
      */
     protected $migrator;
 
     /**
      * Create a new migration rollback command instance.
      *
-     * @param  \Illuminate\Database\Migrations\Migrator  $migrator
+     * @param  \PRipple\Illuminate\Database\Migrations\Migrator  $migrator
      * @return void
      */
     public function __construct(Migrator $migrator)

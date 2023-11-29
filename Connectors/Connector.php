@@ -1,9 +1,9 @@
 <?php
 
-namespace Illuminate\Database\Connectors;
+namespace PRipple\Illuminate\Database\Connectors;
 
 use Exception;
-use Illuminate\Database\DetectsLostConnections;
+use PRipple\Illuminate\Database\DetectsLostConnections;
 use PDO;
 use Throwable;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Illuminate\Database;
+namespace PRipple\Illuminate\Database;
 
 use Illuminate\Contracts\Database\Query\Expression;
 use Illuminate\Support\Traits\Macroable;
@@ -13,7 +13,7 @@ abstract class Grammar
     /**
      * The connection used for escaping values.
      *
-     * @var \Illuminate\Database\Connection
+     * @var \PRipple\Illuminate\Database\Connection
      */
     protected $connection;
 
@@ -281,7 +281,7 @@ abstract class Grammar
     /**
      * Set the grammar's database connection.
      *
-     * @param  \Illuminate\Database\Connection  $connection
+     * @param  \PRipple\Illuminate\Database\Connection  $connection
      * @return $this
      */
     public function setConnection($connection)
