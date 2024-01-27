@@ -28,7 +28,7 @@
     "illuminate/contracts": "^10.0",
     "illuminate/macroable": "^10.0",
     "illuminate/support": "^10.0",
-    "cclilshy/p-ripple": "dev-main"
+    "cclilshy/p-ripple": "*"
   },
   "autoload": {
     "psr-4": {
@@ -53,7 +53,7 @@
   "config": {
     "sort-packages": true
   },
-  "version": "dev-main",
+  "version": "v1.0.0",
   "minimum-stability": "dev",
   "prefer-stable": true
 }

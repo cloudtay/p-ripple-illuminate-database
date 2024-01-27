@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
  * Copyright (c) 2023 cclilshy
  * Contact Information:
@@ -36,8 +36,6 @@
  * 无论是合同诉讼、侵权行为还是其他方面，作者或版权持有人均不对
  * 由于软件或软件的使用或其他交易而引起的任何索赔、损害或其他责任承担责任。
  */
-
-declare(strict_types=1);
 
 namespace PRipple\Illuminate\Database\Proxy;
 
@@ -104,10 +102,10 @@ class PDOProxy extends Worker
     {
         $driver    = $this->config['driver'];
         $dsn       = match ($driver) {
-            'mysql' => "mysql:host={$this->config['host']};port={$this->config['port']};dbname={$this->config['database']}",
-            'pgsql' => "pgsql:host={$this->config['host']};port={$this->config['port']};dbname={$this->config['database']}",
+            'mysql'  => "mysql:host={$this->config['host']};port={$this->config['port']};dbname={$this->config['database']}",
+            'pgsql'  => "pgsql:host={$this->config['host']};port={$this->config['port']};dbname={$this->config['database']}",
             'sqlite' => "sqlite:{$this->config['url']}",
-            default => throw new Exception("Unsupported driver: $driver"),
+            default  => throw new Exception("Unsupported driver: $driver"),
         };
         $username  = $this->config['username'] ?? '';
         $password  = $this->config['password'] ?? '';
@@ -139,9 +137,9 @@ class PDOProxy extends Worker
                     is_string($key) ? $key : $key + 1,
                     $value,
                     match (true) {
-                        is_int($value) => PDO::PARAM_INT,
+                        is_int($value)      => PDO::PARAM_INT,
                         is_resource($value) => PDO::PARAM_LOB,
-                        default => PDO::PARAM_STR
+                        default             => PDO::PARAM_STR
                     },
                 );
             }
@@ -150,9 +148,9 @@ class PDOProxy extends Worker
                     is_string($key) ? $key : $key + 1,
                     $value,
                     match (true) {
-                        is_int($value) => PDO::PARAM_INT,
+                        is_int($value)      => PDO::PARAM_INT,
                         is_resource($value) => PDO::PARAM_LOB,
-                        default => PDO::PARAM_STR
+                        default             => PDO::PARAM_STR
                     },
                 );
             }
