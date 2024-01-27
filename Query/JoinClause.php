@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Query;
+namespace Cclilshy\PRipple\Database\Query;
 
 use Closure;
 

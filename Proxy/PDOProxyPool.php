@@ -38,12 +38,12 @@
  */
 
 
-namespace PRipple\Illuminate\Database\Proxy;
+namespace Cclilshy\PRipple\Database\Proxy;
 
+use Cclilshy\PRipple\Database\Component;
+use Cclilshy\PRipple\Database\ConnectionHook;
 use Cclilshy\PRipple\PRipple;
 use Cclilshy\PRipple\Worker\Worker;
-use PRipple\Illuminate\Database\Component;
-use PRipple\Illuminate\Database\ConnectionHook;
 
 class PDOProxyPool extends Worker
 {

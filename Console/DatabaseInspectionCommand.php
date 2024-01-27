@@ -1,15 +1,15 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console;
+namespace Cclilshy\PRipple\Database\Console;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Illuminate\Console\Command;
-use PRipple\Illuminate\Database\ConnectionInterface;
-use PRipple\Illuminate\Database\MySqlConnection;
-use PRipple\Illuminate\Database\PostgresConnection;
-use PRipple\Illuminate\Database\QueryException;
-use PRipple\Illuminate\Database\SQLiteConnection;
-use PRipple\Illuminate\Database\SqlServerConnection;
+use Cclilshy\PRipple\Database\ConnectionInterface;
+use Cclilshy\PRipple\Database\MySqlConnection;
+use Cclilshy\PRipple\Database\PostgresConnection;
+use Cclilshy\PRipple\Database\QueryException;
+use Cclilshy\PRipple\Database\SQLiteConnection;
+use Cclilshy\PRipple\Database\SqlServerConnection;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Composer;
 use Symfony\Component\Process\Exception\ProcessSignaledException;

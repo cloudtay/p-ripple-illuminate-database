@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Relations;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations;
 
 class MorphPivot extends Pivot
 {

@@ -1,15 +1,15 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Relations;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations;
 
 use Closure;
 use Illuminate\Contracts\Database\Eloquent\Builder as BuilderContract;
-use PRipple\Illuminate\Database\Eloquent\Builder;
-use PRipple\Illuminate\Database\Eloquent\Collection;
-use PRipple\Illuminate\Database\Eloquent\Model;
-use PRipple\Illuminate\Database\Eloquent\ModelNotFoundException;
-use PRipple\Illuminate\Database\MultipleRecordsFoundException;
-use PRipple\Illuminate\Database\Query\Expression;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\Eloquent\Collection;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\ModelNotFoundException;
+use Cclilshy\PRipple\Database\MultipleRecordsFoundException;
+use Cclilshy\PRipple\Database\Query\Expression;
 use Illuminate\Support\Traits\ForwardsCalls;
 use Illuminate\Support\Traits\Macroable;
 

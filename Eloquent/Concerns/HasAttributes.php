@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Concerns;
 
 use BackedEnum;
 use Brick\Math\BigDecimal;
@@ -13,19 +13,19 @@ use DateTimeInterface;
 use Illuminate\Contracts\Database\Eloquent\Castable;
 use Illuminate\Contracts\Database\Eloquent\CastsInboundAttributes;
 use Illuminate\Contracts\Support\Arrayable;
-use PRipple\Illuminate\Database\Eloquent\Casts\AsArrayObject;
-use PRipple\Illuminate\Database\Eloquent\Casts\AsCollection;
-use PRipple\Illuminate\Database\Eloquent\Casts\AsEncryptedArrayObject;
-use PRipple\Illuminate\Database\Eloquent\Casts\AsEncryptedCollection;
-use PRipple\Illuminate\Database\Eloquent\Casts\AsEnumArrayObject;
-use PRipple\Illuminate\Database\Eloquent\Casts\AsEnumCollection;
-use PRipple\Illuminate\Database\Eloquent\Casts\Attribute;
-use PRipple\Illuminate\Database\Eloquent\Casts\Json;
-use PRipple\Illuminate\Database\Eloquent\InvalidCastException;
-use PRipple\Illuminate\Database\Eloquent\JsonEncodingException;
-use PRipple\Illuminate\Database\Eloquent\MissingAttributeException;
-use PRipple\Illuminate\Database\Eloquent\Relations\Relation;
-use PRipple\Illuminate\Database\LazyLoadingViolationException;
+use Cclilshy\PRipple\Database\Eloquent\Casts\AsArrayObject;
+use Cclilshy\PRipple\Database\Eloquent\Casts\AsCollection;
+use Cclilshy\PRipple\Database\Eloquent\Casts\AsEncryptedArrayObject;
+use Cclilshy\PRipple\Database\Eloquent\Casts\AsEncryptedCollection;
+use Cclilshy\PRipple\Database\Eloquent\Casts\AsEnumArrayObject;
+use Cclilshy\PRipple\Database\Eloquent\Casts\AsEnumCollection;
+use Cclilshy\PRipple\Database\Eloquent\Casts\Attribute;
+use Cclilshy\PRipple\Database\Eloquent\Casts\Json;
+use Cclilshy\PRipple\Database\Eloquent\InvalidCastException;
+use Cclilshy\PRipple\Database\Eloquent\JsonEncodingException;
+use Cclilshy\PRipple\Database\Eloquent\MissingAttributeException;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Relation;
+use Cclilshy\PRipple\Database\LazyLoadingViolationException;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection as BaseCollection;

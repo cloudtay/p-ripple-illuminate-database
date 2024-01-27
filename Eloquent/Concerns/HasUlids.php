@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Concerns;
 
-use PRipple\Illuminate\Database\Eloquent\ModelNotFoundException;
+use Cclilshy\PRipple\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Str;
 
 trait HasUlids

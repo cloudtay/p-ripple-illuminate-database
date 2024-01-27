@@ -1,14 +1,14 @@
 <?php
 
-namespace PRipple\Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Exception;
-use PRipple\Illuminate\Database\PDO\SQLiteDriver;
-use PRipple\Illuminate\Database\Query\Grammars\SQLiteGrammar as QueryGrammar;
-use PRipple\Illuminate\Database\Query\Processors\SQLiteProcessor;
-use PRipple\Illuminate\Database\Schema\Grammars\SQLiteGrammar as SchemaGrammar;
-use PRipple\Illuminate\Database\Schema\SQLiteBuilder;
-use PRipple\Illuminate\Database\Schema\SqliteSchemaState;
+use Cclilshy\PRipple\Database\PDO\SQLiteDriver;
+use Cclilshy\PRipple\Database\Query\Grammars\SQLiteGrammar as QueryGrammar;
+use Cclilshy\PRipple\Database\Query\Processors\SQLiteProcessor;
+use Cclilshy\PRipple\Database\Schema\Grammars\SQLiteGrammar as SchemaGrammar;
+use Cclilshy\PRipple\Database\Schema\SQLiteBuilder;
+use Cclilshy\PRipple\Database\Schema\SqliteSchemaState;
 use Illuminate\Filesystem\Filesystem;
 
 class SQLiteConnection extends ConnectionHook

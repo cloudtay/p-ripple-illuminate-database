@@ -1,15 +1,15 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Schema\Grammars;
+namespace Cclilshy\PRipple\Database\Schema\Grammars;
 
 use BackedEnum;
 use Doctrine\DBAL\Schema\AbstractSchemaManager as SchemaManager;
 use Doctrine\DBAL\Schema\TableDiff;
 use Illuminate\Contracts\Database\Query\Expression;
-use PRipple\Illuminate\Database\Concerns\CompilesJsonPaths;
-use PRipple\Illuminate\Database\Connection;
-use PRipple\Illuminate\Database\Grammar as BaseGrammar;
-use PRipple\Illuminate\Database\Schema\Blueprint;
+use Cclilshy\PRipple\Database\Concerns\CompilesJsonPaths;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\Grammar as BaseGrammar;
+use Cclilshy\PRipple\Database\Schema\Blueprint;
 use Illuminate\Support\Fluent;
 use LogicException;
 use RuntimeException;

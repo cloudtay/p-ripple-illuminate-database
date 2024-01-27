@@ -2,7 +2,7 @@
 
 namespace {{ factoryNamespace }};
 
-use PRipple\Illuminate\Database\Eloquent\Factories\Factory;
+use Cclilshy\PRipple\Database\Eloquent\Factories\Factory;
 
 /**
  * @extends \PRipple\Illuminate\Database\Eloquent\Factories\Factory<\{{ namespacedModel }}>

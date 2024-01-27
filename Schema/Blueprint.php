@@ -1,14 +1,14 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Schema;
+namespace Cclilshy\PRipple\Database\Schema;
 
 use BadMethodCallException;
 use Closure;
-use PRipple\Illuminate\Database\Connection;
-use PRipple\Illuminate\Database\Eloquent\Concerns\HasUlids;
-use PRipple\Illuminate\Database\Query\Expression;
-use PRipple\Illuminate\Database\Schema\Grammars\Grammar;
-use PRipple\Illuminate\Database\SQLiteConnection;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\Eloquent\Concerns\HasUlids;
+use Cclilshy\PRipple\Database\Query\Expression;
+use Cclilshy\PRipple\Database\Schema\Grammars\Grammar;
+use Cclilshy\PRipple\Database\SQLiteConnection;
 use Illuminate\Support\Fluent;
 use Illuminate\Support\Traits\Macroable;
 

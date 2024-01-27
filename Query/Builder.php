@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Query;
+namespace Cclilshy\PRipple\Database\Query;
 
 use BackedEnum;
 use Carbon\CarbonPeriod;
@@ -10,13 +10,13 @@ use Illuminate\Contracts\Database\Query\Builder as BuilderContract;
 use Illuminate\Contracts\Database\Query\ConditionExpression;
 use Illuminate\Contracts\Database\Query\Expression as ExpressionContract;
 use Illuminate\Contracts\Support\Arrayable;
-use PRipple\Illuminate\Database\Concerns\BuildsQueries;
-use PRipple\Illuminate\Database\Concerns\ExplainsQueries;
-use PRipple\Illuminate\Database\ConnectionInterface;
-use PRipple\Illuminate\Database\Eloquent\Builder as EloquentBuilder;
-use PRipple\Illuminate\Database\Eloquent\Relations\Relation;
-use PRipple\Illuminate\Database\Query\Grammars\Grammar;
-use PRipple\Illuminate\Database\Query\Processors\Processor;
+use Cclilshy\PRipple\Database\Concerns\BuildsQueries;
+use Cclilshy\PRipple\Database\Concerns\ExplainsQueries;
+use Cclilshy\PRipple\Database\ConnectionInterface;
+use Cclilshy\PRipple\Database\Eloquent\Builder as EloquentBuilder;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Relation;
+use Cclilshy\PRipple\Database\Query\Grammars\Grammar;
+use Cclilshy\PRipple\Database\Query\Processors\Processor;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;

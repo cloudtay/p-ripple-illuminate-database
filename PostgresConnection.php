@@ -1,14 +1,14 @@
 <?php
 
-namespace PRipple\Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Exception;
-use PRipple\Illuminate\Database\PDO\PostgresDriver;
-use PRipple\Illuminate\Database\Query\Grammars\PostgresGrammar as QueryGrammar;
-use PRipple\Illuminate\Database\Query\Processors\PostgresProcessor;
-use PRipple\Illuminate\Database\Schema\Grammars\PostgresGrammar as SchemaGrammar;
-use PRipple\Illuminate\Database\Schema\PostgresBuilder;
-use PRipple\Illuminate\Database\Schema\PostgresSchemaState;
+use Cclilshy\PRipple\Database\PDO\PostgresDriver;
+use Cclilshy\PRipple\Database\Query\Grammars\PostgresGrammar as QueryGrammar;
+use Cclilshy\PRipple\Database\Query\Processors\PostgresProcessor;
+use Cclilshy\PRipple\Database\Schema\Grammars\PostgresGrammar as SchemaGrammar;
+use Cclilshy\PRipple\Database\Schema\PostgresBuilder;
+use Cclilshy\PRipple\Database\Schema\PostgresSchemaState;
 use Illuminate\Filesystem\Filesystem;
 
 class PostgresConnection extends ConnectionHook

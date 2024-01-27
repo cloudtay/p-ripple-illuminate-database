@@ -1,14 +1,14 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Factories;
+namespace Cclilshy\PRipple\Database\Eloquent\Factories;
 
 use Closure;
 use Faker\Generator;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Foundation\Application;
-use PRipple\Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use PRipple\Illuminate\Database\Eloquent\Model;
-use PRipple\Illuminate\Database\Eloquent\SoftDeletes;
+use Cclilshy\PRipple\Database\Eloquent\Collection as EloquentCollection;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Enumerable;

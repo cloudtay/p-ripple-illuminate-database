@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
-use PRipple\Illuminate\Database\Events\ModelsPruned;
+use Cclilshy\PRipple\Database\Events\ModelsPruned;
 use LogicException;
 
 trait MassPrunable

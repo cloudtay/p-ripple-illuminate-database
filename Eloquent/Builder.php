@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
 use BadMethodCallException;
 use Closure;
@@ -8,13 +8,13 @@ use Exception;
 use Illuminate\Contracts\Database\Eloquent\Builder as BuilderContract;
 use Illuminate\Contracts\Database\Query\Expression;
 use Illuminate\Contracts\Support\Arrayable;
-use PRipple\Illuminate\Database\Concerns\BuildsQueries;
-use PRipple\Illuminate\Database\Eloquent\Concerns\QueriesRelationships;
-use PRipple\Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use PRipple\Illuminate\Database\Eloquent\Relations\Relation;
-use PRipple\Illuminate\Database\Query\Builder as QueryBuilder;
-use PRipple\Illuminate\Database\RecordsNotFoundException;
-use PRipple\Illuminate\Database\UniqueConstraintViolationException;
+use Cclilshy\PRipple\Database\Concerns\BuildsQueries;
+use Cclilshy\PRipple\Database\Eloquent\Concerns\QueriesRelationships;
+use Cclilshy\PRipple\Database\Eloquent\Relations\BelongsToMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Relation;
+use Cclilshy\PRipple\Database\Query\Builder as QueryBuilder;
+use Cclilshy\PRipple\Database\RecordsNotFoundException;
+use Cclilshy\PRipple\Database\UniqueConstraintViolationException;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;

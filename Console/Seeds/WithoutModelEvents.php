@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console\Seeds;
+namespace Cclilshy\PRipple\Database\Console\Seeds;
 
-use PRipple\Illuminate\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Model;
 
 trait WithoutModelEvents
 {

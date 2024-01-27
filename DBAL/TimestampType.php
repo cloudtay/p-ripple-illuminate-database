@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\DBAL;
+namespace Cclilshy\PRipple\Database\DBAL;
 
 use Doctrine\DBAL\Exception as DBALException;
 use Doctrine\DBAL\Platforms\AbstractPlatform;

@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
 use Illuminate\Support\Arr;
 

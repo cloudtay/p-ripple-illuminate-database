@@ -1,14 +1,14 @@
 <?php
 
-namespace PRipple\Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Exception;
-use PRipple\Illuminate\Database\PDO\MySqlDriver;
-use PRipple\Illuminate\Database\Query\Grammars\MySqlGrammar as QueryGrammar;
-use PRipple\Illuminate\Database\Query\Processors\MySqlProcessor;
-use PRipple\Illuminate\Database\Schema\Grammars\MySqlGrammar as SchemaGrammar;
-use PRipple\Illuminate\Database\Schema\MySqlBuilder;
-use PRipple\Illuminate\Database\Schema\MySqlSchemaState;
+use Cclilshy\PRipple\Database\PDO\MySqlDriver;
+use Cclilshy\PRipple\Database\Query\Grammars\MySqlGrammar as QueryGrammar;
+use Cclilshy\PRipple\Database\Query\Processors\MySqlProcessor;
+use Cclilshy\PRipple\Database\Schema\Grammars\MySqlGrammar as SchemaGrammar;
+use Cclilshy\PRipple\Database\Schema\MySqlBuilder;
+use Cclilshy\PRipple\Database\Schema\MySqlSchemaState;
 use Illuminate\Filesystem\Filesystem;
 use PDO;
 

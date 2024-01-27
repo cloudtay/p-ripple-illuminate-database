@@ -7,7 +7,7 @@ The Illuminate Database component is a full database toolkit for PHP, providing 
 First, create a new "Capsule" manager instance. Capsule aims to make configuring the library for usage outside of the Laravel framework as easy as possible.
 
 ```PHP
-use PRipple\Illuminate\Database\Capsule\Manager as Capsule;
+use Cclilshy\PRipple\Database\Capsule\Manager as Capsule;
 
 $capsule = new Capsule;
 

@@ -1,25 +1,25 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Concerns;
 
 use Closure;
-use PRipple\Illuminate\Database\ClassMorphViolationException;
-use PRipple\Illuminate\Database\Eloquent\Builder;
-use PRipple\Illuminate\Database\Eloquent\Collection;
-use PRipple\Illuminate\Database\Eloquent\Model;
-use PRipple\Illuminate\Database\Eloquent\PendingHasThroughRelationship;
-use PRipple\Illuminate\Database\Eloquent\Relations\BelongsTo;
-use PRipple\Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use PRipple\Illuminate\Database\Eloquent\Relations\HasMany;
-use PRipple\Illuminate\Database\Eloquent\Relations\HasManyThrough;
-use PRipple\Illuminate\Database\Eloquent\Relations\HasOne;
-use PRipple\Illuminate\Database\Eloquent\Relations\HasOneThrough;
-use PRipple\Illuminate\Database\Eloquent\Relations\MorphMany;
-use PRipple\Illuminate\Database\Eloquent\Relations\MorphOne;
-use PRipple\Illuminate\Database\Eloquent\Relations\MorphTo;
-use PRipple\Illuminate\Database\Eloquent\Relations\MorphToMany;
-use PRipple\Illuminate\Database\Eloquent\Relations\Pivot;
-use PRipple\Illuminate\Database\Eloquent\Relations\Relation;
+use Cclilshy\PRipple\Database\ClassMorphViolationException;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\Eloquent\Collection;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\PendingHasThroughRelationship;
+use Cclilshy\PRipple\Database\Eloquent\Relations\BelongsTo;
+use Cclilshy\PRipple\Database\Eloquent\Relations\BelongsToMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasManyThrough;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasOne;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasOneThrough;
+use Cclilshy\PRipple\Database\Eloquent\Relations\MorphMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\MorphOne;
+use Cclilshy\PRipple\Database\Eloquent\Relations\MorphTo;
+use Cclilshy\PRipple\Database\Eloquent\Relations\MorphToMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Pivot;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 

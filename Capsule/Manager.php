@@ -1,12 +1,13 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Capsule;
+namespace Cclilshy\PRipple\Database\Capsule;
 
+use Cclilshy\PRipple\Database\ConnectionHook;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Events\Dispatcher;
-use PRipple\Illuminate\Database\Connectors\ConnectionFactory;
-use PRipple\Illuminate\Database\DatabaseManager;
-use PRipple\Illuminate\Database\Eloquent\Model as Eloquent;
+use Cclilshy\PRipple\Database\Connectors\ConnectionFactory;
+use Cclilshy\PRipple\Database\DatabaseManager;
+use Cclilshy\PRipple\Database\Eloquent\Model as Eloquent;
 use Illuminate\Support\Traits\CapsuleManagerTrait;
 use PDO;
 
@@ -67,7 +68,7 @@ class Manager
      * Get a connection instance from the global manager.
      *
      * @param  string|null  $connection
-     * @return \PRipple\Illuminate\Database\ConnectionHook
+     * @return ConnectionHook
      */
     public static function connection($connection = null)
     {
@@ -102,7 +103,7 @@ class Manager
      * Get a registered connection instance.
      *
      * @param  string|null  $name
-     * @return \PRipple\Illuminate\Database\ConnectionHook
+     * @return ConnectionHook
      */
     public function getConnection($name = null)
     {

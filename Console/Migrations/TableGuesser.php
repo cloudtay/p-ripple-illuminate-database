@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console\Migrations;
+namespace Cclilshy\PRipple\Database\Console\Migrations;
 
 class TableGuesser
 {

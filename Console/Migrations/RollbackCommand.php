@@ -1,9 +1,9 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console\Migrations;
+namespace Cclilshy\PRipple\Database\Console\Migrations;
 
 use Illuminate\Console\ConfirmableTrait;
-use PRipple\Illuminate\Database\Migrations\Migrator;
+use Cclilshy\PRipple\Database\Migrations\Migrator;
 use Symfony\Component\Console\Input\InputOption;
 
 class RollbackCommand extends BaseCommand

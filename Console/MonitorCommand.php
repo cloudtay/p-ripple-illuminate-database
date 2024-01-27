@@ -1,10 +1,10 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console;
+namespace Cclilshy\PRipple\Database\Console;
 
 use Illuminate\Contracts\Events\Dispatcher;
-use PRipple\Illuminate\Database\ConnectionResolverInterface;
-use PRipple\Illuminate\Database\Events\DatabaseBusy;
+use Cclilshy\PRipple\Database\ConnectionResolverInterface;
+use Cclilshy\PRipple\Database\Events\DatabaseBusy;
 use Illuminate\Support\Composer;
 use Symfony\Component\Console\Attribute\AsCommand;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console;
+namespace Cclilshy\PRipple\Database\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Contracts\Events\Dispatcher;
-use PRipple\Illuminate\Database\Connection;
-use PRipple\Illuminate\Database\ConnectionResolverInterface;
-use PRipple\Illuminate\Database\Events\SchemaDumped;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\ConnectionResolverInterface;
+use Cclilshy\PRipple\Database\Events\SchemaDumped;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Facades\Config;
 use Symfony\Component\Console\Attribute\AsCommand;

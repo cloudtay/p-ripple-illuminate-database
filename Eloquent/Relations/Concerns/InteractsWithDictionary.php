@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Relations\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations\Concerns;
 
 use BackedEnum;
 use Doctrine\Instantiator\Exception\InvalidArgumentException;

@@ -1,12 +1,12 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Query\Grammars;
+namespace Cclilshy\PRipple\Database\Query\Grammars;
 
 use Illuminate\Contracts\Database\Query\Expression;
-use PRipple\Illuminate\Database\Concerns\CompilesJsonPaths;
-use PRipple\Illuminate\Database\Grammar as BaseGrammar;
-use PRipple\Illuminate\Database\Query\Builder;
-use PRipple\Illuminate\Database\Query\JoinClause;
+use Cclilshy\PRipple\Database\Concerns\CompilesJsonPaths;
+use Cclilshy\PRipple\Database\Grammar as BaseGrammar;
+use Cclilshy\PRipple\Database\Query\Builder;
+use Cclilshy\PRipple\Database\Query\JoinClause;
 use Illuminate\Support\Arr;
 use RuntimeException;
 

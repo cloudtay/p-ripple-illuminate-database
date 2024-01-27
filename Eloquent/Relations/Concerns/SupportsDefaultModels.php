@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Relations\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations\Concerns;
 
-use PRipple\Illuminate\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Model;
 
 trait SupportsDefaultModels
 {

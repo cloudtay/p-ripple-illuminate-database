@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Query\Processors;
+namespace Cclilshy\PRipple\Database\Query\Processors;
 
 class MySqlProcessor extends Processor
 {

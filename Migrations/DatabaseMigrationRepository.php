@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Migrations;
+namespace Cclilshy\PRipple\Database\Migrations;
 
-use PRipple\Illuminate\Database\ConnectionResolverInterface as Resolver;
+use Cclilshy\PRipple\Database\ConnectionResolverInterface as Resolver;
 
 class DatabaseMigrationRepository implements MigrationRepositoryInterface
 {

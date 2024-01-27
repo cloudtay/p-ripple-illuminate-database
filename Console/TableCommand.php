@@ -1,12 +1,12 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console;
+namespace Cclilshy\PRipple\Database\Console;
 
 use Doctrine\DBAL\Schema\Column;
 use Doctrine\DBAL\Schema\ForeignKeyConstraint;
 use Doctrine\DBAL\Schema\Index;
 use Doctrine\DBAL\Schema\Table;
-use PRipple\Illuminate\Database\ConnectionResolverInterface;
+use Cclilshy\PRipple\Database\ConnectionResolverInterface;
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Attribute\AsCommand;
 

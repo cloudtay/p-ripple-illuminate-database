@@ -1,10 +1,10 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Schema;
+namespace Cclilshy\PRipple\Database\Schema;
 
 use Closure;
 use Illuminate\Container\Container;
-use PRipple\Illuminate\Database\Connection;
+use Cclilshy\PRipple\Database\Connection;
 use InvalidArgumentException;
 use LogicException;
 

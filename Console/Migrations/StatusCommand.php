@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console\Migrations;
+namespace Cclilshy\PRipple\Database\Console\Migrations;
 
-use PRipple\Illuminate\Database\Migrations\Migrator;
+use Cclilshy\PRipple\Database\Migrations\Migrator;
 use Illuminate\Support\Collection;
 use Symfony\Component\Console\Input\InputOption;
 

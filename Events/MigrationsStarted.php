@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Events;
+namespace Cclilshy\PRipple\Database\Events;
 
 class MigrationsStarted extends MigrationsEvent
 {

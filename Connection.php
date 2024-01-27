@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Carbon\CarbonInterval;
 use Closure;
@@ -9,17 +9,17 @@ use Doctrine\DBAL\Connection as DoctrineConnection;
 use Doctrine\DBAL\Types\Type;
 use Exception;
 use Illuminate\Contracts\Events\Dispatcher;
-use PRipple\Illuminate\Database\Events\QueryExecuted;
-use PRipple\Illuminate\Database\Events\StatementPrepared;
-use PRipple\Illuminate\Database\Events\TransactionBeginning;
-use PRipple\Illuminate\Database\Events\TransactionCommitted;
-use PRipple\Illuminate\Database\Events\TransactionCommitting;
-use PRipple\Illuminate\Database\Events\TransactionRolledBack;
-use PRipple\Illuminate\Database\Query\Builder as QueryBuilder;
-use PRipple\Illuminate\Database\Query\Expression;
-use PRipple\Illuminate\Database\Query\Grammars\Grammar as QueryGrammar;
-use PRipple\Illuminate\Database\Query\Processors\Processor;
-use PRipple\Illuminate\Database\Schema\Builder as SchemaBuilder;
+use Cclilshy\PRipple\Database\Events\QueryExecuted;
+use Cclilshy\PRipple\Database\Events\StatementPrepared;
+use Cclilshy\PRipple\Database\Events\TransactionBeginning;
+use Cclilshy\PRipple\Database\Events\TransactionCommitted;
+use Cclilshy\PRipple\Database\Events\TransactionCommitting;
+use Cclilshy\PRipple\Database\Events\TransactionRolledBack;
+use Cclilshy\PRipple\Database\Query\Builder as QueryBuilder;
+use Cclilshy\PRipple\Database\Query\Expression;
+use Cclilshy\PRipple\Database\Query\Grammars\Grammar as QueryGrammar;
+use Cclilshy\PRipple\Database\Query\Processors\Processor;
+use Cclilshy\PRipple\Database\Schema\Builder as SchemaBuilder;
 use Illuminate\Support\Arr;
 use Illuminate\Support\InteractsWithTime;
 use Illuminate\Support\Traits\Macroable;

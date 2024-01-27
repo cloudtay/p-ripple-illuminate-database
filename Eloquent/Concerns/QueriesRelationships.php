@@ -1,17 +1,17 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Concerns;
 
 use BadMethodCallException;
 use Closure;
-use PRipple\Illuminate\Database\Eloquent\Builder;
-use PRipple\Illuminate\Database\Eloquent\Collection;
-use PRipple\Illuminate\Database\Eloquent\RelationNotFoundException;
-use PRipple\Illuminate\Database\Eloquent\Relations\BelongsTo;
-use PRipple\Illuminate\Database\Eloquent\Relations\MorphTo;
-use PRipple\Illuminate\Database\Eloquent\Relations\Relation;
-use PRipple\Illuminate\Database\Query\Builder as QueryBuilder;
-use PRipple\Illuminate\Database\Query\Expression;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\Eloquent\Collection;
+use Cclilshy\PRipple\Database\Eloquent\RelationNotFoundException;
+use Cclilshy\PRipple\Database\Eloquent\Relations\BelongsTo;
+use Cclilshy\PRipple\Database\Eloquent\Relations\MorphTo;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Relation;
+use Cclilshy\PRipple\Database\Query\Builder as QueryBuilder;
+use Cclilshy\PRipple\Database\Query\Expression;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
 

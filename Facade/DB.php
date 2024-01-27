@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Facade;
+namespace Cclilshy\PRipple\Database\Facade;
 
 use Carbon\CarbonInterval;
 use Closure;
@@ -13,15 +13,15 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\Facades\Facade;
 use PDO;
 use PDOStatement;
-use PRipple\Illuminate\Database\ConnectionHook;
-use PRipple\Illuminate\Database\DatabaseManager;
-use PRipple\Illuminate\Database\DatabaseTransactionsManager;
-use PRipple\Illuminate\Database\Grammar as BaseGrammar;
-use PRipple\Illuminate\Database\Query\Builder as QueryBuilder;
-use PRipple\Illuminate\Database\Query\Grammars\Grammar as QueryGrammar;
-use PRipple\Illuminate\Database\Query\Processors\Processor;
-use PRipple\Illuminate\Database\Schema\Builder as SchemaBuilder;
-use PRipple\Illuminate\Database\Schema\Grammars\Grammar as SchemaGrammar;
+use Cclilshy\PRipple\Database\ConnectionHook;
+use Cclilshy\PRipple\Database\DatabaseManager;
+use Cclilshy\PRipple\Database\DatabaseTransactionsManager;
+use Cclilshy\PRipple\Database\Grammar as BaseGrammar;
+use Cclilshy\PRipple\Database\Query\Builder as QueryBuilder;
+use Cclilshy\PRipple\Database\Query\Grammars\Grammar as QueryGrammar;
+use Cclilshy\PRipple\Database\Query\Processors\Processor;
+use Cclilshy\PRipple\Database\Schema\Builder as SchemaBuilder;
+use Cclilshy\PRipple\Database\Schema\Grammars\Grammar as SchemaGrammar;
 use Throwable;
 
 /**

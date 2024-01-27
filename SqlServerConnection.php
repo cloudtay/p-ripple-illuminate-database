@@ -1,14 +1,14 @@
 <?php
 
-namespace PRipple\Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Closure;
 use Exception;
-use PRipple\Illuminate\Database\PDO\SqlServerDriver;
-use PRipple\Illuminate\Database\Query\Grammars\SqlServerGrammar as QueryGrammar;
-use PRipple\Illuminate\Database\Query\Processors\SqlServerProcessor;
-use PRipple\Illuminate\Database\Schema\Grammars\SqlServerGrammar as SchemaGrammar;
-use PRipple\Illuminate\Database\Schema\SqlServerBuilder;
+use Cclilshy\PRipple\Database\PDO\SqlServerDriver;
+use Cclilshy\PRipple\Database\Query\Grammars\SqlServerGrammar as QueryGrammar;
+use Cclilshy\PRipple\Database\Query\Processors\SqlServerProcessor;
+use Cclilshy\PRipple\Database\Schema\Grammars\SqlServerGrammar as SchemaGrammar;
+use Cclilshy\PRipple\Database\Schema\SqlServerBuilder;
 use Illuminate\Filesystem\Filesystem;
 use RuntimeException;
 use Throwable;

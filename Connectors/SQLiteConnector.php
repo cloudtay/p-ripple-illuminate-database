@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Connectors;
+namespace Cclilshy\PRipple\Database\Connectors;
 
-use PRipple\Illuminate\Database\SQLiteDatabaseDoesNotExistException;
+use Cclilshy\PRipple\Database\SQLiteDatabaseDoesNotExistException;
 
 class SQLiteConnector extends Connector implements ConnectorInterface
 {

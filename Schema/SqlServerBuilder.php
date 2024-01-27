@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Schema;
+namespace Cclilshy\PRipple\Database\Schema;
 
 class SqlServerBuilder extends Builder
 {

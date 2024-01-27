@@ -1,9 +1,9 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Relations;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations;
 
-use PRipple\Illuminate\Database\Eloquent\Builder;
-use PRipple\Illuminate\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\Eloquent\Model;
 
 abstract class MorphOneOrMany extends HasOneOrMany
 {

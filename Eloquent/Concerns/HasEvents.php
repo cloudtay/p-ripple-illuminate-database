@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Concerns;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Events\NullDispatcher;

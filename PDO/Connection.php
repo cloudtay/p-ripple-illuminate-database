@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\PDO;
+namespace Cclilshy\PRipple\Database\PDO;
 
 use Doctrine\DBAL\Driver\PDO\Exception;
 use Doctrine\DBAL\Driver\PDO\Result;

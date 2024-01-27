@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Migrations;
+namespace Cclilshy\PRipple\Database\Migrations;
 
 abstract class Migration
 {

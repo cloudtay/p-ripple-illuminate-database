@@ -1,14 +1,14 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console;
+namespace Cclilshy\PRipple\Database\Console;
 
 use BackedEnum;
 use Doctrine\DBAL\Schema\Column;
 use Doctrine\DBAL\Schema\Index;
 use Doctrine\DBAL\Types\DecimalType;
 use Illuminate\Contracts\Container\BindingResolutionException;
-use PRipple\Illuminate\Database\Eloquent\Model;
-use PRipple\Illuminate\Database\Eloquent\Relations\Relation;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;
 use ReflectionClass;

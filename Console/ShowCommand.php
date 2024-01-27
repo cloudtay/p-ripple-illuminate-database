@@ -1,12 +1,12 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console;
+namespace Cclilshy\PRipple\Database\Console;
 
 use Doctrine\DBAL\Schema\AbstractSchemaManager;
 use Doctrine\DBAL\Schema\Table;
 use Doctrine\DBAL\Schema\View;
-use PRipple\Illuminate\Database\ConnectionInterface;
-use PRipple\Illuminate\Database\ConnectionResolverInterface;
+use Cclilshy\PRipple\Database\ConnectionInterface;
+use Cclilshy\PRipple\Database\ConnectionResolverInterface;
 use Illuminate\Support\Arr;
 use Symfony\Component\Console\Attribute\AsCommand;
 

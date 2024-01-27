@@ -1,11 +1,11 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Factories;
+namespace Cclilshy\PRipple\Database\Eloquent\Factories;
 
-use PRipple\Illuminate\Database\Eloquent\Model;
-use PRipple\Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use PRipple\Illuminate\Database\Eloquent\Relations\HasOneOrMany;
-use PRipple\Illuminate\Database\Eloquent\Relations\MorphOneOrMany;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Relations\BelongsToMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasOneOrMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\MorphOneOrMany;
 
 class Relationship
 {

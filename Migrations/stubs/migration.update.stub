@@ -1,7 +1,7 @@
 <?php
 
-use PRipple\Illuminate\Database\Migrations\Migration;
-use PRipple\Illuminate\Database\Schema\Blueprint;
+use Cclilshy\PRipple\Database\Migrations\Migration;
+use Cclilshy\PRipple\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration

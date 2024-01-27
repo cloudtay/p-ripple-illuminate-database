@@ -1,9 +1,9 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
 use BadMethodCallException;
-use PRipple\Illuminate\Database\Eloquent\Relations\HasMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Str;
 
 class PendingHasThroughRelationship

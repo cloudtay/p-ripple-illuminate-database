@@ -1,10 +1,10 @@
 <?php
 
-namespace PRipple\Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Doctrine\DBAL\Types\Type;
-use PRipple\Illuminate\Database\Connectors\ConnectionFactory;
-use PRipple\Illuminate\Database\Events\ConnectionEstablished;
+use Cclilshy\PRipple\Database\Connectors\ConnectionFactory;
+use Cclilshy\PRipple\Database\Events\ConnectionEstablished;
 use Illuminate\Support\Arr;
 use Illuminate\Support\ConfigurationUrlParser;
 use Illuminate\Support\Str;
@@ -85,7 +85,7 @@ class DatabaseManager implements ConnectionResolverInterface
      * Get a database connection instance.
      *
      * @param  string|null  $name
-     * @return \PRipple\Illuminate\Database\ConnectionHook
+     * @return ConnectionHook
      */
     public function connection($name = null)
     {

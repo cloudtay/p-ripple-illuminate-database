@@ -1,10 +1,10 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Relations\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations\Concerns;
 
 use Closure;
-use PRipple\Illuminate\Database\Eloquent\Builder;
-use PRipple\Illuminate\Database\Query\JoinClause;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\Query\JoinClause;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 

@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Relations;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations;
 
-use PRipple\Illuminate\Database\Eloquent\Collection;
+use Cclilshy\PRipple\Database\Eloquent\Collection;
 
 class HasMany extends HasOneOrMany
 {

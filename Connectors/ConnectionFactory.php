@@ -1,13 +1,13 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Connectors;
+namespace Cclilshy\PRipple\Database\Connectors;
 
 use Illuminate\Contracts\Container\Container;
-use PRipple\Illuminate\Database\Connection;
-use PRipple\Illuminate\Database\MySqlConnection;
-use PRipple\Illuminate\Database\PostgresConnection;
-use PRipple\Illuminate\Database\SQLiteConnection;
-use PRipple\Illuminate\Database\SqlServerConnection;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\MySqlConnection;
+use Cclilshy\PRipple\Database\PostgresConnection;
+use Cclilshy\PRipple\Database\SQLiteConnection;
+use Cclilshy\PRipple\Database\SqlServerConnection;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 use PDOException;

@@ -1,11 +1,11 @@
 <?php
 
-namespace PRipple\Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\View\Components\TwoColumnDetail;
 use Illuminate\Contracts\Container\Container;
-use PRipple\Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Cclilshy\PRipple\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 

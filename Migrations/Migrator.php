@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Migrations;
+namespace Cclilshy\PRipple\Database\Migrations;
 
 use Doctrine\DBAL\Schema\SchemaException;
 use Illuminate\Console\View\Components\BulletList;
@@ -9,12 +9,12 @@ use Illuminate\Console\View\Components\Info;
 use Illuminate\Console\View\Components\Task;
 use Illuminate\Console\View\Components\TwoColumnDetail;
 use Illuminate\Contracts\Events\Dispatcher;
-use PRipple\Illuminate\Database\ConnectionResolverInterface as Resolver;
-use PRipple\Illuminate\Database\Events\MigrationEnded;
-use PRipple\Illuminate\Database\Events\MigrationsEnded;
-use PRipple\Illuminate\Database\Events\MigrationsStarted;
-use PRipple\Illuminate\Database\Events\MigrationStarted;
-use PRipple\Illuminate\Database\Events\NoPendingMigrations;
+use Cclilshy\PRipple\Database\ConnectionResolverInterface as Resolver;
+use Cclilshy\PRipple\Database\Events\MigrationEnded;
+use Cclilshy\PRipple\Database\Events\MigrationsEnded;
+use Cclilshy\PRipple\Database\Events\MigrationsStarted;
+use Cclilshy\PRipple\Database\Events\MigrationStarted;
+use Cclilshy\PRipple\Database\Events\NoPendingMigrations;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;

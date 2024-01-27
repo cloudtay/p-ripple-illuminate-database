@@ -32,7 +32,7 @@
   },
   "autoload": {
     "psr-4": {
-      "PRipple\\Illuminate\\Database\\": ""
+      "Cclilshy\\PRipple\\Database\\": ""
     }
   },
   "extra": {

@@ -1,10 +1,10 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Query\Processors;
+namespace Cclilshy\PRipple\Database\Query\Processors;
 
 use Exception;
-use PRipple\Illuminate\Database\Connection;
-use PRipple\Illuminate\Database\Query\Builder;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\Query\Builder;
 
 class SqlServerProcessor extends Processor
 {

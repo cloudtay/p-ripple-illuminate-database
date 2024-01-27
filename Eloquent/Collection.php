@@ -1,11 +1,11 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
 use Illuminate\Contracts\Queue\QueueableCollection;
 use Illuminate\Contracts\Queue\QueueableEntity;
 use Illuminate\Contracts\Support\Arrayable;
-use PRipple\Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection as BaseCollection;
 use LogicException;

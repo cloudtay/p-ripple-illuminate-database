@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
-use PRipple\Illuminate\Database\RecordsNotFoundException;
+use Cclilshy\PRipple\Database\RecordsNotFoundException;
 use Illuminate\Support\Arr;
 
 /**

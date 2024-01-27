@@ -1,9 +1,9 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console\Migrations;
+namespace Cclilshy\PRipple\Database\Console\Migrations;
 
 use Illuminate\Contracts\Console\PromptsForMissingInput;
-use PRipple\Illuminate\Database\Migrations\MigrationCreator;
+use Cclilshy\PRipple\Database\Migrations\MigrationCreator;
 use Illuminate\Support\Composer;
 use Illuminate\Support\Str;
 

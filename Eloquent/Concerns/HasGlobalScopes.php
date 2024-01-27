@@ -1,9 +1,9 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Concerns;
 
 use Closure;
-use PRipple\Illuminate\Database\Eloquent\Scope;
+use Cclilshy\PRipple\Database\Eloquent\Scope;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
 

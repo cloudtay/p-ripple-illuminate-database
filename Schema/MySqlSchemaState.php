@@ -1,9 +1,9 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Schema;
+namespace Cclilshy\PRipple\Database\Schema;
 
 use Exception;
-use PRipple\Illuminate\Database\Connection;
+use Cclilshy\PRipple\Database\Connection;
 use Illuminate\Support\Str;
 use Symfony\Component\Process\Process;
 

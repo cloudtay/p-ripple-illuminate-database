@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Query\Processors;
+namespace Cclilshy\PRipple\Database\Query\Processors;
 
-use PRipple\Illuminate\Database\Query\Builder;
+use Cclilshy\PRipple\Database\Query\Builder;
 
 class Processor
 {

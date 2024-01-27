@@ -1,9 +1,9 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Query;
+namespace Cclilshy\PRipple\Database\Query;
 
 use Illuminate\Contracts\Database\Query\Expression as ExpressionContract;
-use PRipple\Illuminate\Database\Grammar;
+use Cclilshy\PRipple\Database\Grammar;
 
 class Expression implements ExpressionContract
 {

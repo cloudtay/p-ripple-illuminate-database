@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Factories;
+namespace Cclilshy\PRipple\Database\Eloquent\Factories;
 
-use PRipple\Illuminate\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
 class BelongsToManyRelationship

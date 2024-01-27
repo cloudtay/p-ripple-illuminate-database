@@ -1,12 +1,12 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Relations;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations;
 
-use PRipple\Illuminate\Database\Eloquent\Builder;
-use PRipple\Illuminate\Database\Eloquent\Collection;
-use PRipple\Illuminate\Database\Eloquent\Model;
-use PRipple\Illuminate\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
-use PRipple\Illuminate\Database\UniqueConstraintViolationException;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\Eloquent\Collection;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Concerns\InteractsWithDictionary;
+use Cclilshy\PRipple\Database\UniqueConstraintViolationException;
 
 abstract class HasOneOrMany extends Relation
 {

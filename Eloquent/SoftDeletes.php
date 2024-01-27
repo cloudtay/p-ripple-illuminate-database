@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
 /**
  * @method static \PRipple\Illuminate\Database\Eloquent\Builder|\PRipple\Illuminate\Database\Query\Builder withTrashed(bool $withTrashed = true)

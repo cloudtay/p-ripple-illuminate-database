@@ -1,14 +1,14 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console\Migrations;
+namespace Cclilshy\PRipple\Database\Console\Migrations;
 
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Contracts\Console\Isolatable;
 use Illuminate\Contracts\Events\Dispatcher;
-use PRipple\Illuminate\Database\Events\SchemaLoaded;
-use PRipple\Illuminate\Database\Migrations\Migrator;
-use PRipple\Illuminate\Database\SQLiteDatabaseDoesNotExistException;
-use PRipple\Illuminate\Database\SqlServerConnection;
+use Cclilshy\PRipple\Database\Events\SchemaLoaded;
+use Cclilshy\PRipple\Database\Migrations\Migrator;
+use Cclilshy\PRipple\Database\SQLiteDatabaseDoesNotExistException;
+use Cclilshy\PRipple\Database\SqlServerConnection;
 use PDOException;
 use Throwable;
 

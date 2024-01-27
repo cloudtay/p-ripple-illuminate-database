@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Schema;
+namespace Cclilshy\PRipple\Database\Schema;
 
-use PRipple\Illuminate\Database\Connection;
+use Cclilshy\PRipple\Database\Connection;
 
 class PostgresSchemaState extends SchemaState
 {

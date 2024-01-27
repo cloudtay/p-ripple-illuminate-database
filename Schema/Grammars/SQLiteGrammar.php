@@ -1,11 +1,11 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Schema\Grammars;
+namespace Cclilshy\PRipple\Database\Schema\Grammars;
 
 use Doctrine\DBAL\Schema\Index;
-use PRipple\Illuminate\Database\Connection;
-use PRipple\Illuminate\Database\Query\Expression;
-use PRipple\Illuminate\Database\Schema\Blueprint;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\Query\Expression;
+use Cclilshy\PRipple\Database\Schema\Blueprint;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Fluent;
 use RuntimeException;

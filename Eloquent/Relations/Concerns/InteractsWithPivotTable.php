@@ -1,10 +1,10 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Relations\Concerns;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations\Concerns;
 
-use PRipple\Illuminate\Database\Eloquent\Collection;
-use PRipple\Illuminate\Database\Eloquent\Model;
-use PRipple\Illuminate\Database\Eloquent\Relations\Pivot;
+use Cclilshy\PRipple\Database\Eloquent\Collection;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Collection as BaseCollection;
 
 trait InteractsWithPivotTable

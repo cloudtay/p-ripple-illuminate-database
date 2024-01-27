@@ -1,11 +1,11 @@
 <?php
 
-namespace PRipple\Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
-use Component\LaravelComponent;
+use Cclilshy\PRipple\Component\LaravelComponent;
+use Cclilshy\PRipple\Database\Capsule\Manager;
+use Cclilshy\PRipple\Database\Facade\DB;
 use Illuminate\Container\Container;
-use PRipple\Illuminate\Database\Capsule\Manager;
-use PRipple\Illuminate\Database\Facade\DB;
 
 class Component
 {

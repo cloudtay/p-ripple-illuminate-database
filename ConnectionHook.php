@@ -1,10 +1,10 @@
 <?php
 
-namespace PRipple\Illuminate\Database;
+namespace Cclilshy\PRipple\Database;
 
 use Cclilshy\PRipple\Core\Map\CoroutineMap;
 use Cclilshy\PRipple\Facade\JsonRpc;
-use PRipple\Illuminate\Database\Proxy\PDOPRoxyPoolMap;
+use Cclilshy\PRipple\Database\Proxy\PDOPRoxyPoolMap;
 
 class ConnectionHook extends Connection
 {

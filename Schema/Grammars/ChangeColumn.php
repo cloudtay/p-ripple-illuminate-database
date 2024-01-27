@@ -1,12 +1,12 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Schema\Grammars;
+namespace Cclilshy\PRipple\Database\Schema\Grammars;
 
 use Doctrine\DBAL\Schema\AbstractSchemaManager as SchemaManager;
 use Doctrine\DBAL\Schema\Table;
 use Doctrine\DBAL\Types\Type;
-use PRipple\Illuminate\Database\Connection;
-use PRipple\Illuminate\Database\Schema\Blueprint;
+use Cclilshy\PRipple\Database\Connection;
+use Cclilshy\PRipple\Database\Schema\Blueprint;
 use Illuminate\Support\Fluent;
 use RuntimeException;
 

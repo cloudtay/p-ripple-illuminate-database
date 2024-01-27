@@ -1,12 +1,12 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Concerns;
+namespace Cclilshy\PRipple\Database\Concerns;
 
 use Illuminate\Container\Container;
-use PRipple\Illuminate\Database\Eloquent\Builder;
-use PRipple\Illuminate\Database\MultipleRecordsFoundException;
-use PRipple\Illuminate\Database\Query\Expression;
-use PRipple\Illuminate\Database\RecordsNotFoundException;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\MultipleRecordsFoundException;
+use Cclilshy\PRipple\Database\Query\Expression;
+use Cclilshy\PRipple\Database\RecordsNotFoundException;
 use Illuminate\Pagination\Cursor;
 use Illuminate\Pagination\CursorPaginator;
 use Illuminate\Pagination\LengthAwarePaginator;

@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\PDO\Concerns;
+namespace Cclilshy\PRipple\Database\PDO\Concerns;
 
-use PRipple\Illuminate\Database\PDO\Connection;
+use Cclilshy\PRipple\Database\PDO\Connection;
 use InvalidArgumentException;
 use PDO;
 

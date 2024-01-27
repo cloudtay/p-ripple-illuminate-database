@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console;
+namespace Cclilshy\PRipple\Database\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\ConfigurationUrlParser;

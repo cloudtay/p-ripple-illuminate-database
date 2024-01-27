@@ -1,15 +1,15 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Relations;
+namespace Cclilshy\PRipple\Database\Eloquent\Relations;
 
 use Illuminate\Contracts\Database\Eloquent\SupportsPartialRelations;
-use PRipple\Illuminate\Database\Eloquent\Builder;
-use PRipple\Illuminate\Database\Eloquent\Collection;
-use PRipple\Illuminate\Database\Eloquent\Model;
-use PRipple\Illuminate\Database\Eloquent\Relations\Concerns\CanBeOneOfMany;
-use PRipple\Illuminate\Database\Eloquent\Relations\Concerns\ComparesRelatedModels;
-use PRipple\Illuminate\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
-use PRipple\Illuminate\Database\Query\JoinClause;
+use Cclilshy\PRipple\Database\Eloquent\Builder;
+use Cclilshy\PRipple\Database\Eloquent\Collection;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Concerns\CanBeOneOfMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Concerns\ComparesRelatedModels;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Concerns\SupportsDefaultModels;
+use Cclilshy\PRipple\Database\Query\JoinClause;
 
 class MorphOne extends MorphOneOrMany implements SupportsPartialRelations
 {

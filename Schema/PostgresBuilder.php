@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Schema;
+namespace Cclilshy\PRipple\Database\Schema;
 
-use PRipple\Illuminate\Database\Concerns\ParsesSearchPath;
+use Cclilshy\PRipple\Database\Concerns\ParsesSearchPath;
 
 class PostgresBuilder extends Builder
 {

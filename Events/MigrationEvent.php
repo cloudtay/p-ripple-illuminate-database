@@ -1,9 +1,9 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Events;
+namespace Cclilshy\PRipple\Database\Events;
 
 use Illuminate\Contracts\Database\Events\MigrationEvent as MigrationEventContract;
-use PRipple\Illuminate\Database\Migrations\Migration;
+use Cclilshy\PRipple\Database\Migrations\Migration;
 
 abstract class MigrationEvent implements MigrationEventContract
 {

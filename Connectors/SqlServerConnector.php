@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Connectors;
+namespace Cclilshy\PRipple\Database\Connectors;
 
 use Illuminate\Support\Arr;
 use PDO;

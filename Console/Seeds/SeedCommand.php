@@ -1,11 +1,11 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console\Seeds;
+namespace Cclilshy\PRipple\Database\Console\Seeds;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
-use PRipple\Illuminate\Database\ConnectionResolverInterface as Resolver;
-use PRipple\Illuminate\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\ConnectionResolverInterface as Resolver;
+use Cclilshy\PRipple\Database\Eloquent\Model;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;

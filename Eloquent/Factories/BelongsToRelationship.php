@@ -1,9 +1,9 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent\Factories;
+namespace Cclilshy\PRipple\Database\Eloquent\Factories;
 
-use PRipple\Illuminate\Database\Eloquent\Model;
-use PRipple\Illuminate\Database\Eloquent\Relations\MorphTo;
+use Cclilshy\PRipple\Database\Eloquent\Model;
+use Cclilshy\PRipple\Database\Eloquent\Relations\MorphTo;
 
 class BelongsToRelationship
 {

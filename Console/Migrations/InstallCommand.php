@@ -1,9 +1,9 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Console\Migrations;
+namespace Cclilshy\PRipple\Database\Console\Migrations;
 
 use Illuminate\Console\Command;
-use PRipple\Illuminate\Database\Migrations\MigrationRepositoryInterface;
+use Cclilshy\PRipple\Database\Migrations\MigrationRepositoryInterface;
 use Symfony\Component\Console\Input\InputOption;
 
 class InstallCommand extends Command

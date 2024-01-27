@@ -1,8 +1,8 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Query\Grammars;
+namespace Cclilshy\PRipple\Database\Query\Grammars;
 
-use PRipple\Illuminate\Database\Query\Builder;
+use Cclilshy\PRipple\Database\Query\Builder;
 use Illuminate\Support\Str;
 
 class MySqlGrammar extends Grammar

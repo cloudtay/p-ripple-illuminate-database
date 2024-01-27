@@ -1,6 +1,6 @@
 <?php
 
-namespace PRipple\Illuminate\Database\Eloquent;
+namespace Cclilshy\PRipple\Database\Eloquent;
 
 use ArrayAccess;
 use Illuminate\Contracts\Broadcasting\HasBroadcastChannel;
@@ -10,12 +10,12 @@ use Illuminate\Contracts\Routing\UrlRoutable;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\CanBeEscapedWhenCastToString;
 use Illuminate\Contracts\Support\Jsonable;
-use PRipple\Illuminate\Database\ConnectionResolverInterface as Resolver;
-use PRipple\Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use PRipple\Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use PRipple\Illuminate\Database\Eloquent\Relations\Concerns\AsPivot;
-use PRipple\Illuminate\Database\Eloquent\Relations\HasManyThrough;
-use PRipple\Illuminate\Database\Eloquent\Relations\Pivot;
+use Cclilshy\PRipple\Database\ConnectionResolverInterface as Resolver;
+use Cclilshy\PRipple\Database\Eloquent\Collection as EloquentCollection;
+use Cclilshy\PRipple\Database\Eloquent\Relations\BelongsToMany;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Concerns\AsPivot;
+use Cclilshy\PRipple\Database\Eloquent\Relations\HasManyThrough;
+use Cclilshy\PRipple\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection as BaseCollection;
 use Illuminate\Support\Str;
