@@ -40,16 +40,18 @@
 
 namespace PRipple\Illuminate\Database\Proxy;
 
-use PRipple;
-use Worker\Worker;
+use Cclilshy\PRipple\PRipple;
+use Cclilshy\PRipple\Worker\Worker;
+use PRipple\Illuminate\Database\Component;
+use PRipple\Illuminate\Database\ConnectionHook;
 
 class PDOProxyPool extends Worker
 {
     /**
      * @var int[] $connections
      */
-    private array                                      $connectionRpcNames = [];
-    private PRipple\Illuminate\Database\ConnectionHook $connectionHook;
+    private array          $connectionRpcNames = [];
+    private ConnectionHook $connectionHook;
 
     /**
      * @param array  $config
@@ -62,7 +64,7 @@ class PDOProxyPool extends Worker
     {
         parent::__construct(PDOProxyPool::class . '.' . $databaseName);
         PDOProxyPoolMap::$pools[$databaseName] = $this;
-        $databaseManager                       = PRipple\Illuminate\Database\Component::$databaseManager;
+        $databaseManager                       = Component::$databaseManager;
         $databaseManager->addConnection([
             'driver'    => 'mysql',
             'host'      => $config['host'] ?? null,

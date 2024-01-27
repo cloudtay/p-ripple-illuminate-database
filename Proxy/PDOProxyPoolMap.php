@@ -39,7 +39,7 @@
 
 namespace PRipple\Illuminate\Database\Proxy;
 
-use Core\Standard\MapInterface;
+use Cclilshy\PRipple\Core\Standard\MapInterface;
 
 class PDOProxyPoolMap implements MapInterface
 {

@@ -39,14 +39,14 @@
 
 namespace PRipple\Illuminate\Database\Proxy;
 
-use Core\Output;
+use Cclilshy\PRipple\Core\Output;
+use Cclilshy\PRipple\Protocol\TCPProtocol;
+use Cclilshy\PRipple\Worker\Built\JsonRpc\Attribute\RPC;
+use Cclilshy\PRipple\Worker\Built\JsonRpc\JsonRpc;
+use Cclilshy\PRipple\Worker\Worker;
 use Exception;
 use PDO;
 use PDOException;
-use Protocol\TCPProtocol;
-use Worker\Built\JsonRpc\Attribute\RPC;
-use Worker\Built\JsonRpc\JsonRpc;
-use Worker\Worker;
 use function Co\loop;
 
 class PDOProxy extends Worker

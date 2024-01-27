@@ -2,8 +2,8 @@
 
 namespace PRipple\Illuminate\Database;
 
-use Core\Map\CoroutineMap;
-use Facade\JsonRpc;
+use Cclilshy\PRipple\Core\Map\CoroutineMap;
+use Cclilshy\PRipple\Facade\JsonRpc;
 use PRipple\Illuminate\Database\Proxy\PDOPRoxyPoolMap;
 
 class ConnectionHook extends Connection
